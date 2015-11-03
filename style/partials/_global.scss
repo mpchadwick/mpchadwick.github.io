@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+html, body {
+    height: 100%;
+}
+body {
+    font-family: Georgia, serif;
+    background-color: floralwhite;
+}
+a {
+    text-decoration: none;
+    color: cornflowerblue;
+}
+a:hover {
+    text-decoration: underline;
+}
+h1, h2, h3, h4, p, pre, blockquote, ul, ol {
+    margin-bottom: 1em;
+}
+h2 {
+    font-family: "Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Tahoma,sans-serif
+}
+ul, ol {
+    margin-left: 50px;
+}
+li {
+    margin-bottom: 0.25em;
+}
+ul > li > ul {
+    margin-left: 35px;
+    margin-top: 0.25em;
+    margin-bottom: 0.5em;
+}
+p, blockquote {
+    line-height: 1.4rem;
+}
+pre {
+    white-space: pre-wrap;
+    padding: 10px;
+}
+blockquote {
+    margin-left: 50px;
+    border-left: 5px solid orange;
+    padding-left: 15px;
+}
+.clear {
+    clear: both;
+}
+.caption {
+    font-style: italic;
+    color: gray;
+}

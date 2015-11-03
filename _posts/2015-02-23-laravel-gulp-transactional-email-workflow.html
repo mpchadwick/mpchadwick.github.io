@@ -1,0 +1,78 @@
+---
+layout: blog-single
+title: A Workflow That Takes The Pain Out Of (Responsive) HTML Email Development (Using Laravel and Gulp)
+date: February 23, 2015
+comments: true
+noNameInTitle: true
+---
+
+<p>Most front end developers would probably not list coding HTML emails as one of their favorite activities. From table based layouts, to inline styles, to <a class="inline-link" href="https://litmus.com/blog/outlook-2013-still-powered-by-word-now-available-for-email-testing" target="_blank">popular email clients that still use Microsoft Word as a rendering engine</a> it is understandable that HTML email development is generally considered a nightmare. Fortunately, <a class="inline-link" href="https://github.com/mailchimp/Email-Blueprints" target="_blank">starter templates</a> and <a class="inline-link" href="http://gulpjs.com/" target="_blank">build tools</a> make the process a lot less painful. In this post I&#39;ll outline a workflow I set up on <a class="inline-link" href="https://domainclamp.com/" target="_blank">a recent project</a> that made HTML email development downright fun.</p>
+<!-- excerpt_separator -->
+
+<h3>No Need To Reinvent The Wheel</h3>
+<p>HTML email is hard. (If you were a psycho) You could try to build your own templates from scratch, but why reinvent the wheel when Mailchimp has released <a class="inline-link" href="https://github.com/mailchimp/Email-Blueprints" target="_blank">an open source library of awesome starter email templates</a>. The base_boxed_basic_query template is a simple template that offers a perfect starting point for transactional HTML emails.</p>
+<img src="{{site.url}}/img/blog/4/1.png" class="wh-auto">
+<p class="caption">Mailchimp&#39;s base_boxed_basic_query template out-of-the-box</p>
+<p>If you&#39;re working in Laravel go ahead and put <a class="inline-link" href="https://raw.githubusercontent.com/mailchimp/email-blueprints/master/responsive-templates/base_boxed_basic_query.html" target="_blank">this template</a> into your <code>app/views/emails</code> directory.</p>
+
+<h3>Customization</h3>
+<p>Once you've placed the template into your email directory turn it into a layout that can be used for all your email templates. Update the code starting at line 477 as follows:</p>
+{% highlight php startinline=True %}
+<table border="0" cellpadding="0" cellspacing="0" width="100%" id="templateBody">
+    <tr>
+        <td valign="top" class="bodyContent" mc:edit="body_content">
+            @yield('content')
+        </td>
+    </tr>
+</table>
+{% endhighlight %}
+<p>Then, all your emails will extend that layout:</p>
+{% highlight php startinline=True %}
+@extends('emails.build.email_layout')
+
+@section('content')
+
+<!-- Your content goes here -->
+	
+@stop
+{% endhighlight %}
+
+<h3>The Build Step</h3>
+<p>Before sending your emails you'll want to run them through a build tool to inline the CSS. The reason for this is that some email clients, <a href="https://litmus.com/blog/understanding-gmail-and-css-part-1" target="_blank" class="inline-link">most notably Gmail</a> strip style tags out of the head. With Gulp, <a href="https://github.com/jonkemp/gulp-inline-css" target="_blank" class="inline-link">gulp-inline-css</a> is the most popular option, however I have had <a href="https://github.com/jonkemp/gulp-inline-css/issues/4" target="_blank" class="inline-link">problems using this plugin with Laravel</a> as demonstrated below:
+
+<p style="font-style: italic; margin-bottom: 0.25em;">Before...</p>
+{% highlight php startinline=True %}
+{%raw%}<p>Dear {{ $person->user->firstname }},</p>{%endraw%}
+{% endhighlight %}
+<p style="font-style: italic; margin-bottom: 0.25em;">After...</p>
+{% highlight php startinline=True %}
+{%raw%}&lt;p&gt;Dear {{ $person-&amp;gt;user-&amp;gt;firstname }},&lt;/p&gt;{%endraw%}
+{% endhighlight %}
+
+<p>As a result, I've implemented the <a href="https://github.com/jayzawrotny/gulp-mc-inline-css" target="_blank" class="inline-link">gulp-mc-inline-css</a> plugin which calls the Mailchimp API to inline the CSS. However, I have an open <a href="https://github.com/jayzawrotny/gulp-mc-inline-css/issues/2" target="_blank" class="inline-link">issue</a> and <a href="https://github.com/jayzawrotny/gulp-mc-inline-css/pull/4" target="_blank" class="inline-link">pull request</a> on that repo to give the implementor the ability to set strip_css to false. This is necessary as without it, media queries will be stripped out and the email will lose it's resposiveness. In the meantime go ahead and use <a href="https://github.com/mpchadwick/gulp-mc-inline-css" target="_blank" class="inline-link">my fork of the repo</a>. Here's how your package.json will look...</p>
+{% highlight json %}
+{
+  "name": "email-workflow",
+  "version": "0.1.0",
+  "devDependencies": {
+    "gulp": "^3.8.10",
+    "gulp-mc-inline-css": "https://github.com/mpchadwick/gulp-mc-inline-css/tarball/master"
+  }
+}
+{% endhighlight %}
+
+<p>Your gulpfile will look like this...</p>
+
+{% highlight javascript %}var gulp = require('gulp'),
+mcInlineCss = require('gulp-mc-inline-css'),
+config = require('./gulp_config.json');
+
+gulp.task('mc-inline-css', function() {
+	return gulp.src('./app/views/emails/*')
+		.pipe(mcInlineCss(config.MC_APIKEY, false))
+		.pipe(gulp.dest('./app/views/emails/build'));
+});
+{% endhighlight %}
+
+<h3>The Send</h3>
+<p>In my app, <a href="https://mandrill.com/" target="_blank" class="inline-link">Mandrill</a> is being used to handle the send. However, Laravel offers <a href="http://laravel.com/docs/4.2/mail" target="_blank" class="inline-link">great documentatation</a> on it <code>Mail</code> class and feel free to use whichever driver you prefer.</p>

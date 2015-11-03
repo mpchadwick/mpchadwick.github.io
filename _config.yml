@@ -1,0 +1,6 @@
+title: Max Chadwick
+url: http://localhost:4000
+permalink: /blog/:title
+highlighter: pygments
+gems:
+  - octopress-autoprefixer

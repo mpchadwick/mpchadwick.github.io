@@ -1,0 +1,12 @@
+@media (min-width: 600px) {
+    .page-wrapper h1 {
+        font-size: 48px;
+    }
+    .page-wrapper h2 {
+        text-align: left;
+    }
+    /* Increase specificity to ensure override... */
+    .call-to-action-wrapper {
+        text-align: left;
+    }
+}

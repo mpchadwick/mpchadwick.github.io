@@ -1,0 +1,69 @@
+---
+layout: blog-single
+title: Whodunnit
+date: July 02, 2015
+comments: true
+noNameInTitle: true
+---
+
+<p>When a team of people, both technical and non-technical, collectively operate a shared software installation things are bound to go wrong at some point. As the technical folk we are often engaged to perform forensic analysis. This type of work frequently includes tasks such as <code>grep</code>-ping server access logs for certain request paths, dates, and IP addresses or reviewing any other logs or information related to whatever incident may have occurred.</p>
+<p>This post is about a specific incident that came up recently. It was not a major one, but there were some learnings for me along the way and I figured it would be interesting to document the process.</p>
+<!-- excerpt_separator -->
+
+<h3>Some Background</h3>
+<p>As with most things these days, the story starts with an email. I had previously requested a client conduct UAT on a bugfix in a staging environment. Not long after, the client responded back and told me that he was having trouble with the site...he couldn't proceed through the checkout flow and was getting a white screen.</p>
+<p>"Hmm...that's strange", I thought. I had personally deployed and tested the bug fix on that same staging environment prior to notifying the client and did not observe any such issue. What could be wrong?</p>
+
+<h3>Diagnosis</h3>
+<p>To start out, I SSH-ed into the box and ran a <code>git status</code> in the web root. While I was expecting it to be on the head of the develop branch it was not. But I had just run a <code>git pull</code> before notifying the client! Something was amiss...</p>
+
+<h3>Autopsy (part 1)</h3>
+<p>This is where things get interesting.</p>
+<p>"Anyone doing anything on the staging server?" I popped into the Hipchat room for the site in question. We have Hipchat rooms for each site we manage at <a href="http://www.somethingdigital.com/" target="_blank" class="inline-link">Something Digital</a>, which is an awesome practice.</p>
+<p>Radio silence.</p>
+<p>"Hmm...what's going on?", I wondered.</p>
+<p>Like most devs do, I turned to Google.</p>
+<blockquote>Sidenote: I probably could've figured out the solution without Googling for it. However, I didn't even take a moment to think about how I might approach the challenge. I could easily go into a tangent here into the tendency of devs to Google solutions and copy / paste answers from Stack Overflow without attempting to implement a solution on their own, which I, myself, am clearly guilty of, but I'll save that for a separate post.</blockquote>
+<p>"Search bash history for all users" I typed into Google</p>
+<p>The command that turned up was as follows</p>
+{% highlight bash %}
+getent passwd | cut -d : -f 6 | sed 's:$:/.bash_history' | xargs -d '\n' grep 'search term'
+{% endhighlight %}
+<p>For me the term to search for was <code>git checkout</code>.</p>
+<p>Upon running the command I got an inordinate amount of results. What I needed to know was <strong>the most recent execution of <code>git checkout</code></strong>.</p>
+
+<h3>A Sidebar On <code>.bash_history</code></h3>
+<p>By default <code>.bash_history</code> does <strong>not</strong> include timestamps for each command. I can't say I agree with that behavior. If you're responsible for a server that is accessed by multiple users it's probably a good idea to make sure bash commands are getting logged with time stamps. <a href="http://honglus.blogspot.com/2012/02/enable-timestamp-logging-in-bash.html" class="inline-link" target="_blank">This article</a> covers how to add timestamps to <code>.bash_history</code> globally. You could also default all users to z-shell which does log timestamps to <code>.zsh_history</code>. Finally, it may be worth looking into tools such as <a href="https://github.com/a2o/snoopy" target="_blank" class="inline-link">snoopy</a> that offer several improvements over both <code>.bash_history</code> and <code>.zsh_history</code>.
+
+<h3>Autopsy (part 2)</h3>
+<p>Fortunately timestamps were being recorded globally for <code>.bash_history</code> on this box. Running <code>less ~/.bash_history</code> looked like this...</p>
+
+{% highlight bash %}
+#1435642505
+exit
+#1435642534
+pwd
+#1435642534
+git
+#1435642542
+touch myfile
+#1435642544
+rm -f myfile
+{% endhighlight %}
+
+<p>The timestamps were recorded on the line above the command, so I needed to add the <code>-B 1</code> flag to the <code>grep</code> command to also get one line before.</p>
+
+{% highlight bash %}
+getent passwd | cut -d : -f 6 | sed 's:$:/.bash_history' | xargs -d '\n' grep -B 1 'checkout'
+{% endhighlight %}
+
+<p>Awesome now all I need to do is combine every two lines in the output, and finally sort</p>
+
+{% highlight bash %}
+getent passwd | cut -d : -f 6 | sed 's:$:/.bash_history' | xargs -d '\n' grep -B 1 'checkout' | sed 'N;s/\n/ /' | sort
+{% endhighlight %}
+
+<p>Beautiful. This command was so sexy I put it in put it into the main Something Digital Hipchat room, created an alias in my <code>.zshrc</code>, tweeted about it, and now am even writing a blog about it.</p>
+
+<h3>The Result</h3>
+<p>After all this build up, I have to say, the result of the story is pretty anti-climactic. Or, I should say it remains an unsolved mystery...or maybe I just thought I QA-ed it. Or maybe clearing the application cache upon deploy didn't kick in immediately. Anyway, for whatever reason <strong>no one had run a <code>git checkout</code> since my most recent <code>git pull</code></strong>. Who knows what happened, but I certainly had fun trying to figure it out.</p>

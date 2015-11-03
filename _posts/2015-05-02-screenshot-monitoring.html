@@ -1,0 +1,48 @@
+---
+layout: blog-single
+title: Screenshot Monitoring
+date: May 02, 2015
+comments: true
+noNameInTitle: true
+---
+
+<p>Sometimes it&#39;s helpful to keep a visual record of certain areas of your website.</p>
+<p>I&#39;ll give you an example. I worked on a Magento site with a long-standing issue where multiple times a day, half of the documents would fall out of the SOLR index. In the end we found the culprit behind this issue, but in the process of debugging and analyzing the issue it was helpful to keep screenshots of certain search terms on record. In this post I&#39;ll dive into the details on setting said monitoring up.</p>
+<!-- excerpt_separator -->
+
+<h3>The Search Begins</h3>
+<p>To get this set up, the first and most obvious question is "What tool should I use?". I had heard of <a href="https://github.com/ariya/phantomjs" target="_blank" class="inline-link">PhantomJS</a> being used for things like this in the past (in fact their README even lists "screen capture" in the "Use Cases" section) so researching PhantomJS was my first order of business.</p> 
+<p>PhantomJS likely would&#39;ve been a solid choice for this, however, I would be running this job on a LAMP stack and wanted to keep everything as "LAMP-Y" as possible. There had to be a better way...</p>
+
+<h3>The Search Continues</h3>
+<p>After an hour or so Googling I determined that using a command line solution was the way to go (there are plenty of PHP solutions as well). Simply install the Linux package and execute from the command line. What could be easier (or more "LAMP-Y")?</p>
+
+<h3>The End Game</h3>
+<p>At this point I&#39;m convinced that there really isn&#39;t a better solution than <a href="https://github.com/wkhtmltopdf/wkhtmltopdf" target="_blank" class="inline-link">wkhtmltopdf</a> for my needs. While I&#39;m not wild about the name (since it does more than just PDFs) it damn well gets the job done and is dead simple to set up. Below is what I have implemented for keeping records of the necessary screenshots.</p>
+
+{% highlight bash %}
+#!/bin/sh
+
+###########################
+# A super simple bash script for capturing and saving screenshots to disk
+#
+# Example usage: 
+# ./screenShots.sh http://google.com google.jpg /home/mchadwick/screenshots/
+#
+# $1 = URL
+# $2 = Filename with .jpg extension
+# $3 = Directory to save file to
+###########################
+
+NOW=$(date +"%Y_%m_%d_%H_%M")
+FILENAME="${3}${NOW}_${2}"
+/usr/local/bin/wkhtmltoimage --format jpeg --width 1200 --quality 30 $1 $FILENAME
+{% endhighlight %}
+
+<p>I run this script on a cron twice a day, once at 6:00AM and again at 6:00PM.</p>
+{% highlight bash %}
+00 06,18 * * * /home/mchadwick/screenShots.sh http://google.com google.jpg /var/www/html/screenshots
+{% endhighlight %}
+
+<p>Since all the parameters are accepted as arguments rather than being hardcoded in the script I am able to monitor multiple pages with the same script. All the filenames are prefixed with the date and time the screenshot was captured and use a unique name which comes from the second argument, so they will be retained indefinitely (setting up rotation is a good idea as well!). I also am keeping these in a directory that is publicly accessible with an .htaccess file to enable directory indexes so that my team, and our client, can review the screenshots on demand without needing an SFTP connection.</p>
+<p>This has worked like a charm for me since implementation.</p>

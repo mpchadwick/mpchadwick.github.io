@@ -1,0 +1,93 @@
+---
+layout: blog-single
+title: Dealing with WHOIS records
+date: January 4, 2015
+comments: true
+noNameInTitle: true
+---
+
+<p>Recently I&#39;ve been working on a side project, <a class="inline-link" href="https://domainclamp.com" target="_blank">Domain Clamp</a>, a web app for monitoring domain and SSL expirations and sending notifications. The most unexpected challenge thus far has been dealing with WHOIS records. While SSL expiraton dates can be retrieved simply by asking the server on which the SSL is installed, there is no way to get a domain expiration date without asking a WHOIS server. And that, my friends, is where the trouble begins...</p>
+<!-- excerpt_separator -->
+
+<h3>Some Background</h3>
+<p>I initially began building <a class="inline-link" href="https://domainclamp.com" target="_blank">Domain Clamp</a> in Rails, but quickly switched to Laravel. I&#39;m, sure Rails would&#39;ve been an excellent choice for the project, but I&#39;m much better versed in PHP and wanted to be able to hop right into the development without the learning curve of a new language. There were two critical requirements for the application</p>
+
+<ul>
+	<li>The ability to automatically check domain expiration dates</li>
+	<li>The ability to automatically check SSL expiration dates</li>
+</ul>
+
+<p>SSL expirations turned out to be by far the easier of the two. Some quick Googling turned up <a class="inline-link" href="http://stackoverflow.com/questions/3081042/how-to-get-ssl-certificate-info-with-curl-in-php" target="_blank">this stack overflow thread</a> and I wound up creating a simple Laravel package. It&#39;s really just one method and could even be placed in the app&#39;s helpers file. Here&#39;s the code:</p>
+
+{% highlight php startinline=True %}
+function getCertInfo($domain)
+{
+	$c = stream_context_create(array("ssl" => array("capture_peer_cert" => true)));
+
+	set_error_handler(function(){return true;});
+	$r = stream_socket_client("ssl://".$domain.":443", $errno, $errstr, 30, STREAM_CLIENT_CONNECT, $c);
+	restore_error_handler();
+
+	if(!$r) {
+		return false;
+	}
+
+	$cont = stream_context_get_params($r);
+	$certinfo = openssl_x509_parse($cont["options"]["ssl"]["peer_certificate"]);
+	return $certinfo;
+}
+{% endhighlight %}
+<p>Data on the certificate is returned as an array and <code>$certinfo['validTo_time_t']</code> contains a unix timestamp with the certificate expiry.</p>
+
+<h3>TLD Administrators and WHOIS records</h3>
+<p>At the time of writing this article there nearly 800 active TLDs. Conveniently, <a class="inline-link" href="http://data.iana.org/TLD/tlds-alpha-by-domain.txt" target="_blank">a machine readable list</a>, is maintained by IANA (the Internet Assigned Numbers Authority). Operation / administration of each TLD is split amongst hundreds of different entities. IANA also maintains <a class="inline-link" href="http://www.iana.org/domains/root/db" target="_blank">a webpage which details the operator for each TLD</a>. Unfortunately, there is no standardized response format for a WHOIS request. Per <a class="inline-link" href="https://tools.ietf.org/html/rfc3912" target="_blank">the WHOIS spec</a>
+<blockquote>The protocol delivers its content in a human-readable format.</blockquote>
+<p><span class="italic">Human-readable</span> is the important word here...Translation, your app cannot get the domain expiry from a WHOIS response without some extra effort.</p>
+
+<h3>Getting the Domain Expiry</h3>
+<p>Back to <a class="inline-link" href="https://domainclamp.com" target="_blank">Domain Clamp</a>, as mentioned above, automatically pulling a domain expiration date is one of the core requirements of the application. Rather than re-invent the wheel, I reviewed existing libraries that work with WHOIS records. Essentially there are two steps involved.</p>
+<p><b>Step 1: Determine the proper WHOIS server for the query:</b> WHOIS libraries generally contain a configuration file mapping TLDs to WHOIS servers. Here are a few examples:</p>
+<ul>
+<li><a class="inline-link" href="https://github.com/weppos/whois/blob/master/data/tld.json" target="_blank">From the Ruby WHOIS Gem</li>
+<li><a class="inline-link" href="https://github.com/rfc1036/whois/blob/master/tld_serv_list" target="_blank">From the Debian WHOIS library</li>
+<li><a class="inline-link" href="https://github.com/novutec/WhoisParser/blob/master/Config/whois.ini" target="_blank">From the WhoisParser PHP library</a></li>
+</ul>
+<p><b>Step 2: Parse the response from the WHOIS server:</b> WHOIS libraries use RegEx to parse the hundreds of possible responses. <a class="inline-link" href="https://github.com/weppos/whois/tree/master/lib/whois/record/parser" target="_blank">The parser directory from the Ruby Whois Gem</a> currently has over 200 files in it.</p>
+
+<h3>How I&#39;m Handling This For Domain Clamp</h3>
+<p>Since I made the decision to build the app on top of Laravel I naturally began to look for a PHP solution. There are a number of libraries available which range from providing <a class="inline-link" href="https://github.com/regru/php-whois" target="_blank">virtually no parsing functionality</a> to providing <a class="inline-link" href="https://github.com/novutec/WhoisParser" target="_blank">a fairly solid API</a> for interacting with the WHOIS record. Initially, I selected the Novutec library. Things started out smooth, but as I began to test some of the domans I own, I found many cases where the library was not returning the proper WHOIS result.</p>
+<p>After submitting a PR which went unacknowledged for several months, I toyed with the idea of maintaining my own fork of the library, but eventually would up deciding to set up a separate service for WHOIS queries built with the Ruby WHOIS gem. The service is set up as a Sinatra app and I decided to <a class="inline-link" href="https://github.com/mpchadwick/ruby-whois-api" target="_blank">throw it up on GitHub</a>.</p>
+
+<h3>How Could This All Be Improved</h3>
+<p>This post is not meant to point a finger at Novutec. They put together a solid library which I'm sure took countless hours to develop and have open sourced it to the community asking for nothing in exchange. WHOIS parsing is hard and is even harder to maintain.</p> 
+<p>Ideally, the WHOIS spec would be updated to outline a standard format for WHOIS server responses. Then IANA, who <a class="inline-link" href="http://www.iana.org/domains/root" target="_blank">is responsible for management of the DNS root zone</a> would be in charge of enforcing that TLD operators comply with that standard. Alternately, IANA could provide it's own WHOIS server in a standardized format.</p>
+<p>Knowing that the above is unlikely, at this point everyone who has a stake in WHOIS record parsing needs to actively contribute to libraries to ensure they stay up to date</p>
+
+<h3>A Note On Testing</h3>
+<p>Aside from the above, another gripe I have with WHOIS is around <a class="inline-link" href="http://www.iana.org/assignments/special-use-domain-names/special-use-domain-names.xhtml" target="_blank">special use domain names</a>. The following second level domains are all currently off limits according to <a class="inline-link" href="http://tools.ietf.org/html/rfc6761" target="_blank">RFC 6761</a>.</p>
+<ul>
+<li>example. (e.g. example.com)</li>
+<li>test. (e.g. test.com)</li>
+<li>invalid. (e.g. invalid.com)</li>
+<li>localhost. (e.g. localhost.com)</li>
+</ul>
+<p>However, many TLD operators do not return a standard WHOIS response for these reserved domains. This means that there is not universal second level domain that can be tested across all TLDs to confirm that a WHOIS parser library is parsing records properly. Here's an example of how simple it would be to test the Novutec library if <code>test.</code> was mandated to return a standard WHOIS record from the WHOIS server.</p>
+
+{% highlight php startinline=True %}
+
+require_once 'DomainParser/Parser.php';
+require_once 'WhoisParser/Parser.php';
+$Parser = new Novutec\WhoisParser\Parser();
+
+$tlds = parse_ini_file('WhoisParser/Config/whois.ini');
+foreach($tlds as $tld => $data) {
+        $domain = 'test.' . $tld;
+        $result = $Parser->lookup($domain);
+        if(!$result->expires) {
+                echo $tld . ' did not return an expiry date' . PHP_EOL;
+        }
+}
+{% endhighlight %}
+
+<h3>The Future</h3>
+<p>The WHOIS system is widely regarded as broken. As an app developer I may gripe about the lack of a standardized response format, however <a class="inline-link" href="https://www.icann.org/en/system/files/files/initial-report-24jun13-en.pdf" target="_blank">ICANN has questioned the fundamentals of giving out anonymous public accss to registration data.</a> It will be interesting to see the future of WHOIS. From my viewpoint, I can only hope that the system becomes easier to work with for developers using the data for "permissable purposes".</p>

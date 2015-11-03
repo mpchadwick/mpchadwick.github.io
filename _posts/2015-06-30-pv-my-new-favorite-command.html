@@ -1,0 +1,34 @@
+---
+layout: blog-single
+title: pv&colon; My New Favorite Command
+date: June 30, 2015
+comments: true
+noNameInTitle: true
+---
+
+<p>I don't know about you, but I'm not a fan of typing a command into the terminal and then nothing happening. Generally, any command that I know might take a while I'll run in verbose mode. That's great, I know that the process really is running. But what I don't know how far along it is...and how much more there is to go.</p>
+<p>Today I found out about the <code>pv</code> command. Boy, is that a game changer...</p>
+<!-- excerpt_separator -->
+
+<h3>What Does <code>pv</code> do?</h3>
+<p>I stumbled upon <code>pv</code> (short for Pipe Viewer) as I was wondering if there was anyway to know the status of MySQL import. Basically, you start out by running your input file through <code>pv</code> and then piping that out to whatever command you were originally intending to run.
+
+{% highlight bash %}
+pv my_backup.sql | mysql my_database
+{% endhighlight %}
+
+<p><code>pv</code> then keeps track of and reports on the status of wherever it's output is going.</p>
+
+<img src="{{site.url}}/img/blog/pv/pv-example.png" alt="Example of running pv command in terminal" class="wh-auto"/>
+
+<p>By default <code>pv</code> shows the the amount of data transfered, the amount of time running, the transfer rate, a progress bar, the percentage complete, and an eta. I find the defaults to work perfectly, but if you'd like to tinker with things details on all the switches can be found <a href="http://www.ivarch.com/programs/quickref/pv.shtml" class="inline-link" target="_blank">here</a>.</p>
+
+<h3>How Do I Get It</h3>
+<p>Head to the projects home page <a href="http://www.ivarch.com/programs/pv.shtml" target="_blank" class="inline-link">here</a> for installation instructions. I was running <code>pv</code> on a CentOS system and used the <code>yum</code> package manager for installation.</p>
+
+<h3>A Word On Tmux</h3>
+<p>While we're on the subject, it should be said that tmux is also a great tool for these types of long running jobs. If you don't know about it there's a great primer <a href="https://danielmiessler.com/study/tmux/" target="_blank" class="inline-link">here</a>.</p>
+
+<h3>Other Uses</h3>
+<p>While a MySQL import seems like one of the most common use cases for <code>pv</code>, I anticipate I'll get additional mileage out of <code>pv</code> down the road. For example, I can see myself using it one day when running a long <code>grep</code>, <code>awk</code>, <code>sort</code> and <code>uniq</code> command on a massive Apache log file.</p> 
+<p>How are you using <code>pv</code>? I'd love to hear some more use cases in the comments.</p>

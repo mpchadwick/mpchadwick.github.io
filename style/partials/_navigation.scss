@@ -1,0 +1,32 @@
+.navigation-bar {
+    background-color: orange;
+    height: 24px;
+    padding-top: 8px;
+    padding-bottom: 5px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    animation-name: body-background;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+}
+.navigation-bar__item {
+    display: inline-block;
+    float: left;
+    padding-right: 20px;
+}
+.navigation-bar__item-link {
+    color: white;
+}
+.navigation-bar__item-link--active {
+    color: darkslategray;
+}
+.navigation-bar__item-link--active:hover {
+    text-decoration: none;
+    cursor: default;
+}

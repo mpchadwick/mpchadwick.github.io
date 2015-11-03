@@ -1,0 +1,40 @@
+---
+layout: blog-single
+title: Enterprise_Targetrule Database Structure
+date: August 15, 2015
+comments: true
+noNameInTitle: true
+---
+
+<p>Recently, I've been doing some work with Magento Enterprise's "Rule-Based Product Relations" feature, or, as it's called in the source code, <code>Enterprise_Targetrule</code>.</p> 
+<p>At <a class="inline-link" href="http://somethingdigital.com" target="_blank">Something Digital</a> we have a client with an interesting requirement that involved some customization to the module. As a result, I spent some time digging into the module's mechanics. Since technical documentation is sparse, I figured I'd share my learnings for anyone interested to benefit.</p> 
+<!-- excerpt_separator -->
+
+<p>This blog post specifically discusses the database schema of the module, and goes through each table involved in the system, discussing its particular role. There are many aspects of the module that are not covered here...the purpose is to give a high level overview of how the data is stored by the system (with a tangent here and there for good measure), not to be a thorough, "Everything you need to know about Rule-based Product Relations" type post.</p>
+<p>Finally this post likely takes some liberties in terms of the request flow / order that things occur when data is recorded to the database. I made a conscious decision to sacrifice complete technical accuracy in favor of documenting things in a way that makes the system easy to understand big picture-wise.</p>
+
+<h3>The <code>enterprise_targetrule</code> table</h3>
+<p>The <code>enterprise_targetrule</code> table is pretty straight forward. As you'd expect it simply stores a record for each "target rule" that has been defined.</p> 
+<p>One thing I'd like to point out are the <code>action_select</code> and <code>action_select_bind</code> columns, which appear to cache the <code>SELECT</code> statement that is prepared by the data in the <code>actions_serialized</code> column and relevant binds. Interestingly this optimization only appears to be present in the <code>Enterprise_Targetrule</code> module and is not found in other ancestors of <code>Mage_Rule</code> such as <code>Mage_SalesRule</code> and <code>Mage_CatalogRule</code>.</p>
+
+<h3>The <code>enterprise_targetrule_product</code> table</h3>
+<p>In addition to the <code>enterprise_targetrule</code> table, the <code>enterprise_targetrule_product</code> table is immediately populated when a new rule is created. This simple table stores ids of all the products that match the conditions defined in the rule's "Products to Match" tab, and associates them with the rule through the <code>rule_id</code> column.</p>
+
+<h3>The <code>enterprise_targetrule_index_[crosssell/related/upsell]</code> tables</h3>
+<p>These index tables are populated when a product in the <code>enterprise_targetrule_product</code> table is visited for the first time (other events such as saving a product may populate these tables as well, but let's table that conversation). The product's id is recorded to the revelant table (depending on which type of product relation the rule applies to), and this record is given an id, stored in the <code>targetrule_id</code> column. This id is then referenced to cache the "Products to Display" for this product.</p>
+
+<h3>The <code>enterprise_targetrule_index_[crosssell/related/upsell]_product</code> tables</h3>
+<p>These tables are where the "Products to Display" mapping is cached. The mapping is stored when a matched product is loaded on the frontend for the first time (other events store/refresh the mapping, but let's also skip over that for now...remember, big picture).</p> 
+<p>The maximum number that can be stored for a single mapping is 20 (see <code>Enterprise_TargetRule_Helper_Data::MAX_PRODUCT_LIST_RESULT</code>. If a lower number is configured in the "Result Limit" field for the rule then that amount will be stored. If less products are found than what is configured, then anything that was found will be stored.</p>
+<p>These products are associated with the matched product through the <code>targetrule_id</code>.</p>
+<p>What I find most interesting here is the decision by Magento to enforce a limit of 20 on how many products can enter the "Products to Display" collection for a given product. Note that this collection is filtered down when rendered on the front end based on the value set in System > Configuration > Catalog > Catalog > Rule-Based Product Relations > Maximum Number of Products In (Related, Cross-Sell, Upsell) Product List. To be fair, they are up-front about this limit in the note for the "Result Limit" field on the "Rule Information" tab.</p>
+<p>Personally, I'd be more in favor of a recommendation to the user that a smaller collection is better for performance (I assume that's why this was put in place). That being said, maybe there are some benchmarks that show crippling performance effects when this number is set too high, or some other concern that I am completely ignorant to...</p>
+
+<h3>The <code>enterprise_targetrule_index</code> table</h3>
+<p>Finally the <code>enterprise_targetrule_index</code> indexes a product that has been mapped to it's respective set of "Products to Display" so that it doesn't need to be pulled again.</p>
+
+<h3>Customer Segments</h3>
+<p>The module also has the ability to limit rules to certain customer segments. This is done via the <code>enterprise_targetrule_customersegment</code> table, which maps rules to customer segments. That data is then used throughout the tables defined above to allow for various sets of "Matched Products" and "Displayed Products" for different customer segments.</p>
+
+<h3>The End</h3>
+<p>That concludes my overview of the data storage for the <code>Enterprise_Targetrule</code> module. As mentioned above, there's a lot more to the module that is not covered here. While I'm not planning on writing that "Everything you need to know about Rule-based Product Relations" type-post I do have a bit more to say about the module, specifically some thoughts on customizations which may or may not be the subject of an additional post.</p>

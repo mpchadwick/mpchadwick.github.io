@@ -19,6 +19,10 @@ a:hover {
 h1, h2, h3, h4, p, pre, blockquote, ul, ol {
     margin-bottom: 1em;
 }
+h1, h2 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
 h2 {
     font-family: "Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Tahoma,sans-serif
 }

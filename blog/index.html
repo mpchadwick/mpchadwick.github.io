@@ -9,7 +9,7 @@ isBlog: true
 <div>
 	<h2>{{post.title}}</a>
 	<h4>Published: {{post.date | date: "%B %-d, %Y"}}</h4>
-	<p>{{post.excerpt}}</p>
+	{{post.excerpt}}
 	<div class="call-to-action-wrapper">
         <a class="call-to-action" href="{{post.url}}">Read more</a>
     </div>

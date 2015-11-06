@@ -16,7 +16,7 @@ a {
 a:hover {
   text-decoration: underline; }
 
-h1, h2, h3, h4, p, pre, blockquote, ul, ol {
+h1, h2, h3, h4, h5, p, pre, blockquote, ul, ol {
   margin-bottom: 1em; }
 
 h1, h2 {

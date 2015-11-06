@@ -22,11 +22,6 @@ needsPicturefill: true
 	<source srcset="{{site.url}}/img/blog/1/1.png" media="(max-width: 600px) and (min-width: 341px)">
 	<image srcset="{{site.url}}/img/blog/1/4.png">
 </picture>
-<span class="picture" data-picture data-alt="Screenshot of Chrome Dev Tools showing a page loading a single YouTube embed">
-	<span data-src="{{site.url}}/img/blog/1/4.png"></span>
-	<span data-src="{{site.url}}/img/blog/1/5.png" data-media="(max-width: 340px)"></span>
-	<span data-src="{{site.url}}/img/blog/1/1.png" data-media="(max-width: 600px) and (min-width: 341px)"></span>
-</span> 
 <p class="caption">Screenshot of Chrome Dev Tools showing a page with a single iframe YouTube embed element</p>
 <p>This issue has come up time and time again. There have been <a href="http://stackoverflow.com/questions/7594960/better-page-load-performance-when-loading-multiple-embedded-youtube-videos" target="_blank" class="inline-link">Stack Overflow Threads</a> about it, <a href="http://www.labnol.org/internet/light-youtube-embeds/27941/" target="_blank" class="inline-link">blog posts</a>, <a href="https://github.com/TjWallas/YouTube-Lite-Embed" target="_blank" class="inline-link">jQuery plugins</a>, and even <a href="http://wordpress.org/plugins/wp-youtube-lyte/" target="_blank" class="inline-link">a WordPress plugin</a> developed specifically to solve this problem. The purpose of this blog post is to do a quick round up of some of the solutions proposed to date, and then share some code I&#39;ve developed to solve this problem.</p>
 <p>My code focuses specifically on solving the issue in a RWD environment, something that isn&#39;t baked in to any other solutions I&#39;ve seen.</p>

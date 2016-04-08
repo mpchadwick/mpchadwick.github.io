@@ -5,13 +5,13 @@ title: Projects
 # Projects
 
 ##Domain Clamp
-Domain Clamp is a SaSS app that monitors domains and SSL certificates and sends alerts when anything is soon to expire.
+Domain Clamp is a SaaS app that monitors domains and SSL certificates and sends alerts when anything is soon to expire.
 
 I was inspired to build Domain Clamp by my work at agencies, which are sometimes blamed for domains and SSL certificates that expire, even when those records are not in their names.
 
 The app is mainly powered by Laravel and gets somehelp from AngularJS on the frontend, although it is not a truly "single page app".
 
-I build the whole thing soup to nuts, including branding, page design, copywriting, front end development and backend development.
+I built the whole thing soup to nuts, including branding, page design, copywriting, front end development and backend development.
 
 <a class="call-to-action" href="https://domainclamp.com">View the app</a>
 
@@ -21,7 +21,7 @@ jQuery.nonSuckyYouTubeEmbed is a jQuery plugin designed to improve front end per
 
 The plugin works by fetching the fetching a thumbnail image and overlaying a play button, and replacing the thumbnail with the embedded YouTube iFrame when only when the user clicks the play button. This is important *always* but especially important for sites the embed multiple videos on a single page.
 
-I also took a deep dive on YouTube embed in [this blog post](http://maxchadwick.xyz/blog/non-sucky-youtube-embed/)
+I also took a deep dive on YouTube embeds in [this blog post](http://maxchadwick.xyz/blog/non-sucky-youtube-embed/)
 
 <a class="call-to-action" href="https://github.com/mpchadwick/jquery.nonSuckyYouTubeEmbed">View on GitHub</a>
 

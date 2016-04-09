@@ -1,6 +1,7 @@
 title: Max Chadwick
 url: http://maxchadwick.xyz
 permalink: /blog/:title
-highlighter: pygments
+highlighter: rouge
 gems:
   - octopress-autoprefixer
+excerpt_separator: <!-- excerpt_separator -->

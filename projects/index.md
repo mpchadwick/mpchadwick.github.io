@@ -4,7 +4,7 @@ title: Projects
 ---
 # Projects
 
-##Domain Clamp
+## Domain Clamp
 Domain Clamp is a SaaS app that monitors domains and SSL certificates and sends alerts when anything is soon to expire.
 
 I was inspired to build Domain Clamp by my work at agencies, which are sometimes blamed for domains and SSL certificates that expire, even when those records are not in their names.

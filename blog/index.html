@@ -7,7 +7,7 @@ isBlog: true
 
 {% for post in site.posts %}
 <div>
-	<h2>{{post.title}}</a>
+	<h2><a href="{{post.url}}">{{post.title}}</a></h2>
 	<h4>Published: {{post.date | date: "%B %-d, %Y"}}</h4>
 	{{post.excerpt}}
 	<div class="call-to-action-wrapper">

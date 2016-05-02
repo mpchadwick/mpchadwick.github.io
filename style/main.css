@@ -382,6 +382,8 @@ blockquote {
 
 .page-wrapper h2 {
   text-align: center; }
+  .page-wrapper h2 a {
+    color: black; }
 
 .navigation-bar {
   background-color: orange;

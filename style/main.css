@@ -369,6 +369,8 @@ blockquote {
   margin-left: auto;
   margin-right: auto;
   margin-top: 60px; }
+  .page-wrapper .post-summary {
+    margin-bottom: 30px; }
 
 .page-wrapper h1 {
   font-size: 32px;
@@ -428,6 +430,13 @@ blockquote {
   margin-top: 50px; }
   .footer a {
     color: gold; }
+
+.paginator {
+  margin-top: 30px; }
+  .paginator__index {
+    float: left; }
+  .paginator__links {
+    float: right; }
 
 body.home {
   background-color: orange;

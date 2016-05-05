@@ -5,8 +5,8 @@ isBlog: true
 ---
 <h1>Blog</h1>
 
-{% for post in site.posts %}
-<div>
+{% for post in paginator.posts %}
+<div class="post-summary">
 	<h2><a href="{{post.url}}">{{post.title}}</a></h2>
 	<h4>Published: {{post.date | date: "%B %-d, %Y"}}</h4>
 	{{post.excerpt}}
@@ -15,3 +15,20 @@ isBlog: true
     </div>
 </div>
 {% endfor %}
+
+<!-- Pagination links -->
+<div class="paginatator">
+    <div class="paginator__index">You are viewing page <em>{{ paginator.page }}</em> of <em>{{ paginator.total_pages }}</em></div>
+        <div class="paginator__links">
+        {% if paginator.previous_page %}
+            <a href="{{ paginator.previous_page_path }}" class="previous">Previous</a>
+        {% endif %}
+
+        {% if paginator.previous_page and paginator.next_page %} | {% endif %}
+
+        {% if paginator.next_page %}
+            <a href="{{ paginator.next_page_path }}" class="next">Next</a>
+        {% endif %}
+    </div>
+    <div class="clear"></div>
+</div>

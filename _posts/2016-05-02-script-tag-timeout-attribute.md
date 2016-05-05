@@ -69,7 +69,7 @@ Simply add your script like this and the browser will cancel the request, if it 
 
 This was my first question when I got the idea for the `timeout` attribute. For example, what would happen if we put this all the way at the top?
 
-{% highlight js %}
+```js
 var loaded = [];
 
 var observer = new MutationObserver(function(mutations) {
@@ -101,7 +101,7 @@ var config = {
 };
 
 observer.observe(document.documentElement, config);
-{% endhighlight %}
+```
 
 Unfortunately, this doesn't work.
 

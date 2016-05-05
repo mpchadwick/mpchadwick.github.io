@@ -1,1 +1,7 @@
 url: http://localhost:4000
+excerpt_separator: <!-- excerpt_separator -->
+markdown: kramdown
+
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge

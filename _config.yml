@@ -1,7 +1,13 @@
 title: Max Chadwick
 url: http://maxchadwick.xyz
 permalink: /blog/:title
-highlighter: rouge
+markdown: kramdown
+
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
 gems:
   - octopress-autoprefixer
+
 excerpt_separator: <!-- excerpt_separator -->

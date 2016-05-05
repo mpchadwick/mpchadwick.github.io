@@ -61,9 +61,9 @@ The idea is simple. Similar to `async` or `defer` you add this attribute to the 
 
 Simply add your script like this and the browser will cancel the request, if it hasn't received a response for the requested asset after the specified duration.
 
-{% highlight js %}
+```
 <script async src="http://example.com/risky.js" timeout="3s"></script>
-{% endhighlight %}
+```
 
 ### Can We Just Write a Timeout.js Polyfill?
 

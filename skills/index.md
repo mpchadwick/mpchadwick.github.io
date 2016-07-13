@@ -20,6 +20,7 @@ Each section is ordered by a blending my self-rated proficiency and my own perso
 - Markdown
 - Ruby
 - Bash
+- Go
 - Java
 
 ### Frameworks & Platforms
@@ -50,4 +51,7 @@ Each section is ordered by a blending my self-rated proficiency and my own perso
 ### Data Stores
 - MySQL
 - Redis
+- InfluxDB
+- Solr
+- Prometheus
 - MongoDB

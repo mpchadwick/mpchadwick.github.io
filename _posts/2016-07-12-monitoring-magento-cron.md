@@ -1,7 +1,7 @@
 ---
 layout: blog-single
 title: "Monitoring the Magento Cron with InfluxDb"
-date: July 11, 2016
+date: July 12, 2016
 comments: true
 noNameInTitle: true
 ---

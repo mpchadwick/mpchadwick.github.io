@@ -12,5 +12,6 @@ kramdown:
 gems:
   - octopress-autoprefixer
   - jekyll-paginate
+  - jekyll-feed
 
 excerpt_separator: <!-- excerpt_separator -->

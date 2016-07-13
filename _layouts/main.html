@@ -8,6 +8,7 @@
     {% if page.needsPicturefill %}
     <script src="scripts/picturefill.min.js"></script>
     {% endif %}
+    {% feed_meta %}
 </head>
 <body{% if page.body-class %} class="{{page.body-class}}"{% endif %}>
     {% if page.include-social %}

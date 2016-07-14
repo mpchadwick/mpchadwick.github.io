@@ -14,5 +14,6 @@ gems:
   - jekyll-paginate
   - jekyll-feed
   - jekyll-sitemap
+  - jekyll-seo-tag
 
 excerpt_separator: <!-- excerpt_separator -->

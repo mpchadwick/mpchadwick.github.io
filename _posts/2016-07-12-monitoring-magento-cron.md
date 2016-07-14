@@ -1,6 +1,7 @@
 ---
 layout: blog-single
 title: "Monitoring the Magento Cron with InfluxDb"
+description: The Magento cron has a nasty habit of getting stuck. Learn how to use the TICK stack to monitor and send alerts when something goes wrong.
 date: July 12, 2016
 comments: true
 noNameInTitle: true

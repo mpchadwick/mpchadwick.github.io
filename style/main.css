@@ -27,7 +27,7 @@ h2 {
   font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif; }
 
 ul, ol {
-  margin-left: 50px; }
+  margin-left: 25px; }
 
 li {
   margin-bottom: 0.25em; }
@@ -45,7 +45,7 @@ pre {
   padding: 10px; }
 
 blockquote {
-  margin-left: 50px;
+  margin-left: 25px;
   border-left: 5px solid orange;
   padding-left: 15px; }
 
@@ -543,6 +543,9 @@ body.home {
   margin-bottom: 30px; }
 
 @media (min-width: 600px) {
+  blockquote, ul, ol {
+    margin-left: 50px; }
+
   .page-wrapper h1 {
     font-size: 48px; }
 

@@ -1,6 +1,7 @@
 ---
 layout: blog-single
 title: "Monitoring Magento FPC Hit Rate"
+description: The faster the site, the better it converts. FPC virtually eliminates the time it takes your server to generate an HTML response. Learn how to track your FPC hit rate.
 date: June 16, 2016
 comments: true
 noNameInTitle: true

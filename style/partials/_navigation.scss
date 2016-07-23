@@ -24,9 +24,8 @@
     color: white;
 }
 .navigation-bar__item-link--active {
-    color: darkslategray;
+    text-decoration: underline;
 }
 .navigation-bar__item-link--active:hover {
-    text-decoration: none;
     cursor: default;
 }

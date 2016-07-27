@@ -11,7 +11,7 @@ Page caching implementations such as Varnish store unique cache entries for each
 
 <!-- excerpt_separator -->
 
-(Good) page caching implementations offer strategies for dealing with this. [Varnish has published some guidelines on how to strip gclid here](https://www.varnish-cache.org/trac/wiki/VCLExampleStripGoogleAdwordsGclidParameter). The thing is, you need to know which parameters to strip ahead of time <sup style="padding-top: 40px;" id="a1">[1](#f1)</sup>. But what happens if the marketing department launches a new "strategic partnership" that's going to drive a boatload of traffic with a new unique query identifier, all without telling the tech team?
+(Good) page caching implementations offer strategies for dealing with this. [Varnish has published some guidelines on how to strip gclid here](https://www.varnish-cache.org/trac/wiki/VCLExampleStripGoogleAdwordsGclidParameter). The thing is, you need to know which parameters to strip ahead of time <sup style="display: inline-block" id="a1">[1](#f1)</sup>. But what happens if the marketing department launches a new "strategic partnership" that's going to drive a boatload of traffic with a new unique query identifier, all without telling the tech team?
 
 In this post I'll show you how to monitor query parameter usage on your site using [Kapcitor UDFs](https://docs.influxdata.com/kapacitor/v0.13/nodes/u_d_f_node/).
 

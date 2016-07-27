@@ -56,12 +56,13 @@ blockquote {
   font-style: italic;
   color: gray; }
 
-*[id]:before {
-  display: block;
-  content: " ";
-  margin-top: -40px;
-  height: 40px;
-  visibility: hidden; }
+*[id] {
+  padding-top: 40px;
+  margin-top: -40px; }
+
+#disqus_thread, #disqus_thread * {
+  padding-top: 0;
+  margin-top: 0; }
 
 @-webkit-keyframes body-background {
   from {

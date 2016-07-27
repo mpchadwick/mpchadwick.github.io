@@ -9,10 +9,11 @@ noNameInTitle: true
 
 Page caching implementations such as Varnish store unique cache entries for each URL. This makes sense...in theory each URL *should* identify a unique resource. However, advertising platforms such as Google Adwords need to be able to track the behavior of users that enter your site through their ads. To do this, they add *their own* unique identifier to the URL (e.g. "gclid", "gdftrk"). If nothing is done about this, traffic entering your site through these platforms will never hit the cache (on the first page load). What would happen if your site experienced a surge of traffic using these unique identifiers? Can your infrastructure handle a sudden burst of requests for uncached pages?
 
+<!-- excerpt_separator -->
+
 (Good) page caching implementations offer strategies for dealing with this. [Varnish has published some guidelines on how to strip gclid here](https://www.varnish-cache.org/trac/wiki/VCLExampleStripGoogleAdwordsGclidParameter). The thing is, you need to know which parameters to strip ahead of time <sup style="padding-top: 40px;" id="a1">[1](#f1)</sup>. But what happens if the marketing department launches a new "strategic partnership" that's going to drive a boatload of traffic with a new unique query identifier, all without telling the tech team?
 
 In this post I'll show you how to monitor query parameter usage on your site using [Kapcitor UDFs](https://docs.influxdata.com/kapacitor/v0.13/nodes/u_d_f_node/).
-<!-- excerpt_separator -->
 
 > **NOTE** The UDF we'll be looking at is written in Go.
 

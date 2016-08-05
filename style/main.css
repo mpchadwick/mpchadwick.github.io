@@ -548,6 +548,21 @@ body.home {
 .about-section {
   margin-bottom: 30px; }
 
+.domain-clamp-ad {
+  background-color: deeppink;
+  margin-bottom: 20px;
+  padding: 20px;
+  color: white;
+  display: block;
+  border-left: 10px solid brown; }
+  .domain-clamp-ad p {
+    margin-bottom: 0; }
+  .domain-clamp-ad a {
+    color: yellow;
+    text-decoration: underline; }
+    .domain-clamp-ad a:hover {
+      background-color: darksalmon; }
+
 @media (min-width: 600px) {
   blockquote, ul, ol {
     margin-left: 50px; }

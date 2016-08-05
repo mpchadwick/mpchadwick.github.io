@@ -1,0 +1,21 @@
+.domain-clamp-ad {
+    background-color: deeppink;
+    margin-bottom: 20px;
+    padding: 20px;
+    color: white;
+    display: block;
+    border-left: 10px solid brown;
+
+    p {
+        margin-bottom: 0;
+    }
+
+    a {
+        color: yellow;
+        text-decoration: underline;
+
+        &:hover {
+            background-color: darksalmon;
+        }
+    }
+}

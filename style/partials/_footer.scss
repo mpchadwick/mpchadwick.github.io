@@ -1,11 +1,13 @@
 .footer {
-    padding-top: 9px;
-    padding-bottom: 9px;
+    padding: 9px;
     color: white;
     text-align: center;
-    width: 100%;
     background-color: cadetblue;
     margin-top: 50px;
+
+    p {
+        margin-bottom: 0;
+    }
 
     a {
         color: gold;

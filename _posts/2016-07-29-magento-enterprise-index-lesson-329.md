@@ -25,8 +25,7 @@ Let me explain why.
 
 Changelog based reindexing will call the `execute` method on the `changelog` `action_model` for each `indexer`. For this investigation, we're concerned about the `cataloginventory_stock` indexer, as the issue we're dealing with is related to inventory being decremented when a product is sold. Let's take a look at `Enterprise_CatalogInventory_Model_Index_Action_Refresh_Changelog::execute()`
 
-```php
-<?php
+```php?start_inline=1
 /**
  * Refresh entities by changelog
  *
@@ -49,8 +48,7 @@ public function execute()
 
 The thing we're interested in is `$this->_selectChangedIds()` which is defined in the grandparent `Enterprise_Index_Model_Action_Abstract()`.
 
-```php
-<?php
+```php?start_inline=1
 protected function _selectChangedIds($maxVersion = null)
 {
     return $this->_getChangedIdsSelect($maxVersion)->query()->fetchAll(Zend_Db::FETCH_COLUMN);
@@ -59,8 +57,7 @@ protected function _selectChangedIds($maxVersion = null)
 
 OK, next let's look at `_getChangedIdsSelect()`
 
-```php
-<?php
+```php?start_inline=1
 protected function _getChangedIdsSelect($maxVersion = null)
 {
     if (empty($maxVersion)) {
@@ -83,8 +80,7 @@ Do you see what might will happen if you `TRUNCATE` the changelog?
 
 The issue is here...
 
-```php
-<?php
+```php?start_inline=1
 ->where('version_id > ?', $this->_metadata->getVersionId())
 ```
 
@@ -102,8 +98,7 @@ You may be saying to yourself..."Wait just one minute, I know there's a changelo
 
 Magento's scheduled changelog cleaning will eventually execute `Enterprise_Mview_Model_Action_Changelog_Clear::execute()` for each changelog. Here's the definition of that method...
 
-```php
-<?php
+```php?start_inline=1
 /**
  * Clear changelog table
  *
@@ -130,4 +125,4 @@ This is especially prevalent outside of production in order to free up space whe
 1. Add self correction to the metadata version id if the maximum version ID in the changelog is lower
 2. Show a warning that the changelog may be "corrupt" in the Index management screen in the admin if this scenario is detected
 
-For now, we're planning to add item number 1 our  [`SomethingDigital_IndexPerf`](https://github.com/sdinteractive/SomethingDigital_EnterpriseIndexPerf/issues/19) module and will be checking for this scenario every time we onboard a new Magento 1 site.
+For now, we're planning to add item number 1 our  [`SomethingDigital_EnterpriseIndexPerf`](https://github.com/sdinteractive/SomethingDigital_EnterpriseIndexPerf/issues/19) module and will be checking for this scenario every time we onboard a new Magento 1 site.

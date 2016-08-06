@@ -1,6 +1,6 @@
 ---
 layout: blog-single
-title: One Weird Trick To Instantly Break usesSource
+title: One "Weird Trick" To Instantly Break usesSource
 description: 
 date: August 05, 2016
 comments: true

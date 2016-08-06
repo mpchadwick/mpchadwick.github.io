@@ -1,7 +1,7 @@
 ---
 layout: blog-single
 title: One "Weird Trick" To Instantly Break usesSource
-description: 
+description: usesSource *seems* like a safe means for determining if an attribute has a source model. I'll show you why that's not actually the case, though.
 date: August 05, 2016
 comments: true
 noNameInTitle: true

@@ -203,3 +203,7 @@ $this->_requestCacheId  = $this->prepareCacheId($this->_requestId);
 ```
 
 This means the for a given URL, there are separate FPC entries for (amongst other things) each customer group / customer segment combination.
+
+<hr><br>
+
+Hope you found these tips helpful. Leave a comment below with any questions or comments.

@@ -4,6 +4,10 @@
     margin-left: auto;
     margin-right: auto;
     margin-top: 60px;
+    p {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+    }
 
     .post-summary {
         margin-bottom: 30px;

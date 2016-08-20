@@ -41,8 +41,13 @@ p, blockquote {
     line-height: 1.4rem;
 }
 pre {
-    white-space: pre-wrap;
+    white-space: nowrap;
     padding: 10px;
+    overflow-x: auto;
+
+    code {
+        white-space: pre;
+    }
 }
 blockquote {
     margin-left: 25px;

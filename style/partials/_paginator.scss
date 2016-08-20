@@ -1,12 +1,19 @@
-.paginator {
+.pagination {
     margin-top: 30px;
-
-    &__index {
-        float: left;
+    @media (max-width: 600px) {
+        text-align: center;
     }
 
-    &__links {
-        float: right;
+    * {
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+
+    a.page {
+        border: 1px solid #dcdcdc;
+        background-color: ghostwhite;
     }
 }
 

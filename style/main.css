@@ -439,12 +439,19 @@ blockquote {
   .footer a {
     color: gold; }
 
-.paginator {
+.pagination {
   margin-top: 30px; }
-  .paginator__index {
-    float: left; }
-  .paginator__links {
-    float: right; }
+  @media (max-width: 600px) {
+    .pagination {
+      text-align: center; } }
+  .pagination * {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 10px;
+    padding-left: 10px; }
+  .pagination a.page {
+    border: 1px solid #dcdcdc;
+    background-color: ghostwhite; }
 
 body.home {
   background-color: orange;

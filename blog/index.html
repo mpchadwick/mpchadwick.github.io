@@ -17,18 +17,28 @@ isBlog: true
 {% endfor %}
 
 <!-- Pagination links -->
-<div class="paginatator">
-    <div class="paginator__index">You are viewing page <em>{{ paginator.page }}</em> of <em>{{ paginator.total_pages }}</em></div>
-        <div class="paginator__links">
-        {% if paginator.previous_page %}
-            <a href="{{ paginator.previous_page_path }}" class="previous">Previous</a>
-        {% endif %}
+{% if paginator.total_pages > 1 %}
+<div class="pagination">
+  {% if paginator.previous_page %}
+    <a class="prev-next" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Prev</a>
+  {% else %}
+    <span>&laquo; Prev</span>
+  {% endif %}
 
-        {% if paginator.previous_page and paginator.next_page %} | {% endif %}
+  {% for page in (1..paginator.total_pages) %}
+    {% if page == paginator.page %}
+      <strong>{{ page }}</strong>
+    {% elsif page == 1 %}
+      <a class="page" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
+    {% else %}
+      <a class="page" href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
+    {% endif %}
+  {% endfor %}
 
-        {% if paginator.next_page %}
-            <a href="{{ paginator.next_page_path }}" class="next">Next</a>
-        {% endif %}
-    </div>
-    <div class="clear"></div>
+  {% if paginator.next_page %}
+    <a class="prev-next" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next &raquo;</a>
+  {% else %}
+    <span>Next &raquo;</span>
+  {% endif %}
 </div>
+{% endif %}

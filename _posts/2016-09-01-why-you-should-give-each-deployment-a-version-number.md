@@ -1,7 +1,7 @@
 ---
 layout: blog-single
 title: Why and How Git Tags Can Save Your Sanity
-description:
+description: If you deploy with git pull origin master, you're gonna have a bad time. Learn what you're missing out on with git tags.
 date: September 01, 2016
 comments: true
 noNameInTitle: true

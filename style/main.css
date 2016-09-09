@@ -63,7 +63,7 @@ blockquote {
   padding-top: 40px;
   margin-top: -40px; }
 
-#disqus_thread, #disqus_thread * {
+#disqus_thread, #disqus_thread *, .twitter-tweet {
   padding-top: 0;
   margin-top: 0; }
 
@@ -418,7 +418,8 @@ blockquote {
   animation-timing-function: linear;
   position: fixed;
   top: 0px;
-  width: 100%; }
+  width: 100%;
+  z-index: 10; }
 
 .navigation-bar__item {
   display: inline-block;

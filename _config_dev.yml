@@ -1,8 +1,9 @@
 url: http://localhost:4000
 excerpt_separator: <!-- excerpt_separator -->
 markdown: kramdown
-paginate: 5
+paginate: 6
 paginate_path: "/blog/:num/"
+future: true
 
 kramdown:
   input: GFM

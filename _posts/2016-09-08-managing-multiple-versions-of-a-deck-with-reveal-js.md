@@ -83,4 +83,4 @@ You can see this in action on the the following deck.
 
 ### Conclusion
 
-Hope that this will help some people find a better approach to managing multiple versions of the same deck. As always, feel free to leave any thoughts in the comments below or reach out to me on [Twitter](http://twitter.com/maxpchadwick).
+I hope that this will help some people find a better approach to managing multiple versions of the same deck. As always, feel free to leave any thoughts in the comments below or reach out to me on [Twitter](http://twitter.com/maxpchadwick).

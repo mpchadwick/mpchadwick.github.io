@@ -40,8 +40,6 @@ public function couponPostAction()
         ->collectTotals()
         ->save();
 
-    $this->_getSession()->addSuccess($this->__('Coupon code was canceled.'));
-
     $this->_goBack();
 }
 ```

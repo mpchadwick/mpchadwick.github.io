@@ -14,9 +14,10 @@ I'm currently in the process of paring down a 60 minute talk to fit into a 30 mi
 
 Aside from [my co-worker Gil's "insightful" idea](https://twitter.com/Intradox/status/772271225376804865) I didn't get much of a response on Twitter [nor did I find much on Google](https://www.google.com/#q=reveal+js+multiple+versions). I did, however, come up with a solution for this that I think it pretty sweet. I figured I'd write up a quick blog post to outline what I did.
 
-> **NOTE** The technique outlined here is relevant if your deck is powered by [Reveal.js](https://github.com/hakimel/reveal.js/).
- 
  <!-- excerpt_separator -->
+
+> **NOTE** The technique outlined here is relevant if your deck is powered by [Reveal.js](https://github.com/hakimel/reveal.js/).
+
  
 ### The Wrong Path
  

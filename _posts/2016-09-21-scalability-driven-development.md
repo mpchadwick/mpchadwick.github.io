@@ -78,4 +78,4 @@ Then, we can wait until the user actually visits the cart and apply the coupon i
 
 ### Conclusion
 
-I hope some of you found this post informative and will keep it in mind as you're planning implementations for new features. The worst thing that can happen is to launch a bright shiny new feature, and then the first time it's actually used in production have the site go down. As always, feel free to leave any thoughts in the comments below or teach out to me on [Twitter](http://twitter.com/maxpchadwick).
+I hope some of you found this post informative and will keep it in mind as you're planning implementations for new features. The worst thing that can happen is to launch a bright shiny new feature, and then the first time it's actually used in production have the site go down. As always, feel free to leave any thoughts in the comments below or reach out to me on [Twitter](http://twitter.com/maxpchadwick).

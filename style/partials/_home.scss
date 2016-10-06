@@ -101,3 +101,9 @@ body.home {
         font-size: 24px;
     }
 }
+.social-icon {
+  fill: #f7f7f7;
+}
+svg:hover .social-icon {
+  fill: #e0e0e0;
+}

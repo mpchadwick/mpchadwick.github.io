@@ -5,31 +5,7 @@ body-class: home
 include-social: true
 ---
 <div class="home-wrapper">
-    <div class="home-social__wrapper">
-        <ul>
-            <li>
-            <a href="https://github.com/mpchadwick">
-                <svg viewBox="0 0 100 100" width="40" height="40">
-                    <use xlink:href="#github"></use>
-                </svg>
-            </a>
-            </li>
-            <li>
-            <a href="https://twitter.com/maxpchadwick">
-                <svg viewBox="0 0 100 100" width="40" height="40">
-                    <use xlink:href="#twitter"></use>
-                </svg>
-            </a>
-            </li>
-            <li>
-            <a href="https://www.linkedin.com/in/mpchadwick">
-                <svg viewBox="0 0 100 100" width="40" height="40">
-                    <use xlink:href="#linkedin"></use>
-                </svg>
-            </a>
-            </li>
-        </ul>
-    </div>
+    {% include social-links.html %}
     <div class="clear"></div>
     <h1 class="home__header">Max Chadwick</h1>
     <h2 class="home__sub-header">Full Stack Developer</h2>

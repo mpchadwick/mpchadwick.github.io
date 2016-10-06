@@ -13,5 +13,31 @@ layout: main
 {{ content }}
 </div>
 <div class="footer">
-<p>The site was built with <a href="http://jekyllrb.com">Jekyll</a> and is hosted on <a href="http://github.com/pages">GitHub Pages</a>. The entire source is available <a href="https://github.com/mpchadwick/mpchadwick.github.io">here</a>.</p>
+    <p>The entire source of this site is <a href="https://github.com/mpchadwick/mpchadwick.github.io">available on Github</a>.</p>
+    <div class="home-social__wrapper">
+        <ul>
+            <li>
+            <a href="https://github.com/mpchadwick">
+                <svg viewBox="0 0 100 100" width="40" height="40">
+                    <use xlink:href="#github"></use>
+                </svg>
+            </a>
+            </li>
+            <li>
+            <a href="https://twitter.com/maxpchadwick">
+                <svg viewBox="0 0 100 100" width="40" height="40">
+                    <use xlink:href="#twitter"></use>
+                </svg>
+            </a>
+            </li>
+            <li>
+            <a href="https://www.linkedin.com/in/mpchadwick">
+                <svg viewBox="0 0 100 100" width="40" height="40">
+                    <use xlink:href="#linkedin"></use>
+                </svg>
+            </a>
+            </li>
+        </ul>
+    </div>
+    <p><strong>&copy; {{ site.time | date: '%Y' }} Max Chadwick</strong></p>
 </div>

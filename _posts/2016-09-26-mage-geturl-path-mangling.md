@@ -3,8 +3,7 @@ layout: blog-single
 title: "Beware: Path mangling introduced by Mage::getUrl()"
 description: In this post we take a look at what actually happens when you call Mage::getUrl and how it can unintentionally mangle your URL.
 date: September 26, 2016
-comments: true
-noNameInTitle: true
+tags: [magento, backend]
 ---
 
 I dealt with a pretty interesting issue today. The symptom can be summarized as follows...

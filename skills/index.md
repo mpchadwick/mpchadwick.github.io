@@ -17,10 +17,10 @@ Each section is ordered by a blending my self-rated proficiency and my own perso
 - SASS
 - HTML
 - CSS
+- Go
 - Markdown
 - Ruby
 - Bash
-- Go
 - Java
 
 ### Frameworks & Platforms

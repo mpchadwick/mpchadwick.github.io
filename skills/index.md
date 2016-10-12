@@ -54,4 +54,5 @@ Each section is ordered by a blending my self-rated proficiency and my own perso
 - InfluxDB
 - Solr
 - Prometheus
+- Elasticsearch
 - MongoDB

@@ -144,4 +144,4 @@ I'm looking to implement a similar auto-update strategy for pngarbage.
 
 ### Conclusion
 
-If you have any comments on auto updating, feel free to drop a note comments below. Of course, as always, you can reach me on [Twitter](http://twitter.com/maxpchadwick) as well.
+If you have any comments on auto-updating, feel free to drop a note comments below. Of course, as always, you can reach me on [Twitter](http://twitter.com/maxpchadwick) as well.

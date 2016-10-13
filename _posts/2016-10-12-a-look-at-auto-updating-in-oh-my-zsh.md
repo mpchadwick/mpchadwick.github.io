@@ -72,10 +72,10 @@ fi
 It then gets the current epoch and checks if the difference in days between the last epoch is greater than `$epoch_target`.
 
 ```bash
-  epoch_diff=$(($(_current_epoch) - $LAST_EPOCH))
-  if [ $epoch_diff -gt $epoch_target ]
-    # Oh boy, updating time
-  fi
+epoch_diff=$(($(_current_epoch) - $LAST_EPOCH))
+if [ $epoch_diff -gt $epoch_target ]
+  # Oh boy, updating time
+fi
 ```
 
  `$epoch_target`  either comes from the `UPDATE_ZSH_DAYS` environment variable (intended to be set in `~/.zshrc`) or defaults to 13.

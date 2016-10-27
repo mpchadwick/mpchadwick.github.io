@@ -52,7 +52,7 @@ There are a number of problems with this approach...
 
 This is a step in the right direction, but ideally I would like the ability to control expiry on a route-by-route basis per [this gist](https://gist.github.com/mpchadwick/0265e75241b7c1440f3521d78472ae43). I'll get to why that is important in point 4.
 
-### 3. Ability to introduce vary cache based on new cookies
+### 3. Ability to create additional cache entries based on custom cookies
 
 **Problem**
 

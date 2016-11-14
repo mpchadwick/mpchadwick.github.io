@@ -13,6 +13,8 @@ A while back I published [a post on improving your full page cache hit rate](htt
 
 Riding on the coattails of [my previous listicle, 5 Enterprise Page Cache Pro Tips](https://maxchadwick.xyz/blog/5-enterprise-pagecache-pro-tips), I decided to publish a post in response. However, I've broadened the subject from "What can Magento do to improve hit rates?" to "What can Magento do to improve the `Enterprise_PageCache` module". Based on my experience working with the module, these are the top 5 missing features that I've identified...
 
+<!-- excerpt_separator -->
+
 ### 1. Query parameter black list
 
 **Problem**

@@ -5,6 +5,7 @@ description: In which I outline the benefits of keeping notes throughout the deb
 date: November 17, 2016
 image: /img/blog/debug-notes/debug-notes-4@1x.jpg
 tags: [thoughts]
+ad: domain-clamp-ad-b.html
 ---
 
 <img

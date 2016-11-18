@@ -9,7 +9,7 @@ ad: domain-clamp-ad-b.html
 ---
 
 <img
-  class="rounded"
+  class="rounded shadow"
   src="/img/blog/debug-notes/debug-notes-4@1x.jpg"
   srcset="/img/blog/debug-notes/debug-notes-4@1x.jpg 1x, /img/blog/debug-notes/debug-notes-4@2x.jpg 2x"
   alt="Taking notes while debugging">
@@ -45,7 +45,7 @@ Typically, I create a Markdown file for each debugging session spent looking int
 Next comes the meat. One thing I often do when debugging is trace through source code to understand code flow. I typically make notes of my findings to refer back to later. They look something like...
 
 <img
-  class="rounded"
+  class="rounded shadow"
   src="/img/blog/debug-notes/debug-notes-code-flow@1x.jpg"
   srcset="/img/blog/debug-notes/debug-notes-code-flow@1x.jpg 1x, /img/blog/debug-notes/debug-notes-code-flow@2x.jpg 2x"
   alt="Noting code flow while debugging">
@@ -78,7 +78,7 @@ In addition to Markdown, I sometimes find spreadsheet is a useful format for kee
 Then, I'll create a new row in the spreadsheet for each alert.
 
 <img
-  class="rounded"
+  class="rounded shadow"
   src="/img/blog/debug-notes/debug-notes-spreadsheet@1x.jpg"
   srcset="/img/blog/debug-notes/debug-notes-spreadsheet@1x.jpg 1x, /img/blog/debug-notes/debug-notes-spreadsheet@2x.jpg 2x"
   alt="Using a spreadsheet to take notes while debugging">

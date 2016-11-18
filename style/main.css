@@ -62,6 +62,9 @@ blockquote {
 .rounded {
   border-radius: 5px; }
 
+.shadow {
+  box-shadow: 0px 0px 12px 3px #c3c3c3; }
+
 *[id] {
   padding-top: 40px;
   margin-top: -40px; }

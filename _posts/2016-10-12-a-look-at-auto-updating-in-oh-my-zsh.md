@@ -11,6 +11,7 @@ Recently I've been working on a little side project called [pngarbage](https://g
 I spent some time thinking about tools I use daily that implement auto-updating. The first one that came to mind is [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh), one of [the most starred repos on Github](https://github.com/search?utf8=%C3%A2%C2%9C%C2%93&q=stars%3A%3E1&type=Repositories&ref=searchresults). If you've used it before you're probably pretty familiar with this screen...
 
 <img
+  class="rounded shadow"
   src="/img/blog/auto-updating/oh-my-zsh-auto-update@1x.jpg"
   srcset="/img/blog/auto-updating/oh-my-zsh-auto-update@1x.jpg 1x, /img/blog/auto-updating/oh-my-zsh-auto-update@2x.jpg 2x"
   alt="oh-my-zsh auto-update prompt">

@@ -1,8 +1,2 @@
 source 'https://rubygems.org'
-gem 'octopress-autoprefixer'
-gem 'pygments.rb'
-gem 'jekyll-paginate'
-gem 'jekyll-seo-tag'
-gem 'jekyll-feed'
-gem 'jekyll-sitemap'
-gem 'jemoji'
+gem 'github-pages', group: :jekyll_plugins

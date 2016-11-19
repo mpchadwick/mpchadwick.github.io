@@ -10,6 +10,9 @@ kramdown:
   input: GFM
   syntax_highlighter: rouge
 
+sass:
+  style: compressed
+
 gems:
   - jekyll-paginate
   - jekyll-feed

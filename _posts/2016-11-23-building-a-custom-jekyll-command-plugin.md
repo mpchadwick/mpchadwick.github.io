@@ -179,6 +179,7 @@ end
 A command that just prints out "Hello" to the terminal is pretty useless, but I'd imagine if you're reading this you're working on something that other people might actually want to use. In order to make your gem available on [RubyGems.org](https://rubygems.org/) you need to update `jekyll-hello.gemspec`. The one that Bundler scaffolded for you contains comments about what you need to fill in. Then use `gem build jekyll-hello.gemspec` to build your gem,
 
 Once built, make sure you've registered for an account at [RubyGems.org](https://rubygems.org/). You'll then be able to push with `gem push jekyll-hello-0.1.0.gem` once you've entered your credentials at the prompt.
+
 ### Conclusion
 
 I hope that this article was helped understand how to build command based Jekyll plugins. If you have any comments, feel free to drop a note comments below. I'm not a ruby expert by any means, so any corrections are appreciated as well. Of course, as always, you can reach me on [Twitter](http://twitter.com/maxpchadwick).

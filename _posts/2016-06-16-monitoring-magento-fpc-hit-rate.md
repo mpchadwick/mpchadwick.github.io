@@ -3,8 +3,7 @@ layout: blog-single
 title: "Monitoring Magento FPC Hit Rate"
 description: The faster the site, the better it converts. FPC virtually eliminates the time it takes your server to generate an HTML response. Learn how to track your FPC hit rate.
 date: June 16, 2016
-comments: true
-noNameInTitle: true
+tags: [monitoring, magento, caching, scaling]
 ---
 
 We've been breaking some new ground (at least from what I can see in my Google searches) at [Something Digital](http://www.somethingdigital.com/)  with the work we've been doing to monitor, and improve, FPC hit rate using `Enterprise_PageCache` on our client's sites. I'll likely publish a few posts related to this topic, but the first thing I wanted to focus on is why, and how, you can track your FPC hit rate.

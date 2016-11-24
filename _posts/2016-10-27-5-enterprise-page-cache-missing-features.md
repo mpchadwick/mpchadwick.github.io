@@ -3,7 +3,7 @@ layout: blog-single
 title: "5 Enterprise_PageCache Missing Features"
 description: What can't Enterprise_PageCache do that it *should* be able to do? This post dives into the module's critical missing features.
 date: October 27, 2016
-tags: [magento, caching]
+tags: [magento, caching, scaling]
 ---
 
 A while back I published [a post on improving your full page cache hit rate](https://maxchadwick.xyz/blog/monitoring-magento-fpc-hit-rate). In a conversation on Twitter, I was asked to provide suggestions on what Magento can do to improve hit rates.

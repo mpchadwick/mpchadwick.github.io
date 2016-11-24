@@ -2,8 +2,7 @@
 layout: blog-single
 title: "[PROPOSAL] Script Tag Timeout Attribute"
 date: May 02, 2016
-comments: true
-noNameInTitle: true
+tags: [thoughts, frontend]
 ---
 
 Marketing `<script>` tags. Some might say they power the internet. 

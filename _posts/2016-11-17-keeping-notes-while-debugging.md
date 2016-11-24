@@ -4,7 +4,7 @@ title: "Keeping Notes While Debugging"
 description: In which I outline the benefits of keeping notes throughout the debugging process.
 date: November 17, 2016
 image: /img/blog/debug-notes/debug-notes-4@1x.jpg
-tags: [thoughts]
+tags: [thoughts, debugging]
 ad: domain-clamp-ad-b.html
 ---
 

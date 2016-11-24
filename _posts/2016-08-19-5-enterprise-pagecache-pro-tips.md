@@ -3,8 +3,7 @@ layout: blog-single
 title: 5 Enterprise_PageCache Pro Tips
 description: 5 Pro Tips for working with Magento 1's Enterprise_PageCache module
 date: August 19, 2016
-comments: true
-noNameInTitle: true
+tags: [magento, caching, scaling]
 ---
 
 I recently gave [a talk on monitoring and improving your full page cache hit rate with `Enterprise_PageCache` at NomadMage](https://nomadmage.com/monitoring-improving-full-page-cachehit-rate-enterprise_pagecache/). The talk dives deep into the internal's of `Enterprise_PageCache`, investigating how requests are saved to and loaded from cache. In this post, I wanted to highlight 5 key aspects of FPC that are revealed in the talk.

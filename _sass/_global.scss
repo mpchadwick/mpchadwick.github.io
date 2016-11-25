@@ -8,6 +8,9 @@ html, body {
 body {
     font-family: Georgia, serif;
     background-color: floralwhite;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
 }
 a {
     text-decoration: none;

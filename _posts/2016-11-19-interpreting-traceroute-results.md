@@ -4,7 +4,7 @@ title: "Interpreting Traceroute Results"
 description: Traceroute finally clicked for me today. Here, I'll share what I learned along the way.
 date: November 19, 2016
 image: /img/blog/traceroute/traceroute-time-goes-down-betwen-hops@1x.jpg
-tags: [tools, shell, sysadmin, debuggin]
+tags: [tools, shell, sysadmin, debugging]
 ad: domain-clamp-ad-b.html
 ---
 

@@ -1,10 +1,13 @@
 .tags {
     .page-wrapper {
+        /* Hack to make sure last element can still show on top */
+        padding-bottom: 500px;
+
         a {
-            color: #ac0780;
+            color: purple;
         }
         ul {
-            margin-bottom: 2em;
+            margin-bottom: 3em;
         }
         li {
             margin-bottom: 1em;

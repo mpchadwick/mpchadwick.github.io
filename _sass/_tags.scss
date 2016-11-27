@@ -1,7 +1,7 @@
 .tags {
     .page-wrapper {
         /* Hack to make sure last element can still show on top */
-        padding-bottom: 500px;
+        padding-bottom: calc(100vh - 320px);
 
         a {
             color: purple;

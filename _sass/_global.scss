@@ -40,8 +40,8 @@ ul > li > ul {
     margin-top: 0.25em;
     margin-bottom: 0.5em;
 }
-p, blockquote {
-    line-height: 1.4rem;
+p, blockquote, li {
+    line-height: 1.5rem;
 }
 pre {
     white-space: nowrap;
@@ -50,6 +50,12 @@ pre {
 
     code {
         white-space: pre;
+        line-height: 1.1rem;
+    }
+}
+.wrap {
+    pre code {
+        white-space: initial;
     }
 }
 blockquote {

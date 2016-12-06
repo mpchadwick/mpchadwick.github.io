@@ -8,7 +8,7 @@ tags: [servers, apache, c]
 ad: domain-clamp-ad-b.html
 ---
 
-[`mod_log_config`](http://httpd.apache.org/docs/current/mod/mod_log_config.html)  provides many useful ["%" directives](http://httpd.apache.org/docs/current/mod/mod_log_config.html#formats) for defining  `CustomLog` formats. In combination with its friend, [`mod_logio`](http://httpd.apache.org/docs/2.4/mod/mod_logio.html), 99% percent of logging use cases are covered. However, one day, you may find that there's something you want to log that is not accessible with the tools Apache provides you. Luckily, you can utilize [Apache's module system](https://httpd.apache.org/docs/2.4/developer/modguide.html) to add your own logging directives. In this post guide, we'll write an Apache module that adds a `%^IH` % directive which records request header size, in bytes.
+[`mod_log_config`](http://httpd.apache.org/docs/current/mod/mod_log_config.html)  provides many useful ["%" directives](http://httpd.apache.org/docs/current/mod/mod_log_config.html#formats) for defining  `CustomLog` formats. In combination with its friend, [`mod_logio`](http://httpd.apache.org/docs/2.4/mod/mod_logio.html), 99% percent of logging use cases are covered. However, one day, you may find that there's something you want to log that is not accessible with the tools Apache provides you. Luckily, you can utilize [Apache's module system](https://httpd.apache.org/docs/2.4/developer/modguide.html) to add your own logging directives. In this guide, we'll write an Apache module that adds a `%^IH` % directive which records request header size, in bytes.
 
 <!-- excerpt_separator -->
 
@@ -520,7 +520,7 @@ Try compiling it.
 
 ### Wait, What?
 
-If you're testing things out at this point, you'll notice something strange. The values aren't correct AND they just keep going up! This is because, per `mod_logio` we need to clean up after ourselves.
+If you're testing things, out at this point, you'll notice something strange. The values aren't correct AND they just keep going up! This is because, per `mod_logio` we need to clean up after ourselves.
 
 In order to do so, we hook into `ap_hook_log_transaction `.
 
@@ -645,4 +645,4 @@ Go ahead and compile that and check your logs. It should be working perfectly!
 
 I hope this guide provided a useful example of how Apache modules can be written to create custom % directives. I've published the code to Github [here](https://github.com/mpchadwick/mod_log_header_size).
 
-I don't claim to be an expert in C by any means, so corrections are comments as certainly appreciated. Feel free to drop a note comments below, or, as always, you can reach me on [Twitter](http://twitter.com/maxpchadwick) as well.
+I don't claim to be an expert in C by any means, so corrections and comments are certainly appreciated. Feel free to drop a note comments below, or, as always, you can reach me on [Twitter](http://twitter.com/maxpchadwick) as well.

@@ -18,7 +18,9 @@ layout: page
 {% endif %}
 {{ content }}
 {% if page.ad != null %}
-    {% include {{page.ad}} %}
+    {% if page.ad != "none" %}
+        {% include {{page.ad}} %}
+    {% endif %}
 {% endif %}
 <div id="disqus_thread"></div>
 <script>

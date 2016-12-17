@@ -4,7 +4,7 @@ title: HTTP Request Header Size Limits
 description: An exploration of the considerations of size limits for HTTP request headers
 date: November 26, 2016
 image:
-tags: [sysadmin, security, debugging]
+tags: [sysadmin, security, debugging, networking]
 ad: domain-clamp-ad-b.html
 ---
 

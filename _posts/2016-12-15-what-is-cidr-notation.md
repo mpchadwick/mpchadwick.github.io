@@ -101,7 +101,7 @@ These are Class A addresses. In this case 104 should be the network and all the 
 
 This is done by providing an IP address separated by a slash, and then (this next part's tricky) the number of bits that reference the network portion of the address when the IP address is written in binary. As mentioned, I'm not going to go into detail on how that is actually calculated, just explain at a high level the purpose of this notation.
  
-### Why Should I Care About This About CIDR Notation?
+### Why Should I Care About CIDR Notation?
  
 If you work in business of keeping applications available online it is good to have some understanding of basic networking concepts. For example, your site may come under attack by a malicious network and you may work with a network engineer to resolve the issue.
 

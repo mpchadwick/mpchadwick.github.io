@@ -111,7 +111,7 @@ I was a little surprised at how few of the blogs had used emoji. After all, blog
 
 Moreover, [emoji has been found to increase open rates in email](http://www.experian.com/blogs/marketing-forward/2012/07/17/thinking-about-using-symbols-in-your-email-subject-lines/) and [engagement on social media](http://www.wordstream.com/blog/ws/2015/11/19/twitter-emoji).
 
-I was interested in the punctuation aspects of emoji usage since [there doens't seem to be a consensus on this subject](http://mentalfloss.com/article/65394/how-do-you-punctuate-around-emoticons-and-emoji). On this site, I've typically been omitting punctuation when using emoji. It was reaffirming to see that most authors feel the same way.
+I was also interested in the punctuation aspects of emoji usage since [there doesn't seem to be a consensus on this subject](http://mentalfloss.com/article/65394/how-do-you-punctuate-around-emoticons-and-emoji). On this site, I've typically been omitting punctuation when using emoji. It was reaffirming to see that most authors feel the same way.
 
 ### Conclusion
 

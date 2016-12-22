@@ -77,11 +77,11 @@ However, there were a number of sites that had only ever used emoji once, despit
 
 The most popular emoji on technical blogs was :smile: (`:smile:`), which was used 39 times. In second place was :+1: (`:+1:`) with 15 uses. Here are the top 5...
 
-- (1.) :smile: (`:smile:`) - 39 uses
-- (2.) :+1: (`:+1:`) - 15 uses
-- (3.) :wink: (`:wink:`) - 9 uses
-- (4.) :grinning: (`:grinning:`) - 8 uses
-- ( 5.) :point_down: (`:point_down:`)  / :blush: (`:blush:`) / :stuck_out_tongue_winking_eye: (`:stuck_out_tongue_winking_eye:`) / :x: (`:x:`) / :grin: (`:grin:`) - 3 uses (TIE)
+1. :smile: (`:smile:`) - 39 uses
+2. :+1: (`:+1:`) - 15 uses
+3. :wink: (`:wink:`) - 9 uses
+4. :grinning: (`:grinning:`) - 8 uses
+5. :point_down: (`:point_down:`)  / :blush: (`:blush:`) / :stuck_out_tongue_winking_eye: (`:stuck_out_tongue_winking_eye:`) / :x: (`:x:`) / :grin: (`:grin:`) - 3 uses (TIE)
 
 ### How Emoji Are Used In Blogs
 

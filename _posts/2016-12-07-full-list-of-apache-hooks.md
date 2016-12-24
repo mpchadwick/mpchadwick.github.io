@@ -1,7 +1,7 @@
 ---
 layout: blog-single
 title: Full List of Apache Hooks
-description: 
+description: Apache hooks all the thing!
 date: December 07, 2016
 image:
 tags: [servers, apache, c]

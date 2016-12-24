@@ -1,7 +1,7 @@
 ---
 layout: blog-single
 title: A Review Of Emoji Usage In Technical Blogs
-description: 
+description: I parsed the source code of hundreds of technical blogs to answer 3 questions. Here, I document my findings.
 date: December 20, 2016
 image:
 tags: [writing]

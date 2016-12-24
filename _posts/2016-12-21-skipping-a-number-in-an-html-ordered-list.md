@@ -1,7 +1,7 @@
 ---
 layout: blog-single
 title: Skipping A Number In An HTML Ordered List
-description: 
+description: Typically ordered lists just go up sequentially, but occasionally you may want to skip a number. Here, I show you how to do that.
 date: December 21, 2016
 image:
 tags: [html]

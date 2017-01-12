@@ -27,8 +27,8 @@ excerpt_separator: <!-- excerpt_separator -->
 
 pre-commit:
   - check: FrontMatterVariableExists
-    variables: ['description', 'image']
+    variables: ['description']
   - check: FrontMatterVariableIsNotDuplicate
     variables: ['description']
   - check: FrontMatterVariableMeetsLengthRequirements
-    variables: ['description', 'title']
+    variables: ['description||165', 'title']

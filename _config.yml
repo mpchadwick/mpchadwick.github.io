@@ -19,6 +19,16 @@ gems:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-seo-tag
+  - jekyll-redirect-from
   - jemoji
+  - jekyll-admin
 
 excerpt_separator: <!-- excerpt_separator -->
+
+pre-commit:
+  - check: FrontMatterVariableExists
+    variables: ['description', 'image']
+  - check: FrontMatterVariableIsNotDuplicate
+    variables: ['description']
+  - check: FrontMatterVariableMeetsLengthRequirements
+    variables: ['description', 'title']

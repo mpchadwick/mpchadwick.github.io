@@ -4,7 +4,7 @@ title: Faster Search With ripgrep
 description: A comparison of ripgrep to grep -r, specifically looking at the Magento 1 and Magento 2 code bases.
 date: December 23, 2016
 image:
-tags: [tools, linux]
+tags: [tools, shell]
 ad: domain-clamp-ad-b.html
 ---
 

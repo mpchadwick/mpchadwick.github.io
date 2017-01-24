@@ -4,7 +4,7 @@ title: MySQL Query Cache Hit Rate
 description: A look at the strategies, means and tools involved in viewing and monitoring your MySQL Query Cache Hit Rate
 date: January 22, 2017
 image: 
-tags: [MySQL, Databases, Monitoring, Scaling]
+tags: [MySQL, databases, monitoring, scaling]
 ad: domain-clamp-ad-b.html
 ---
 

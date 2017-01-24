@@ -54,7 +54,7 @@ function getCertInfo($domain)
 <li><a class="inline-link" href="https://github.com/rfc1036/whois/blob/master/tld_serv_list" target="_blank">From the Debian WHOIS library</li>
 <li><a class="inline-link" href="https://github.com/novutec/WhoisParser/blob/master/Config/whois.ini" target="_blank">From the WhoisParser PHP library</a></li>
 </ul>
-<p><b>Step 2: Parse the response from the WHOIS server:</b> WHOIS libraries use RegEx to parse the hundreds of possible responses. <a class="inline-link" href="https://github.com/weppos/whois/tree/master/lib/whois/record/parser" target="_blank">The parser directory from the Ruby Whois Gem</a> currently has over 200 files in it.</p>
+<p><b>Step 2: Parse the response from the WHOIS server:</b> WHOIS libraries use RegEx to parse the hundreds of possible responses. <a class="inline-link" href="https://github.com/weppos/whois-parser/tree/4806a7c82c155f0cf50c8a01b71b1d42bca0ec66/lib/whois/parsers" target="_blank">The parsers directory from the Ruby Whois Gem</a> currently has over 200 files in it.</p>
 
 <h3>How I&#39;m Handling This For Domain Clamp</h3>
 <p>Since I made the decision to build the app on top of Laravel I naturally began to look for a PHP solution. There are a number of libraries available which range from providing <a class="inline-link" href="https://github.com/regru/php-whois" target="_blank">virtually no parsing functionality</a> to providing <a class="inline-link" href="https://github.com/novutec/WhoisParser" target="_blank">a fairly solid API</a> for interacting with the WHOIS record. Initially, I selected the Novutec library. Things started out smooth, but as I began to test some of the domans I own, I found many cases where the library was not returning the proper WHOIS result.</p>

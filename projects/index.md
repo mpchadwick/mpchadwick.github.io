@@ -46,7 +46,7 @@ I was inspired to build this based on actual frustration I saw merchants having 
 
 ruby-whois-api is a basic Sinatra wrapper for the Ruby WHOIS gem.
 
-My work on Domain Clamp forced me to do [a deep dive on WHOIS parsing](http://maxchadwick.xyz/blog/dealing-with-whois-records/) at which point it was pretty clear that the Ruby gem was the best solution available.
+My work on Domain Clamp forced me to do [a deep dive on WHOIS parsing]({{site.url}}/blog/dealing-with-whois-records) at which point it was pretty clear that the Ruby gem was the best solution available.
 
 ruby-whois-api is a minimal web service that receives domain name and responds with a parsed WHOIS record.
 

@@ -9,7 +9,7 @@ isBlog: true
 <div class="post-summary">
 	<h2><a href="{{post.url}}">{{post.title}}</a></h2>
 	<h4>Published: {{post.date | date: "%B %-d, %Y"}}</h4>
-  {% if post.tags %}
+  {% if post.tags.size > 0 %}
   <div class="tags-list">
     <strong>Tags:</strong>
     <ul>

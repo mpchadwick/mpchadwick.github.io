@@ -52,7 +52,7 @@ One is likely to run into these limits when using cookies to track some attribut
 
 ### What To Do
 
-When contemplating using a cookie to store some piece of information it is important to consider whether that information has an upper bound. If it does not, cookies are a dangerous choice. A good alternative is to use [local storage](todo) to store the data on the user's browser so that it does not need to be transferred back and forth over HTTP.
+When contemplating using a cookie to store some piece of information it is important to consider whether that information has an upper bound. If it does not, cookies are a dangerous choice. A good alternative is to use [local storage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage) to store the data on the user's browser so that it does not need to be transferred back and forth over HTTP.
 
 ### Conclusion
 

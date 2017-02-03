@@ -1,6 +1,6 @@
 ---
 layout: blog-single
-title: Mage::getStoreConfig() in a tight loops
+title: Mage::getStoreConfig() in tight loops
 description: An investigation on the performance of repeatedly calling Mage::getStoreConfig() compared to using local variables.
 date: February 02, 2017
 image: 

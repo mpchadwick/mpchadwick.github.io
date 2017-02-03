@@ -23,8 +23,7 @@ h1, h2, h3, h4, h5, p, pre, blockquote, ul, ol, hr {
     margin-bottom: 1em;
 }
 h1, h2 {
-    overflow: hidden;
-    text-overflow: ellipsis;
+    word-wrap: break-word;
 }
 h2 {
     font-family: "Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Tahoma,sans-serif

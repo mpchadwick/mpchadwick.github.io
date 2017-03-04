@@ -3,10 +3,25 @@ layout: main
 ---
 <div class="navigation-bar">
     <ul>
-        <li class="navigation-bar__item"><a class="navigation-bar__item-link" href="/">Home</a></li>
-        <li class="navigation-bar__item"><a class="navigation-bar__item-link{% if page.title == 'Skills' %} navigation-bar__item-link--active{% endif %}" href="/skills/">Skills</a></li>
-        <li class="navigation-bar__item"><a class="navigation-bar__item-link{% if page.title == 'Projects' %} navigation-bar__item-link--active{% endif %}" href="/projects/">Projects</a></li>
-        <li class="navigation-bar__item"><a class="navigation-bar__item-link{% if page.title == 'Blog' %} navigation-bar__item-link--active{% endif %}" href="/blog/">Blog</a></li>
+        <li class="navigation-bar__item">
+            <a class="navigation-bar__item-link" href="/">Home</a>
+        </li>
+        <li class="navigation-bar__item">
+            <a class="navigation-bar__item-link{% if page.title == 'Skills' %} navigation-bar__item-link--active{% endif %}" href="/skills/">Skills</a>
+        </li>
+        <li class="navigation-bar__item">
+            <a class="navigation-bar__item-link{% if page.title == 'Projects' %} navigation-bar__item-link--active{% endif %}" href="/projects/">Projects</a>
+        </li>
+        <li class="navigation-bar__item">
+            <a class="navigation-bar__item-link{% if page.title == 'Blog' %} navigation-bar__item-link--active{% endif %}" href="/blog/">Blog</a>
+        </li>
+        {% if page.title != 'Search' %}
+        <li class="navigation-bar__item">
+            <a class="navigation-bar__item-link" href="/search/">
+                <svg class="social-icon" width="15" height="22"><use xlink:href="#search"></use></svg>
+            </a>
+        </li>
+        {% endif %}
     </ul>
 </div>
 <div class="page-wrapper">

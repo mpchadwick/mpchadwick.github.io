@@ -1,0 +1,41 @@
+.search {
+    .page-wrapper {
+        .search-form {
+            &__wrapper {
+                margin-bottom: 30px;
+            }
+
+            &__input,
+            &__button {
+                float: left;
+                height: 50px;
+                border: 1px solid #9a9a9a;
+            }
+
+            &__input {
+                padding-left: 10px;
+                width: calc(100% - 50px);
+                border-right: 0;
+                font-size: 18px;
+                font-family: Georgia, serif;
+            }
+
+            &__button {
+                width: 50px;
+                border-left: 0;
+            }
+        }
+
+        a {
+            color: purple;
+        }
+
+        ul {
+            margin-bottom: 3em;
+        }
+
+        li {
+            margin-bottom: 1em;
+        }
+    }
+}

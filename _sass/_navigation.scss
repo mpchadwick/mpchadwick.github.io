@@ -22,6 +22,10 @@
     display: inline-block;
     float: left;
     padding-right: 20px;
+
+    &--search {
+        margin-top: 1px;
+    }
 }
 .navigation-bar__item-link {
     color: white;

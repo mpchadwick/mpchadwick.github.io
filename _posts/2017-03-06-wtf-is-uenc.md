@@ -4,7 +4,7 @@ title: WTF Is uenc?
 description: A look at Magento's uenc parameter
 date: March 06, 2017
 image: 
-tags: [Magento]
+tags: [magento]
 ad: domain-clamp-ad-b.html
 ---
 

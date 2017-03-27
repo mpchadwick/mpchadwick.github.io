@@ -1,9 +1,9 @@
 ---
 layout: blog-single
 title: GROUP-ing a product collection the right way with groupByAttribute
-description:
-date: March 10, 2017
-image: A look at the "right" way to GROUP BY an attribute of a product collection. Works with both flat AND eav!
+description: A look at the "right" way to GROUP BY an attribute of a product collection. Works with both flat AND eav!
+date: March 12, 2017
+image: 
 tags: [magento]
 ad: domain-clamp-ad-b.html
 ---

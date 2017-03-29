@@ -42,7 +42,7 @@ Grafana expects that each of the pieces of data will come from a [field](https:/
 The InfluxDb query to create the annotation from the screenshot above looks like this.
 
 ```
-curl -X POST "http://localhost:8086/write?db=mydb&precision=s" --data-binary 'events title="Deployed v10.2.0",text="<a href='https://github.com'>Release notes</a>",tags="these are the tags" 1470661200'
+curl -X POST "http://localhost:8086/write?db=mydb&precision=s" --data-binary 'events title="Deployed v10.2.0",text="<a href='https://github.com'>Release notes</a>",tags="these,are,the,tags" 1470661200'
 ```
 
 As you can see...

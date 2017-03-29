@@ -1,7 +1,7 @@
 ---
 layout: blog-single
 title: Creating Grafana Annotations with InfluxDb
-description: When reviewing historical data in tools such, it's typically useful to overlay a timeline of key events.  In this post we'll look at creating annotations for your InfluxDb powered Grafana visualizations.
+description: When reviewing historical data it's useful to overlay a timeline of key events. Here, we'll look at creating annotations for InfluxDb Grafana visualizations.
 date: August 08, 2016
 tags: [monitoring, grafana, influxdb]
 ---
@@ -48,7 +48,7 @@ curl -X POST "http://localhost:8086/write?db=mydb&precision=s" --data-binary 'ev
 As you can see...
 
 - Grafana will let you send HTML in the "Text" such as a link to the release notes
-- The tags are separated by spaces
+- The tags are separated by commas
 
 ### Pulling the data into Grafana
 

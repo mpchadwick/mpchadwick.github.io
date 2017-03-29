@@ -33,7 +33,7 @@ From my research it seems that...
 
 1. The title is typically used to provide a heading for the event
 2. The text provides additional information. Linking to release notes is good use case
-3. I'm not sure what the intention of tagging events out be. Perhaps to allow filtering of annotations on a dashboard for certain tags, although I haven't seen that documented anywhere.
+3. I'm not sure what tags are meant to be used for. Perhaps to allow filtering of annotations on a dashboard for certain tags, although I haven't seen that documented anywhere.
 
 ### Writing to data to InfluxDb
 

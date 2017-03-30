@@ -132,7 +132,7 @@ Now from within your jekyll project. you should be able to execute the `jekyll h
 
 
 
-```bash
+```
 $ bundle exec jekyll hello
              Hello!
 ```

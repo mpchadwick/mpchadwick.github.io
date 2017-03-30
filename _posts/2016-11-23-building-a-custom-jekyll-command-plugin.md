@@ -34,8 +34,8 @@ This guide assumes you already have the following set up on your computer...
 
 The `bundle` executable can be used to scaffold a Gem to you. Head to a folder where you normally store your projects and run `bundle gem jekyll-hello`. You should see something like this in your terminal (if this is you're first time you'll have to answer a few questions which will be stored as defaults in `~/.bundle/config`).
 
-```bash
-➜  bundle gem jekyll-hello
+```
+$ bundle gem jekyll-hello
 Creating gem 'jekyll-hello'...
 MIT License enabled in config
       create  jekyll-hello/Gemfile
@@ -50,7 +50,6 @@ MIT License enabled in config
       create  jekyll-hello/LICENSE.txt
       create  jekyll-hello/.travis.yml
 Initializing git repo in /Users/maxchadwick/Projects/jekyll-hello
-➜ 
 ```
 
 ### The Code
@@ -77,8 +76,8 @@ end
 
 You're tree should now look like this...
 
-```bash
-➜  tree
+```
+$ tree
 .
 ├── Gemfile
 ├── LICENSE.txt
@@ -130,6 +129,8 @@ end
 ### Try Out Your New Jekyll Plugin!
 
 Now from within your jekyll project. you should be able to execute the `jekyll hello` sub-command.
+
+
 
 ```bash
 $ bundle exec jekyll hello

@@ -132,7 +132,7 @@ end
 Now from within your jekyll project. you should be able to execute the `jekyll hello` sub-command.
 
 ```bash
-➜  ~/my-jekyll-project jekyll hello
+$ bundle exec jekyll hello
              Hello!
 ```
 

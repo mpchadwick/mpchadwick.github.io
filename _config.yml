@@ -5,6 +5,11 @@ markdown: kramdown
 paginate: 6
 paginate_path: "/blog/:num/"
 author: "Max Chadwick"
+twitter:
+  username: maxpchadwick
+
+author:
+  twitter: maxpchadwick
 
 kramdown:
   input: GFM
@@ -25,10 +30,13 @@ gems:
 
 excerpt_separator: <!-- excerpt_separator -->
 
+# pre-commmit:
+#   - check: SpellCheck
+
 pre-commit:
   - check: FrontMatterVariableExists
     variables: ['description']
   - check: FrontMatterVariableIsNotDuplicate
     variables: ['description']
   - check: FrontMatterVariableMeetsLengthRequirements
-    variables: ['description||165', 'title']
+    variables: ['description||165', 'title||100']

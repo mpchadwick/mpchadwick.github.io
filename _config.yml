@@ -8,8 +8,7 @@ author: "Max Chadwick"
 twitter:
   username: maxpchadwick
 
-author:
-  twitter: maxpchadwick
+author: maxpchadwick
 
 kramdown:
   input: GFM

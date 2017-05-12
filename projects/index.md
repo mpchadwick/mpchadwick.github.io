@@ -59,3 +59,33 @@ My most starred repo on GitHub, this is partially a joke, but I've seen cases wh
 While at Something Digital I had seen a store admin who will remain unnamed upload a 7.2MB image to a blog post, which prompted me to build this...
 
 <a class="call-to-action" href="https://github.com/mpchadwick/Mpchadwick_BigAssImageWarning">View on GitHub</a>
+
+---
+
+## Open Source Contributions
+
+I like to contribute back to the tools I use. Here are some of my open source contributions...
+
+### PHP
+
+- [Add Auto Expiry Feature to Redis cache backend library](https://github.com/colinmollenhour/Cm_Cache_Backend_Redis/pull/111)
+- [Fix timeout so that it can actually be configured in Redis session library](https://github.com/colinmollenhour/Cm_RedisSession/pull/86)
+- [Allow passing arguments to `<options>` methods in Magento Grid Control module](https://github.com/magento-hackathon/GridControl/pull/19)
+
+### JavaScript
+
+- [Refactor bindRemoveButtons for improved performance in Magento 2](https://github.com/magento/magento2/pull/1144)
+- [Add a filter to hide silenced alerts in Prometheus Alert Manager](https://github.com/prometheus/alertmanager/pull/319)
+- [Add option to show percentage in legend to Grafana Piechart Panel plugin](https://github.com/grafana/piechart-panel/pull/41)
+
+### Go
+
+- [Move SMTP auth to the config file](https://github.com/prometheus/alertmanager/pull/308)
+
+### Ruby
+
+- [Add .xyz parser to whois gem](https://github.com/weppos/whois/pull/460)
+
+### DevOps
+
+- [Allow vagrant up with no sites in Laravel Homestead](https://github.com/laravel/homestead/pull/326)

@@ -80,7 +80,8 @@ I like to contribute back to the tools I use. Here are some of my open source co
 
 ### Go
 
-- [Move SMTP auth to the config file](https://github.com/prometheus/alertmanager/pull/308)
+- [Add ability to log alerts in Chronograf](https://github.com/influxdata/chronograf/pull/1477)
+- [Move SMTP auth to the config file in Prometheus Alertmanager](https://github.com/prometheus/alertmanager/pull/308)
 
 ### Ruby
 

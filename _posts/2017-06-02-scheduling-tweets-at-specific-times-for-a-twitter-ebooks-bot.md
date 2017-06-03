@@ -1,6 +1,6 @@
 ---
 layout: blog-single
-title: Scheduling tweets at specific time for twitter_ebooks bots
+title: Scheduling tweets at specific times for twitter_ebooks bots
 description: A guide on how to scheduler your twitter_ebooks bot to tweet on a specific schedule
 date: June 02, 2017
 image: /img/blog/twitter-bot-cron/640px-Bahnsteiguhr.jpg

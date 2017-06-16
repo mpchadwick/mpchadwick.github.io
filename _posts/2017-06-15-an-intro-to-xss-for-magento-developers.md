@@ -14,7 +14,7 @@ XSS is an abbreviation which stands for "Cross Site Scripting". It is a classifi
 
 ### The Idea
 
-The idea behind XSS, is that an attacker executes unauthorized malicious scripts in the context of another user's session. I find the name "cross site scripting" a bit misleading as there is not always a "cross site" involved in the attack. Often the malicious scripting is handled inline, rather than via a `<script>` loaded from an external site ("cross site"). As such, I prefer the name "script injection". However, this type of attack is universally known as XSS, so that's the name I'll use here.
+The idea behind XSS, is that an attacker executes unauthorized malicious scripts in the context of another user's session. I find the name "cross site scripting" a bit misleading as there is not always a "cross site" involved in the attack. Often the malicious scripting is handled inline, rather than a `<script>` referencing an external site ("cross site"). As such, I prefer the name "script injection". However, this type of attack is universally known as XSS, so that's the name I'll use here.
 
 ### An Example
 
@@ -62,13 +62,13 @@ Reflected XSS, on the other hand, is XSS that happens as a result of data in the
   srcset="/img/blog/magento-xss-intro/reflected-xss@1x.jpg 1x, /img/blog/magento-xss-intro/reflected-xss@2x.jpg 2x"
   alt="Magento Reflected XSS">
 
-Without any protection against XSS this malicious script will be executed, and will send your frontend cookie to evil.com. The attacker could then log in as you and place fraudlent orders using your saved credit card.
+Without any protection against XSS this malicious script will be executed, and will send your frontend cookie to evil.com. The attacker could then gain access to your account and place fraudlent orders using your saved credit card.
 
 While reflected XSS is not good, stored XSS is typically considered more severe as the attacker does not need to trick the victim into taking a specific action.
 
 ### The Solution
 
-Their are two solutions for XSS, input validation and output escaping. For example, Magento could look at the search term, see the `<script>` tag any reject is as invalid.
+There are two solutions for XSS, input validation and output escaping. For example, Magento could look at the search term, see the `<script>` tag any reject is as invalid.
 
 In this example, however, search queries including the string \<script> **are** considered valid queries by Magento. So the next solution is output escaping.
 

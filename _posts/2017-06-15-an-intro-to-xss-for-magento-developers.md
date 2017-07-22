@@ -4,7 +4,7 @@ title: An Intro To XSS For Magento Developers
 description: In this post, I cover the basics of XSS, specifically as they relate to Magento
 date: June 15, 2017
 image: /img/blog/magento-xss-intro/magento-xss@2x.jpg
-tags: [magento, security]
+tags: [Magento, Security]
 ad: domain-clamp-ad-b.html
 ---
 

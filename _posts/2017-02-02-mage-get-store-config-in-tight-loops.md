@@ -4,7 +4,7 @@ title: Mage::getStoreConfig() in tight loops
 description: An investigation on the performance of repeatedly calling Mage::getStoreConfig() compared to using local variables.
 date: February 02, 2017
 image: 
-tags: [magento, scaling, performance]
+tags: [Magento, Scaling, Performance]
 ad: domain-clamp-ad-b.html
 ---
 

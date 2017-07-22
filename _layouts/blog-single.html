@@ -8,7 +8,7 @@ layout: page
   <strong>Tags:</strong>
   <ul>
     {% for tag in page.tags %}
-    <li><a href="/tags/#{{tag}}">{{ tag | capitalize }}</a>
+    <li><a href="/tags/#{{ tag | slugify }}">{{ tag }}</a>
     {% endfor %}
   </ul>
 </div>

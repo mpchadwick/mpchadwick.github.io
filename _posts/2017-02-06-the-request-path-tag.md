@@ -4,7 +4,7 @@ title: Magento's REQUEST_PATH FPC Tag
 description: A look at the REQUEST_PATH tag, which is employed by Magento's Enterprise_PageCache module.
 date: February 06, 2017
 image: 
-tags: [magento, caching]
+tags: [Magento, Caching]
 ad: domain-clamp-ad-b.html
 ---
 

@@ -3,7 +3,7 @@ layout: blog-single
 title: One "Weird Trick" To Instantly Break usesSource
 description: usesSource *seems* like a safe means for determining if an attribute has a source model. I'll show you why that's not actually the case, though.
 date: August 05, 2016
-tags: [magento, debugging]
+tags: [Magento, Debugging]
 ---
 
 As you might know, Magento features several frontend input types for catalog attributes. For example the "New From Date" attribute, is stored as `DATETIME` in the `catalog_product_entity_datetime` table, whereas the product's "Name" is stored as `VARCHAR(255)` in the `catalog_product_entity_varchar` table.

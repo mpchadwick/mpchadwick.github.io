@@ -4,7 +4,7 @@ title: Against List View
 description: Magento's list view feature is useless. Here I'll explain why, and show you how to turn it off.
 date: March 01, 2017
 image: 
-tags: [thoughts, magento]
+tags: [Thoughts, Magento]
 ad: domain-clamp-ad-b.html
 ---
 

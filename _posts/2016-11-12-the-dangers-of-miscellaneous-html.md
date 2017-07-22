@@ -3,7 +3,7 @@ layout: blog-single
 title: "The Dangers of \"Miscellaneous HTML\""
 description: A discussion on the dangers of globally rendering any content from a text area in the admin
 date: November 12, 2016
-tags: [magento, security]
+tags: [Magento, Security]
 ---
 
 Recently, I've been giving some thought to the risks associated with the "Miscellaneous HTML" and "Scripts and Style Sheets" (a.k.a. "Miscellaneous Scripts" in Magento 1) features in Magento. For those who don't know, these are two text fields that accept any arbitrary input which is then rendered globally in the footer or header (respectively).

@@ -4,7 +4,7 @@ title: Accessing the admin front name programmatically in Magento 2
 description: Here I'll show you how programmatically resolve the admin front name in Magento 2.
 date: March 23, 2017
 image: 
-tags: [magento 2]
+tags: [Magento 2]
 ad: domain-clamp-ad-b.html
 ---
 

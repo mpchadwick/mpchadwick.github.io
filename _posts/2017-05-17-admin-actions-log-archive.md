@@ -4,7 +4,7 @@ title: Admin Action Logs Archive
 description: A look at how Magento handles admin actions logging.
 date: May 17, 2017
 image: /img/blog/admin-actions-log-archive/magento2-admin-actions-log-report@2x.jpg
-tags: [magento]
+tags: [Magento]
 ad: domain-clamp-ad-b.html
 ---
 

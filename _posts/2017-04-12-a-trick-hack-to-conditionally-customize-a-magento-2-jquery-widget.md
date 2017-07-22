@@ -4,7 +4,7 @@ title: A <strike>Trick</strike> Hack To Conditionally Customize A Magento 2 jQue
 description: Documenting my struggles conditionally customizing an M2 jQuery widget
 date: April 12, 2017
 image:
-tags: [magento 2]
+tags: [Magento 2]
 ad: domain-clamp-ad-b.html
 ---
 

@@ -4,7 +4,7 @@ title: What Is CIDR Notation?
 description: A review of what CIDR notation is and a discussion about why it's a useful concept to understand for application developers.
 date: December 15, 2016
 image:
-tags: [networking]
+tags: [Networking]
 ad: domain-clamp-ad-b.html
 ---
 

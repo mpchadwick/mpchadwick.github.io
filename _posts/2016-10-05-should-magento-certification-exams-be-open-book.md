@@ -3,7 +3,7 @@ layout: blog-single
 title: "Should Magento Certification Exams Be \"Open Book?\""
 description: In this post we take a look at community opinion on this question, and then I voice my own.
 date: October 05, 2016
-tags: [magento, thoughts]
+tags: [Magento, Thoughts]
 ---
 
 I recently obtained [my first Magento certification](https://www.magentocommerce.com/certification/directory/dev/1629453/), passing the Certified Developer exam. I had taken the exam a year and a half prior and didn't pass. I'd been doing Magento development professionally for nearly 18 months at that point.

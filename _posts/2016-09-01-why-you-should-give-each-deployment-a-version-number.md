@@ -3,7 +3,7 @@ layout: blog-single
 title: Why and How Git Tags Can Save Your Sanity
 description: If you deploy with git pull origin master, you're gonna have a bad time. Learn what you're missing out on with git tags.
 date: September 01, 2016
-tags: [thoughts, tools, git]
+tags: [Thoughts, Tools, Git]
 ---
 
 I want to talk to you about tags in git. If you're already using them great! You may not need to read this post (although you're of course welcome to). I'm guessing, however, that there are a good number of you who aren't. If you fall into the latter category, read through the below to find out what you're missing out on.

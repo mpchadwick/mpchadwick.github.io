@@ -3,7 +3,7 @@ layout: blog-single
 title: "Magento Enterprise_Index Lesson #329 - Don't TRUNCATE the _cl tables"
 description: TRUNCATE-ing the _cl tables can permanently break Magento Enterprise partial reindexing. I'll show you why that happens, and what you can do about it.
 date: July 29, 2016
-tags: [magento, debugging]
+tags: [Magento, Debugging]
 ---
 
 I've been looking into a problem recently that was reported by the client as follows...

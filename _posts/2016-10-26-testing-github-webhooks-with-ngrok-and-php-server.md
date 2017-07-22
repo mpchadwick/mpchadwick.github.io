@@ -3,7 +3,7 @@ layout: blog-single
 title: "[Screencast] Testing GitHub Webhooks with Ngrok and PHP's built-in web server"
 description: We take a look at how Ngrok can be used to forward Github webhooks to PHP's built-in server, running on localhost.
 date: October 26, 2016
-tags: [tools]
+tags: [Tools]
 ---
 
 I recently heard about [Ngrok on The Changelog podcast](http://5by5.tv/changelog/210). It sounded cool at the time, although I wasn't exactly sure what I would need it for.

@@ -4,7 +4,7 @@ title: Why Local Profiling Alone Is Insufficient For Performance Optimization
 description: If you just profile your code locally, you're sure to miss something. In this post I'll tell you what you _should_ be doing any why.
 date: January 03, 2017
 image: /img/blog/why-local-profiling-alone-is-insufficient-for-performance-optimization/new-relic@1x.jpg
-tags: [thoughts, backend, scaling]
+tags: [Thoughts, Backend, Scaling]
 ad: domain-clamp-ad-b.html
 ---
 

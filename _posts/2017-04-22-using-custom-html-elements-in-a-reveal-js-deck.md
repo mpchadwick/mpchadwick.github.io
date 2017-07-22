@@ -4,7 +4,7 @@ title: Using Custom HTML Elements In A Reveal.js Deck
 description: A look at how I used custom HTML elements to eliminate repetition in a reveal.js deck
 date: April 22, 2017
 image: /img/blog/custom-html-elements-reveal-js/card.jpg
-tags: [frontend]
+tags: [Frontend]
 ad: domain-clamp-ad-b.html
 ---
 

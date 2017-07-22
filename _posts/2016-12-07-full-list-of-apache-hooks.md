@@ -4,7 +4,7 @@ title: Full List of Apache Hooks
 description: Apache hooks all the thing!
 date: December 07, 2016
 image:
-tags: [servers, apache, c]
+tags: [Servers, Apache, C]
 ad: none
 ---
 

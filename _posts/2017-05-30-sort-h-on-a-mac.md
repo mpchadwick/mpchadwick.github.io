@@ -4,7 +4,7 @@ title: sort -h on a Mac
 description: Out-of-the-box Mac does not support the -h flag for the sort command. Here, I'll show you how to deal with that.
 date: May 30, 2017
 image: /img/blog/sort-h-on-a-mac/sort-h-on-a-mac.jpg
-tags: [tools, shell]
+tags: [Tools, Shell]
 ad: domain-clamp-ad-b.html
 ---
 

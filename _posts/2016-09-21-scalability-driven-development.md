@@ -3,7 +3,7 @@ layout: blog-single
 title: Scalability Driven Development
 description: In this post I discuss how to approach a problem with from an SDD (Scalability Driven Development) mindset.
 date: September 21, 2016
-tags: [thoughts, scaling]
+tags: [Thoughts, Scaling]
 ---
 
 As software developers in the present day, we hear about all different kinds of approaches to writing code which end in "DD". You've got [TDD](https://en.wikipedia.org/wiki/Test-driven_development), [BDD](https://en.wikipedia.org/wiki/Behavior-driven_development), [DDD](https://en.wikipedia.org/wiki/Domain-driven_design), [FDD](https://en.wikipedia.org/wiki/Feature-driven_development), [ATDD](https://en.wikipedia.org/wiki/Acceptance_test%E2%80%93driven_development) and probably more. While each of these philosophies has merits of it's own, in this article, I want to outline yet another approach for writing code that ends in DD which I'm dubbing SDD (Scalability Driven Development).

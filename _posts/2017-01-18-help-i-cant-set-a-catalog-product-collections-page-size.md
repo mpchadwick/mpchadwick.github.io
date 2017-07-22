@@ -4,7 +4,7 @@ title: Help! I Can't Set A Catalog Product Collection's Page Size
 description: I recently ran into an issue where I was unable to set the page size on a product collection. Here I outline the issue I ran into.
 date: January 18, 2017
 image: 
-tags: [magento]
+tags: [Magento]
 ad: domain-clamp-ad-b.html
 ---
 

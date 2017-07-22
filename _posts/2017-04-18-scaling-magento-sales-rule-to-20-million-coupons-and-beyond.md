@@ -4,7 +4,7 @@ title: Scaling Magento's SalesRule Module to Handle 20 Million Coupons and Beyon
 description: A look at how we cut 99% of the time resolved to the discount for a given coupon code in a database with 20 million coupon codes.
 date: April 18, 2017
 image: 
-tags: [magento, scaling, performance]
+tags: [Magento, Scaling, Performance]
 ad: domain-clamp-ad-b.html
 ---
 

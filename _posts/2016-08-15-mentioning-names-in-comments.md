@@ -3,7 +3,7 @@ layout: blog-single
 title: Mentioning People (by Name) in Comments
 description: A rant in which I consider the merits (and downfalls) of mentioning people, by name, in source code comments
 date: August 15, 2016
-tags: [thoughts]
+tags: [Thoughts]
 ---
 
 When commenting code, the most important thing to do is explain *why* the code exists. Anyone can figure out *what* the code does, but, other than the individuals involved in the decision that lead to the implementation, no one else will know the reason. 

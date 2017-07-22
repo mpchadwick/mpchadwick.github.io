@@ -4,7 +4,7 @@ title: Consuming Multiple Archives Into A Single Model For A twitter_ebooks Bot
 description: How to built a model for your twitter_ebooks bot using multiple archives
 date: May 25, 2017
 image: /img/blog/twitter-bot-multiple-archives-single-model/twitter_bot_code.jpg
-tags: [twitter bot]
+tags: [Twitter Bot]
 ad: domain-clamp-ad-b.html
 ---
 

@@ -2,7 +2,7 @@
 layout: blog-single
 title: Massive Magento Attributes
 date: March 27, 2015
-tags: [magento, frontend]
+tags: [Magento, Frontend]
 ---
 
 <p>Magento is <a class="inline-link" href="http://stackoverflow.com/questions/1639213/why-is-magento-so-slow">often criticized</a> for being slow. I won&#39;t lie, the first time I used Magento that was my reaction as well. But after more than a year working at a <a class="inline-link" href="http://www.somethingdigital.com/">Magento Gold Solution Partner</a> I&#39;ve learned that with the right hardware, and software, Magento can run rather smoothly...most of the time.</p>

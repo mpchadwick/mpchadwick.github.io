@@ -4,7 +4,7 @@ title: How Partial Reindexing Schedule Impacts Page Cache Hit Rate
 description: A look at how the schedule at which Magento's changelog based partial reindexing runs is directly tied to page cache hit rate.
 date: January 30, 2017
 image: 
-tags: [magento, scaling, caching]
+tags: [Magento, Scaling, Caching]
 ad: domain-clamp-ad-b.html
 ---
 

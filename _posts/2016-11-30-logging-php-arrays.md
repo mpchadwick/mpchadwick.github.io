@@ -4,7 +4,7 @@ title: Logging PHP Arrays
 description: Or, why print_r is the _wrong_ way to log an array.
 date: November 30, 2016
 image:
-tags: [PHP, sysadmin, debugging]
+tags: [PHP, Sysadmin, Debugging]
 ad: domain-clamp-ad-b.html
 ---
 

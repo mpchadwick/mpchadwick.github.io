@@ -3,7 +3,7 @@ layout: blog-single
 title: "Using Kapacitor UDFs to monitor URL query parameter usage"
 description: Query parameters such as gclid can negatively impact page cache hit rate. Learn how to monitor their usage with Kapacitor UDFs.
 date: July 26, 2016
-tags: [monitoring, scaling, influxdb, kapacitor, golang]
+tags: [Monitoring, Scaling, InfluxDB, Kapacitor, Go]
 ---
 
 Page caching implementations such as Varnish store unique cache entries for each URL. This makes sense...in theory each URL *should* identify a unique resource. However, advertising platforms such as Google Adwords need to be able to track the behavior of users that enter your site through their ads. To do this, they add *their own* unique identifier to the URL (e.g. "gclid", "gdftrk"). If nothing is done about this, traffic entering your site through these platforms will never hit the cache (on the first page load). What would happen if your site experienced a surge of traffic using these unique identifiers? Can your infrastructure handle a sudden burst of requests for uncached pages?

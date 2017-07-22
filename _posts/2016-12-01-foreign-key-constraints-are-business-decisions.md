@@ -4,7 +4,7 @@ title: Foreign Key Constraints Are Business Decisions
 description: Foreign Keys Constraints seem like a technical consideration at first glance, however, as I'll explain, their usage has business implications that need to be considered.
 date: December 01, 2016
 image:
-tags: [databases, thoughts]
+tags: [Databases, Thoughts]
 ad: domain-clamp-ad-b.html
 ---
 

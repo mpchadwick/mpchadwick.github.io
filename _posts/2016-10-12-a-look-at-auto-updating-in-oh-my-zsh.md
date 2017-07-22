@@ -3,7 +3,7 @@ layout: blog-single
 title: "Auto-updating software: Diving into oh-my-zsh"
 description: In this post we take a look at community opinion on this question, and then I voice my own.
 date: October 12, 2016
-tags: [shell, thoughts]
+tags: [Shell, Thoughts]
 ---
 
 Recently I've been working on a little side project called [pngarbage](https://github.com/mpchadwick/pngarbage). It's a command line tool for scanning webpages and identifying image bloat. The tool is written in Go which allows me to distribute a single binary with no dependencies. I'm just in the infancy of the project and plan on (ok...hope to be) adding a bunch of new features. With that in mind, one thing I've been thinking about recently is auto-updating strategies.

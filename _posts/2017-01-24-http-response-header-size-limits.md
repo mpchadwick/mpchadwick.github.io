@@ -4,7 +4,7 @@ title: HTTP Response Header Size Limits
 description: A dive into the HTTP response header size limits, looking at the various places along the way that one can run into these types of limitations.
 date: January 24, 2017
 image: 
-tags: [sysadmin, security, debugging, networking]
+tags: [Sysadmin, Security, Debugging, Networking]
 ad: domain-clamp-ad-b.html
 ---
 

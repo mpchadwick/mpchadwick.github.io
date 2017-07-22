@@ -4,7 +4,7 @@ title: Building A Custom Jekyll Command Plugin
 description: A guide for building custom Jekyll sub-command plugins
 date: November 23, 2016
 image:
-tags: [jekyll, ruby]
+tags: [Jekyll, Ruby]
 ad: domain-clamp-ad-b.html
 ---
 

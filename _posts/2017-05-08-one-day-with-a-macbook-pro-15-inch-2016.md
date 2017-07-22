@@ -4,7 +4,7 @@ title: One Day With A MacBook Pro 15-Inch 2016
 description: My review of the MacBook Pro 2016, after one day of usage
 date: May 08, 2017
 image: /img/blog/macbook-pro-2016/macbook-pro.jpg
-tags: [thoughts]
+tags: [Thoughts]
 ad: domain-clamp-ad-b.html
 ---
 

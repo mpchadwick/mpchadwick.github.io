@@ -4,7 +4,7 @@ title: Send A Kapacitor Alert If No Data Is Received
 description: Here, I show you how to get an alert if InfluxDb is not receiving data
 date: May 23, 2017
 image: /img/blog/kapacitor-alert-if-no-data/configuring-a-deadman-alert-in-chronograf@2x.jpg
-tags: [monitoring, kapacitor, influxdb]
+tags: [Monitoring, Kapacitor, InfluxDB]
 ad: domain-clamp-ad-b.html
 ---
 

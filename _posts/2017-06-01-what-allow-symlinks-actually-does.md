@@ -4,7 +4,7 @@ title: What Magento's "Allow Symlinks" Setting Actually Does
 description: A look at what the "Allow Symlinks" setting in Magento actually does
 date: June 01, 2017
 image: /img/blog/what-allow-symlinks-actually-does/magento-1-allow-symlinks-setting.jpg
-tags: [magento]
+tags: [Magento]
 ad: domain-clamp-ad-b.html
 ---
 

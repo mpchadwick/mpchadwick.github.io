@@ -4,7 +4,7 @@ title: URL Based Apache Directives
 description: A look at how to configure Apache directives for certain URLs
 date: February 27, 2017
 image: 
-tags: [apache]
+tags: [Apache]
 ad: domain-clamp-ad-b.html
 ---
 

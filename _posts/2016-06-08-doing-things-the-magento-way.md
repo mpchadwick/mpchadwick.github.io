@@ -3,7 +3,7 @@ layout: blog-single
 title: "Some Things Should Just Be Done \"The Magento Way\""
 date: June 08, 2016
 date: June 16, 2016
-tags: [magento, thoughts, debugging]
+tags: [Magento, Thoughts, Debugging]
 ---
 
 Working at a Magento consultancy, I have the privilege of interacting with a plethora of merchants that run their businesses on Magento. One aspect of this that never gets old is all the things merchants think should function differently than how Magento thinks they should function[1]. Here is just a short list of things I've encountered...

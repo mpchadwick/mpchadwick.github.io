@@ -4,7 +4,7 @@ title: Understanding How A Magento 1 Module Works
 description: In which I document how to review and understand how Magento 1 modules work
 date: January 11, 2017
 image: 
-tags: [magento]
+tags: [Magento]
 ad: domain-clamp-ad-b.html
 ---
 

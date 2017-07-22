@@ -4,7 +4,7 @@ title: Magento's "Use HTTP Only" Cookie Setting
 description: An investigation into Magento's "Use HTTP Only" cookie setting.
 date: March 08, 2017
 image: 
-tags: [magento, security]
+tags: [Magento, Security]
 ad: domain-clamp-ad-b.html
 ---
 

@@ -4,7 +4,7 @@ title: Aspell and Curly Quotes
 description: 
 date: January 13, 2017
 description:  I spent a while trying to figure out the best way to deal with the issues aspell has with curly quotes. Here I reveal my conclusions.
-tags: [shell, tools]
+tags: [Shell, Tools]
 ad: domain-clamp-ad-b.html
 ---
 

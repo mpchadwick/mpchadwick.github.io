@@ -4,7 +4,7 @@ title: Writing An Apache Module To Add Custom "%" Directives
 description: A guide on writing a custom Apache module which adds a % directive to record request header size.
 date: December 05, 2016
 image:
-tags: [servers, apache, c]
+tags: [Servers, Apache, C]
 ad: domain-clamp-ad-b.html
 ---
 

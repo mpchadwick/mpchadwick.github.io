@@ -2,7 +2,7 @@
 layout: blog-single
 title: Scaling Throughput to Magento’s Search Results Page
 date: April 07, 2016
-tags: [magento, scaling]
+tags: [Magento, Scaling]
 ---
 
 In my work at [Something Digital](http://somethingdigital.com/) I’ve recently taken a deep dive into profiling and improving performance, at scale, of the search results page (`/catalogsearch/result/index`). In our case, we have a client whose traffic profile is very search heavy, and ran into performance issues due to a traffic sure to that route. The investigation was very interesting, and I thought it would be beneficial to document some of the key findings here.

@@ -8,7 +8,7 @@ body-class: tags
 
 {% for tag in site.tags %}
     {% assign t = tag | first %}
-    <h2 id="{{ t }}">{{ t | capitalize }}</h2>
+    <h2 id="{{ t | slugify }}">{{ t }}</h2>
     <ul>
     {% for post in site.posts %}
         {% if post.tags contains t %}

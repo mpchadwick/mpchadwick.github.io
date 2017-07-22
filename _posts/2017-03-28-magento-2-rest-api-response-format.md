@@ -4,7 +4,7 @@ title: Magento 2 REST API Response Formats
 description: A dive into Magento 2's REST API implementation to understand how response format is negotiated.
 date: March 28, 2017
 image:
-tags: [magento 2]
+tags: [Magento 2]
 ad: domain-clamp-ad-b.html
 ---
 

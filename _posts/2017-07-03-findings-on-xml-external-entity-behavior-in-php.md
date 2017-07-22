@@ -4,7 +4,7 @@ title: Findings on XML External Entity Behavior in PHP
 description: In which I document my experience testing XML External Entity loading across a slew of PHP environments
 date: July 03, 2017
 image: /img/blog/xxe-test-php/xxe-test.jpg
-tags: [security, PHP]
+tags: [Security, PHP]
 ad: domain-clamp-ad-b.html
 ---
 

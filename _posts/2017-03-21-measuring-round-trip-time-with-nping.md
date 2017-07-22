@@ -4,7 +4,7 @@ title: Measuring round-trip time with nping
 description: ping sends ICMP packets and can't get through many firewalls. nping is a part of the Nmap security scanner and can send TCP packets to a port of your choosing.
 date: March 21, 2017
 image: 
-tags: [networking]
+tags: [Networking]
 ad: domain-clamp-ad-b.html
 ---
 

@@ -4,7 +4,7 @@ title: Enterprise_PageCache is Borked In 1.14.3.X
 description: Enterprise_PageCache is broken in Magento Enterprise 1.14.3.0 and 1.14.3.1. In this post I'll out line the issue and the patch.
 date: January 20, 2017
 image: 
-tags: [magento]
+tags: [Magento]
 ad: domain-clamp-ad-b.html
 ---
 

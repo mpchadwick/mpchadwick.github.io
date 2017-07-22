@@ -4,7 +4,7 @@ title: Overriding Inline onclick Attributes With Event Capturing
 description: This post reveals a method for overriding inline onclick attributes using event capturing
 date: February 16, 2017
 image: 
-tags: [frontend]
+tags: [Frontend]
 ad: domain-clamp-ad-b.html
 ---
 

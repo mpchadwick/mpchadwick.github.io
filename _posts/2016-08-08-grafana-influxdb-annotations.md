@@ -3,7 +3,7 @@ layout: blog-single
 title: Creating Grafana Annotations with InfluxDb
 description: When reviewing historical data it's useful to overlay a timeline of key events. Here, we'll look at creating annotations for InfluxDb Grafana visualizations.
 date: August 08, 2016
-tags: [monitoring, grafana, influxdb]
+tags: [Monitoring, Grafana, InfluxDB]
 ---
 
 When reviewing historical data in tools such as InfluxDb, it's typically useful to overlay a timeline of key events. For example, [Google Analytics features a simple GUI for adding annotations](https://analytics.googleblog.com/2010/01/annotations-now-available-in-all.html) and [New Relic offers an API for marking deployments](https://docs.newrelic.com/docs/apm/new-relic-apm/maintenance/recording-deployments). In this post we'll look at creating annotations for your InfluxDb powered Grafana visualizations.

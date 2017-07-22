@@ -4,7 +4,7 @@ title: Magento 2 REST API method return processing
 description: A (slightly rant-y) dive into how the Magento 2 REST API processes method returns
 date: March 27, 2017
 image:
-tags: [magento 2]
+tags: [Magento 2]
 ad: domain-clamp-ad-b.html
 ---
 

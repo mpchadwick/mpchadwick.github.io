@@ -4,7 +4,7 @@ title: Digging Into Magento 2's Partial Reindexing Implementation
 description: An exploration of partial reindexing in Magento 2
 date: February 13, 2017
 image: 
-tags: [magento 2]
+tags: [Magento 2]
 ad: domain-clamp-ad-b.html
 ---
 

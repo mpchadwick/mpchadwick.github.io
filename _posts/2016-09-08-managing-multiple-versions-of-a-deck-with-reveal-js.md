@@ -3,7 +3,7 @@ layout: blog-single
 title: Managing Multiple Versions of a Deck with Reveal.js
 description: How do you manage multiple versions of the same deck? This guide outlines a simple approach the will eliminate the need to update content twice.
 date: September 08, 2016
-tags: [thoughts, tools, public speaking]
+tags: [Thoughts, Tools, Public Speaking]
 ---
 
 I'm currently in the process of paring down a 60 minute talk to fit into a 30 minute time slot. Going in, I had a pretty good idea of what needed to be cut, but one challenge I wasn't sure how to tackle was how to manage multiple versions of a single deck.

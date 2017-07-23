@@ -32,6 +32,10 @@ excerpt_separator: <!-- excerpt_separator -->
 # pre-commmit:
 #   - check: SpellCheck
 
+ga:
+  prod: UA-24185213-7
+  dev: UA-24185213-9
+
 pre-commit:
   - check: FrontMatterVariableExists
     variables: ['description', 'image']

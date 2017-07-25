@@ -25,12 +25,8 @@ gems:
   - jekyll-seo-tag
   - jekyll-redirect-from
   - jemoji
-  - jekyll-admin
 
 excerpt_separator: <!-- excerpt_separator -->
-
-# pre-commmit:
-#   - check: SpellCheck
 
 ga:
   prod: UA-24185213-7
@@ -43,3 +39,4 @@ pre-commit:
     variables: ['description', 'image']
   - check: FrontMatterVariableMeetsLengthRequirements
     variables: ['description||165', 'title||100']
+  - check: NoDuplicateTags

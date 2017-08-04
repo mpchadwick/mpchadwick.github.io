@@ -1,6 +1,8 @@
 table {
   border-collapse: collapse;
   margin-bottom: 1em;
+  display: block;
+  overflow-x: auto;
 }
 tr {
   text-align: left;

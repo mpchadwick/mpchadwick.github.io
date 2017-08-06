@@ -6,12 +6,12 @@ date: October 27, 2016
 tags: [Magento, Caching, Scaling]
 ---
 
-A while back I published [a post on improving your full page cache hit rate](https://maxchadwick.xyz/blog/monitoring-magento-fpc-hit-rate). In a conversation on Twitter, I was asked to provide suggestions on what Magento can do to improve hit rates.
+A while back I published [a post on improving your full page cache hit rate]({{ site.baseurl }}{% link _posts/2016-06-16-monitoring-magento-fpc-hit-rate.md %}). In a conversation on Twitter, I was asked to provide suggestions on what Magento can do to improve hit rates.
 
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr"><a href="https://twitter.com/maxpchadwick">@maxpchadwick</a> Do you have suggestions on what we can do to improve cache hit rates?</p>&mdash; Blue_Bovine (@Blue_Bovine) <a href="https://twitter.com/Blue_Bovine/status/743819564983672832">June 17, 2016</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-Riding on the coattails of [my previous listicle, 5 Enterprise Page Cache Pro Tips](https://maxchadwick.xyz/blog/5-enterprise-pagecache-pro-tips), I decided to publish a post in response. However, I've broadened the subject from "What can Magento do to improve hit rates?" to "What can Magento do to improve the `Enterprise_PageCache` module". Based on my experience working with the module, these are the top 5 missing features that I've identified...
+Riding on the coattails of [my previous listicle, 5 Enterprise Page Cache Pro Tips]({{ site.baseurl }}{% link _posts/2016-08-19-5-enterprise-pagecache-pro-tips.md %}), I decided to publish a post in response. However, I've broadened the subject from "What can Magento do to improve hit rates?" to "What can Magento do to improve the `Enterprise_PageCache` module". Based on my experience working with the module, these are the top 5 missing features that I've identified...
 
 <!-- excerpt_separator -->
 
@@ -82,7 +82,7 @@ Cache hit rate is a critical piece of information when monitoring the health of 
 
 **Solution**
 
-I have [an entire blog post which outlines a solution](https://maxchadwick.xyz/blog/monitoring-magento-fpc-hit-rate) (as mentioned, that post is what sparked this list). Ultimately, you'll be using [this free module](https://github.com/mpchadwick/Mpchadwick_PageCacheHitRate).
+I have [an entire blog post which outlines a solution]({{ site.baseurl }}{% link _posts/2016-06-16-monitoring-magento-fpc-hit-rate.md %}) (as mentioned, that post is what sparked this list). Ultimately, you'll be using [this free module](https://github.com/mpchadwick/Mpchadwick_PageCacheHitRate).
 
 ### Conclusion
 

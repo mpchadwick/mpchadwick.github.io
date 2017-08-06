@@ -1,4 +1,4 @@
-.domain-clamp-ad {
+.tout {
     background-color: deeppink;
     margin-top: 20px;
     margin-bottom: 20px;
@@ -19,5 +19,13 @@
         &:hover {
             background-color: darksalmon;
         }
+    }
+    &__avatar {
+      width: 20%;
+      max-width: 80px !important;
+      padding-right: 10px;
+      float: left;
+      border-radius: 50%;
+      margin-bottom: 0;
     }
 }

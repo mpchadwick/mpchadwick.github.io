@@ -13,15 +13,8 @@ layout: page
   </ul>
 </div>
 {% endif %}
-{% if page.ad == null %}
-    {% include domain-clamp-ad.html %}
-{% endif %}
 {{ content }}
-{% if page.ad != null %}
-    {% if page.ad != "none" %}
-        {% include {{page.ad}} %}
-    {% endif %}
-{% endif %}
+{% include bio.html %}
 <div id="disqus_thread"></div>
 <script>
 /**

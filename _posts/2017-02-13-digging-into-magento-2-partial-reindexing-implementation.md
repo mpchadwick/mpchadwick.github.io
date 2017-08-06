@@ -64,7 +64,7 @@ Partials reindexing is kicked off by the `indexer_update_all_views` job which is
 </job>
 ```
 
-I had previously [blogged about how tweaking schedule can be used to give some control over page cache hit rate](https://maxchadwick.xyz/blog/how-partial-reindexing-schedule-impacts-page-cache-hit-rate). Unfortunately,  Magento 2 currently doesn't provide any facility for tuning the partial reindexing schedule and has hard coded it to run every minute.
+I had previously [blogged about how tweaking schedule can be used to give some control over page cache hit rate]({{ site.baseurl }}{% link _posts/2017-01-30-how-partial-reindexing-schedule-impacts-page-cache-hit-rate.md %}). Unfortunately,  Magento 2 currently doesn't provide any facility for tuning the partial reindexing schedule and has hard coded it to run every minute.
 
 ### How The Job Works
 

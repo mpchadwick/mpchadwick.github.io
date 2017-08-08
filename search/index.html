@@ -67,7 +67,8 @@ body-class: search
         var query = document.querySelectorAll('.search-form__input')[0].value
         var location = '/search/?query=' + query;
         if (window.ga && ga.create) {
-            ga('send', 'pageview', location);
+            ga('set', 'page', location);
+            ga('send', 'pageview');
         }
         history.pushState(null, null, location);
         runSearch(query);

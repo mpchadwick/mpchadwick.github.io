@@ -15,13 +15,6 @@ layout: main
         <li class="navigation-bar__item">
             <a class="navigation-bar__item-link{% if page.title == 'Blog' %} navigation-bar__item-link--active{% endif %}" href="/blog/">Blog</a>
         </li>
-        {% if page.title != 'Search' %}
-        <li class="navigation-bar__item navigation-bar__item--search">
-            <a class="navigation-bar__item-link" href="/search/">
-                <svg class="social-icon" width="15" height="22"><use xlink:href="#search"></use></svg>
-            </a>
-        </li>
-        {% endif %}
     </ul>
 </div>
 <div class="page-wrapper">
@@ -29,6 +22,7 @@ layout: main
 </div>
 <div class="footer">
     <p>The entire source of this site is <a href="https://github.com/mpchadwick/mpchadwick.github.io">available on Github</a>.</p>
+    <p>If there's a specific topic you're looking to read about try <a href="/search/">searching</a> or <a href="/tags/">browsing by tag</a>.</p>
     {% include social-links.html %}
     <p><strong>&copy; {{ site.time | date: '%Y' }} Max Chadwick</strong></p>
 </div>

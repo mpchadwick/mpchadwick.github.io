@@ -4,7 +4,8 @@ title: Projects
 ---
 # Projects
 
-## Domain Clamp
+### Domain Clamp
+
 Domain Clamp is a SaaS app that monitors domains and SSL certificates and sends alerts when anything is soon to expire.
 
 I was inspired to build Domain Clamp by my work at agencies, which are sometimes blamed for domains and SSL certificates that expire, even when those records are not in their names.
@@ -15,7 +16,7 @@ I built the whole thing soup to nuts, including branding, page design, copywriti
 
 <a class="call-to-action" href="https://domainclamp.com">View the app</a>
 
-## jQuery.nonSuckyYouTubeEmbed
+### jQuery.nonSuckyYouTubeEmbed
 
 jQuery.nonSuckyYouTubeEmbed is a jQuery plugin designed to improve front end performance when working with YouTube embeds.
 
@@ -25,7 +26,7 @@ I also took a deep dive on YouTube embeds in [this blog post]({{site.url}}/blog/
 
 <a class="call-to-action" href="https://github.com/mpchadwick/jquery.nonSuckyYouTubeEmbed">View on GitHub</a>
 
-## Mpchadwick_SearchAutocompleteConfigmarator
+### Mpchadwick_SearchAutocompleteConfigmarator
 
 Mpchadwick_SearchAutocompleteConfigmarator is a Magento extension I built that enhances the functionality of Magento's out-of-the-box search autocomplete functionality.
 
@@ -42,7 +43,7 @@ I was inspired to build this based on actual frustration I saw merchants having 
 
 <a class="call-to-action" href="https://github.com/mpchadwick/Mpchadwick_SearchAutocompleteConfigmarator">View on GitHub</a>
 
-## ruby-whois-api
+### ruby-whois-api
 
 ruby-whois-api is a basic Sinatra wrapper for the Ruby WHOIS gem.
 
@@ -52,7 +53,7 @@ ruby-whois-api is a minimal web service that receives domain name and responds w
 
 <a class="call-to-action" href="https://github.com/mpchadwick/ruby-whois-api">View on GitHub</a>
 
-## Mpchadwick_BigAssImageWarning
+### Mpchadwick_BigAssImageWarning
 
 My most starred repo on GitHub, this is partially a joke, but I've seen cases where this type of thing is actually needed. This is a Magento extension, the idea behind which is to alert store admins if they upload an image that is bigger than a predetermined threshold.
 
@@ -90,3 +91,13 @@ I like to contribute back to the tools I use. Here are some of my open source co
 ### DevOps
 
 - [Allow vagrant up with no sites in Laravel Homestead](https://github.com/laravel/homestead/pull/326)
+
+---
+
+## Talks
+
+Here's a list of talks I've given...
+
+- [**Nomad Mage**](https://nomadmage.com/) - [Imagining a World Without Caching](https://nomadmage.com/product/imagining-world-without-caching/), July 18, 2017
+- [**NYC Magento Meetup**](https://www.meetup.com/NYC-Magento-Developers/) - [Monitoring (and improving) Your Full Page Cache Hit Rate with Enterprise_PageCache](https://www.meetup.com/NYC-Magento-Developers/events/233797698/), September 29, 2016
+- [**Nomad Mage**](https://nomadmage.com/) - [Monitoring (and improving) Your Full Page Cache Hit Rate with Enterprise_PageCache](https://nomadmage.com/product/monitoring-improving-full-page-cache-hit-rate-enterprise_pagecache/), August 16, 2016

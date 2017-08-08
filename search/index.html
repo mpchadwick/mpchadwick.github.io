@@ -65,7 +65,11 @@ body-class: search
     document.querySelectorAll('.search-form__button')[0].addEventListener('click', function(e) {
         e.preventDefault();
         var query = document.querySelectorAll('.search-form__input')[0].value
-        history.pushState(null, null, '/search/?query=' + query);
+        var location = '/search/?query=' + query;
+        if (window.ga && ga.create) {
+            ga('send', 'pageview', location);
+        }
+        history.pushState(null, null, location);
         runSearch(query);
         return false;
     })

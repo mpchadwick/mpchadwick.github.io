@@ -15,6 +15,8 @@ Tagging is a feature built into most blogging platforms. Typically tags differ f
 
 Regardless of the exact meaning, understanding which tags on your site are most popular can help you make decisions about what type of content to publish. This post outlines a strategy for identifying your most popular tags in Google Analytics
 
+<!-- excerpt_separator -->
+
 ### Recording Arbitrary Data in Google Analytics
 
 Google Analytics provides several mean for storing arbitrary data. The options available to us are as follows...

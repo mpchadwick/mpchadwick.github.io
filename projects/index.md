@@ -69,6 +69,7 @@ I like to contribute back to the tools I use. Here are some of my open source co
 
 ### PHP
 
+- [Use `/usr/bin/env` to resolve PHP in phpggc](https://github.com/ambionics/phpggc/pull/5)
 - [Add Auto Expiry Feature to Redis cache backend library](https://github.com/colinmollenhour/Cm_Cache_Backend_Redis/pull/111)
 - [Fix timeout so that it can actually be configured in Redis session library](https://github.com/colinmollenhour/Cm_RedisSession/pull/86)
 - [Allow passing arguments to `<options>` methods in Magento Grid Control module](https://github.com/magento-hackathon/GridControl/pull/19)
@@ -98,6 +99,7 @@ I like to contribute back to the tools I use. Here are some of my open source co
 
 Here's a list of talks I've given...
 
+- [**NYC Magento Meetup**](https://www.meetup.com/NYC-Magento-Developers/) [Imagining a World Without Caching](https://www.meetup.com/NYC-Magento-Developers/events/242254135/) - August 24, 2017
 - [**Nomad Mage**](https://nomadmage.com/) - [Imagining a World Without Caching](https://nomadmage.com/product/imagining-world-without-caching/), July 18, 2017
 - [**NYC Magento Meetup**](https://www.meetup.com/NYC-Magento-Developers/) - [Monitoring (and improving) Your Full Page Cache Hit Rate with Enterprise_PageCache](https://www.meetup.com/NYC-Magento-Developers/events/233797698/), September 29, 2016
 - [**Nomad Mage**](https://nomadmage.com/) - [Monitoring (and improving) Your Full Page Cache Hit Rate with Enterprise_PageCache](https://nomadmage.com/product/monitoring-improving-full-page-cache-hit-rate-enterprise_pagecache/), August 16, 2016

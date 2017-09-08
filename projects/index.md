@@ -69,6 +69,7 @@ I like to contribute back to the tools I use. Here are some of my open source co
 
 ### PHP
 
+- [Add Zend Framework 1 gadget to phpggc](https://github.com/ambionics/phpggc/pull/8)
 - [Use `/usr/bin/env` to resolve PHP in phpggc](https://github.com/ambionics/phpggc/pull/5)
 - [Add Auto Expiry Feature to Redis cache backend library](https://github.com/colinmollenhour/Cm_Cache_Backend_Redis/pull/111)
 - [Fix timeout so that it can actually be configured in Redis session library](https://github.com/colinmollenhour/Cm_RedisSession/pull/86)

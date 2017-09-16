@@ -102,7 +102,8 @@ I like to contribute back to the tools I use. Here are some of my open source co
 
 Here's a list of talks I've given...
 
-- [**NYC Magento Meetup**](https://www.meetup.com/NYC-Magento-Developers/) [Imagining a World Without Caching](https://www.meetup.com/NYC-Magento-Developers/events/242254135/) - August 24, 2017
+- [**Mage Titans USA**](https://usa.magetitans.com/) - [Imagining a World Without Caching](https://usa.magetitans.com/speakers/max-chadwick/), September 15, 2017
+- [**NYC Magento Meetup**](https://www.meetup.com/NYC-Magento-Developers/) - [Imagining a World Without Caching](https://www.meetup.com/NYC-Magento-Developers/events/242254135/), August 24, 2017
 - [**Nomad Mage**](https://nomadmage.com/) - [Imagining a World Without Caching](https://nomadmage.com/product/imagining-world-without-caching/), July 18, 2017
 - [**NYC Magento Meetup**](https://www.meetup.com/NYC-Magento-Developers/) - [Monitoring (and improving) Your Full Page Cache Hit Rate with Enterprise_PageCache](https://www.meetup.com/NYC-Magento-Developers/events/233797698/), September 29, 2016
 - [**Nomad Mage**](https://nomadmage.com/) - [Monitoring (and improving) Your Full Page Cache Hit Rate with Enterprise_PageCache](https://nomadmage.com/product/monitoring-improving-full-page-cache-hit-rate-enterprise_pagecache/), August 16, 2016

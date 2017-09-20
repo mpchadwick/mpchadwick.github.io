@@ -70,6 +70,7 @@ I like to contribute back to the tools I use. Here are some of my open source co
 
 ### PHP
 
+- [Strip admin users when generating a development DB in n98-magerun2](https://github.com/netz98/n98-magerun2/pull/309)
 - [Add Magento 1 SQL injection gadget to phpggc](https://github.com/ambionics/phpggc/pull/9)
 - [Add Zend Framework 1 gadget to phpggc](https://github.com/ambionics/phpggc/pull/8)
 - [Use `/usr/bin/env` to resolve PHP in phpggc](https://github.com/ambionics/phpggc/pull/5)

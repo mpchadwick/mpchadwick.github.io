@@ -70,6 +70,7 @@ I like to contribute back to the tools I use. Here are some of my open source co
 
 ### PHP
 
+- [Add Role column to admin user grid in Magento 2](https://github.com/magento/magento2/pull/10891#issuecomment-332806807)
 - [Strip admin users when generating a development DB in n98-magerun2](https://github.com/netz98/n98-magerun2/pull/309)
 - [Add Magento 1 SQL injection gadget to phpggc](https://github.com/ambionics/phpggc/pull/9)
 - [Add Zend Framework 1 gadget to phpggc](https://github.com/ambionics/phpggc/pull/8)

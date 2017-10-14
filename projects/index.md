@@ -5,17 +5,13 @@ description: Things that I've worked on.
 ---
 # Projects
 
-### Domain Clamp
+### Mpchadwick_PageCacheHitRate
 
-Domain Clamp is a SaaS app that monitors domains and SSL certificates and sends alerts when anything is soon to expire.
+I built a Magento 1 plugin that allows users to monitor their page cache hit rate. It supports multiple storage backends for hit rate data including New Relic, Redis, or log file based.
 
-I was inspired to build Domain Clamp by my work at agencies, which are sometimes blamed for domains and SSL certificates that expire, even when those records are not in their names.
+It also includes many dimensions for drilling down into the data such as by route, hostname, or URL.
 
-The app is mainly powered by Laravel and gets somehelp from AngularJS on the frontend, although it is not a truly "single page app".
-
-I built the whole thing soup to nuts, including branding, page design, copywriting, front end development and backend development.
-
-<a class="call-to-action" href="https://domainclamp.com">View the app</a>
+<a class="call-to-action" href="https://github.com/mpchadwick/Mpchadwick_PageCacheHitRate">View on GitHub</a>
 
 ### jQuery.nonSuckyYouTubeEmbed
 

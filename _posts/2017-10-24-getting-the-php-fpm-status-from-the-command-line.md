@@ -1,7 +1,7 @@
 ---
 layout: blog-single
-title:  Getting The php-fpm Status From The Command Line
-description: You can't curl php-fpm directly because it doesn't use HTTP. Here I outline how you _can_ talk directly to PHP-FPM.
+title:  Getting The PHP-FPM Status From The Command Line
+description: You can't curl PHP-FPM directly because it doesn't use HTTP. Here I outline how you _can_ talk directly to PHP-FPM.
 date: October 24, 2017
 image:
 tags: [Shell, Tools, PHP]
@@ -24,7 +24,7 @@ I quickly learned that no, it is not supposed to work...
 >
 > no it doesn't use http
 
-Here I'll go into details on how you can get the php-fpm status from the command line. 
+Here I'll go into details on how you can get the PHP-FPM status from the command line. 
 
 <!-- excerpt_separator -->
 

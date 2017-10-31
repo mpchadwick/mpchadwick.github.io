@@ -96,7 +96,7 @@ Due to these faulty locking mechanics, the following race condition is possible.
 
 Under high throughput, the same pattern repeats itself ad nauseam with Request C, Request D, Request E and so on.
 
-While the race condition is not ideal, the reason the real problem is the cache stampeding it causes. This happens because `Mage_Core_Model_Config::saveCache()` clears the config cache before it saves...
+While the race condition is not ideal, the real problem is the cache stampeding it causes. This happens because `Mage_Core_Model_Config::saveCache()` clears the config cache before it saves...
 
 ```php?start_inline=1
 $this->removeCache();

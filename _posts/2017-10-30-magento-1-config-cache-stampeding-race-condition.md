@@ -91,7 +91,7 @@ Due to these faulty locking mechanics, the following race condition is possible.
 - Request A checks if the config cache is locked for saving. It's not.
 - Request A begins saving cache sections
 - Request B comes in. The config cache is still cold (Request A hasn't saved it yet). It also hits `Mage_Core_Model_Config::saveCache()`.
-- Request B checks if the config cache is locked for saving. It's not (Request Ad hasn't saved the lock yet).
+- Request B checks if the config cache is locked for saving. It's not (Request A hasn't saved the lock yet).
 - Request A finishes saving sections and now saves the lock. However, Request B already got past the lock check and it is also able to proceed with cache saving.
 
 Under high throughput, the same pattern repeats itself ad nauseam with Request C, Request D, Request E and so on.

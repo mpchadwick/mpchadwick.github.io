@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Skills
+description: Programming languages, frameworks, platforms, data stores and tools I know.
 ---
 # Skills
 
@@ -14,30 +15,25 @@ Each section is ordered by a blending my self-rated proficiency and my own perso
 - PHP
 - JavaScript
 - SQL
-- SASS
+- SASS / CSS
 - HTML
-- CSS
 - Go
 - Markdown
 - Ruby
 - Bash
-- Java
 
 ### Frameworks & Platforms
-- Laravel
 - Magento
+- Laravel
 - WordPress
 - Jekyll
 - ExpressJS
 - Sinatra
 - Rails
-- CodeIgniter
-- ZenCart
 
 ### Developer Tools
 - Sublime Text
-- Git
-- GitHub
+- Git / GitHub
 - UNIX shell
 - New Relic
 - Gulp

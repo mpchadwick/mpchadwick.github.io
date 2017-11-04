@@ -1,15 +1,5 @@
 body.home {
-    background-color: orange;
-  -webkit-animation-name: body-background;
-          animation-name: body-background;
-  -webkit-animation-duration: 10s;
-          animation-duration: 10s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-direction: alternate;
-          animation-direction: alternate;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
+  background-color: orange;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -24,9 +14,15 @@ body.home {
           justify-content: center;
   color: white;
 }
+.home__avatar {
+  width: 200px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+  border-radius: 50%;
+}
 .home-wrapper {
-    border-top: 1px solid white;
-    border-bottom: 1px solid white;
     padding-top: 15px;
     padding-bottom: 15px;
 }
@@ -58,7 +54,7 @@ body.home {
 }
 .home__header {
     font-size: 32px;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     padding-bottom: 0em;
     text-shadow: 1px 1px 1px #000;
 }

@@ -5,12 +5,13 @@ body-class: home
 include-social: true
 ---
 <div class="home-wrapper">
-    {% include social-links.html %}
-    <div class="clear"></div>
+    <img class="home__avatar" alt="Max Chadwick" src="/img/me.jpg">
     <h1 class="home__header">Max Chadwick</h1>
     <ul class="home-menu">
         <li class="home-menu__item"><a class="home-menu__item-link" href="/skills/">Skills</a></li>
         <li class="home-menu__item"><a class="home-menu__item-link" href="/projects/">Projects</a></li>
         <li class="home-menu__item"><a class="home-menu__item-link" href="/blog/">Blog</a></li>
     </ul>
+    {% include social-links.html %}
+    <div class="clear"></div>
 </div>

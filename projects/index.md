@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Projects
-description: Things that I've worked on.
+description: Things I've built, open source contributions I've made and talks I've given.
 ---
 # Projects
 

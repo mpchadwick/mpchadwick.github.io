@@ -97,6 +97,29 @@ body.home {
         font-size: 24px;
     }
 }
+.home-featured-writing__header {
+  margin-bottom: 0.5em;
+  margin-top: 1em;
+  text-align: center;
+  font-style: italic;
+}
+.home-featured-writing__list {
+  margin-left: 30px;
+  margin-right: 30px;
+}
+.home-featured-writing__item {
+  list-style: none;
+  text-align: center;
+  line-height: 1.4em;
+  margin-bottom: 0.8em;
+}
+.home-featured-writing__link {
+  color: #fffca3;
+  text-decoration: underline;
+  &:hover {
+    color: darken(#fffca3, 15%);
+  }
+}
 .social-icon {
   fill: #f7f7f7;
 }

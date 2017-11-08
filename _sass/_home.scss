@@ -1,5 +1,5 @@
 body.home {
-  background-color: #d62454;
+  background-color: $color-bg-pop;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -125,10 +125,10 @@ body.home {
   margin-bottom: 0.8em;
 }
 .home-featured-writing__link {
-  color: #fffca3;
+  color: $color-bg-pop-link;
   text-decoration: underline;
   &:hover {
-    color: darken(#fffca3, 15%);
+    color: $color-bg-pop-link-hover;
   }
 }
 .social-icon {

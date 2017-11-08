@@ -7,14 +7,14 @@ html, body {
 }
 body {
     font-family: Georgia, serif;
-    background-color: floralwhite;
+    background-color: $color-bg-plain;
     display: flex;
     min-height: 100vh;
     flex-direction: column;
 }
 a {
     text-decoration: none;
-    color: cornflowerblue;
+    color: $color-bg-plain-link;
 }
 a:hover {
     text-decoration: underline;

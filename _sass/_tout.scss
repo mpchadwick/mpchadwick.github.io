@@ -1,5 +1,5 @@
 .tout {
-    background-color: #d62454;
+    background-color: $color-bg-pop;
     margin-top: 20px;
     margin-bottom: 20px;
     padding: 20px;
@@ -8,17 +8,17 @@
     border-left: 10px solid brown;
 
     p {
-        margin-bottom: 0;
-        line-height: 1.3rem;
+      margin-bottom: 0;
+      line-height: 1.3rem;
     }
 
     a {
-        color: #fffca3;
-        text-decoration: underline;
+      color: $color-bg-pop-link;
+      text-decoration: underline;
 
-        &:hover {
-            color: darken(#fffca3, 15%);
-        }
+      &:hover {
+        color: $color-bg-pop-link-hover;
+      }
     }
     &__avatar {
       width: 20%;

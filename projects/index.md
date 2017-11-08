@@ -13,6 +13,36 @@ It also includes many dimensions for drilling down into the data such as by rout
 
 <a class="call-to-action" href="https://github.com/mpchadwick/Mpchadwick_PageCacheHitRate">View on GitHub</a>
 
+### SomethingDigital_InfluxDb
+
+I built a Magento 1 plugin at Something Digital that pushes metrics from Magento to InfluxDb for tracking in time series. There are many metrics that it can be configured to push. Here are a few...
+
+- Cron execution history
+- Changelog table status
+- Full page cahe size
+
+Additionally, it includes a `Measurement` interface which user's can implement to add push their own metrics to InfluxDb.
+
+<a class="call-to-action" href="https://github.com/sdinteractive/SomethingDigital_InfluxDb">View on GitHub</a>
+
+### jekyll-pre-commit
+
+I built a Jekyll plugin which uses git pre-commit hooks to run checks before allowing users to commit changes to their Jekyll sites. Some things it can check...
+
+- Is your `<title>` and `<meta name="description">` a good length (for SEO purposes)?
+- Did you forget to include anything in your front matter (for example forgetting to write a description)?
+- Are any of the values in your front matter duplicated (for example you copy / pasted them from another post)?
+
+In addition to the checks it ships with, users can write their own checks by placing them in their site's `_plugins/` directory.
+
+<a class="call-to-action" href="https://github.com/mpchadwick/jekyll-pre-commit">View on GitHub</a>
+
+### mod_log_header_size
+
+I build an Apache plugin which adds `%` directives for logging request and response header sizes (in bytes). This was built in response to several issues I've seen where application code leads to header size limits being exceeded on both requests and responses. The module allows users to monitor and alert on header size.
+
+<a class="call-to-action" href="https://github.com/mpchadwick/mod_log_header_size">View on GitHub</a>
+
 ### jQuery.nonSuckyYouTubeEmbed
 
 jQuery.nonSuckyYouTubeEmbed is a jQuery plugin designed to improve front end performance when working with YouTube embeds.

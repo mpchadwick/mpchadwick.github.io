@@ -1,5 +1,5 @@
 .tout {
-    background-color: deeppink;
+    background-color: #d62454;
     margin-top: 20px;
     margin-bottom: 20px;
     padding: 20px;
@@ -13,11 +13,11 @@
     }
 
     a {
-        color: yellow;
+        color: #fffca3;
         text-decoration: underline;
 
         &:hover {
-            background-color: darksalmon;
+            color: darken(#fffca3, 15%);
         }
     }
     &__avatar {

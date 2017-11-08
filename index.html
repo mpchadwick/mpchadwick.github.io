@@ -12,18 +12,28 @@ include-social: true
         <li class="home-menu__item"><a class="home-menu__item-link" href="/projects/">Projects</a></li>
         <li class="home-menu__item"><a class="home-menu__item-link" href="/blog/">Blog</a></li>
     </ul>
+    <div class="home-featured-writing">
     <h3 class="home-featured-writing__header">Selected Writing</h3>
     <ul class="home-featured-writing__list">
+        {% assign selected_posts = site.posts | where:"selected","true" %}
+        {% for post in selected_posts %}
         <li class="home-featured-writing__item">
-            <a class="home-featured-writing__link" href="{{ site.baseurl }}{% link _posts/2017-04-18-scaling-magento-sales-rule-to-20-million-coupons-and-beyond.md %}">Scaling Magento's SalesRule Module to Handle 20 Million Coupons and Beyond</a>
+            <a class="home-featured-writing__link" href="{{ post.url }}">{{ post.title }}</a>
+            <p class="home-featured-writing__post-date">{{post.date | date: "%B %-d, %Y"}}</p>
+            {% if post.tags.size > 0 %}
+                <div class="tags-list">
+                    <strong>Tags:</strong>
+                    <ul>
+                    {% for tag in post.tags %}
+                    <li><a href="/tags/#{{ tag | slugify }}">{{ tag }}</a>
+                    {% endfor %}
+                    </ul>
+                </div>
+            {% endif %}
         </li>
-        <li class="home-featured-writing__item">
-            <a class="home-featured-writing__link" href="{{ site.baseurl }}{% link _posts/2017-08-14-ssrf-exploits-against-redis.md %}">curl Based SSRF Exploits Against Redis</a>
-        </li>
-        <li class="home-featured-writing__item">
-            <a class="home-featured-writing__link" href="{{ site.baseurl }}{% link _posts/2016-07-26-kapacitor-udf-url-query-param-usage.md %}">Using Kapacitor UDFs to monitor URL query parameter usage</a>
-        </li>
+        {% endfor %}
     </ul>
+    </div>
     {% include social-links.html %}
     <div class="clear"></div>
 </div>

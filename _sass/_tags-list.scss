@@ -1,0 +1,24 @@
+.tags-list {
+  font-size: 0.8em;
+  margin-bottom: 2em;
+
+  a {
+    color: $color-bg-plain-link-alt;
+  }
+
+  ul {
+    display: inline;
+    margin-left: 0;
+
+    li {
+      display: inline-block;
+      padding-right: 5px;
+
+      a {
+        padding: 5px;
+        border: 1px solid black;
+        background-color: white;
+      }
+    }
+  }
+}

@@ -7,13 +7,13 @@
     * {
         padding-top: 5px;
         padding-bottom: 5px;
-        padding-right: 10px;
-        padding-left: 10px;
+        padding-right: 20px;
+        padding-left: 20px;
     }
 
     a.page {
         border: 1px solid #dcdcdc;
-        background-color: ghostwhite;
+        background-color: $color-button-bg-alt;
     }
 }
 

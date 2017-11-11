@@ -2,6 +2,8 @@
 layout: page
 title: Projects
 description: Things I've built, open source contributions I've made and talks I've given.
+redirect_from:
+  - /projects/
 ---
 
 # Projects

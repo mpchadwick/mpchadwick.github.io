@@ -99,6 +99,12 @@ body.home {
 .home-featured-writing {
   padding-left: 20px;
   padding-right: 20px;
+  max-width: 600px;
+
+  .call-to-action {
+    background-color: white;
+    color: purple;
+  }
 }
 .home-featured-writing__header {
   margin-bottom: 1em;

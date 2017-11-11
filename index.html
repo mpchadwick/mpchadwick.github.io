@@ -34,6 +34,14 @@ include-social: true
         {% endfor %}
     </ul>
     </div>
+    <div class="home-featured-writing">
+        <h3 class="home-featured-writing__header">Selected Projects</h3>
+        {% assign selected_projects = site.projects | where:"selected","true" | sort: 'position' %}
+        {% for project in selected_projects %}
+        <h4>{{ project.title }}</h4>
+        {{ project.content }}
+        {% endfor %}
+    </div>
     {% include social-links.html %}
     <div class="clear"></div>
 </div>

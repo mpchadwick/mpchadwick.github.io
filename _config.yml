@@ -10,6 +10,9 @@ twitter:
 
 author: maxpchadwick
 
+collections:
+  - projects
+
 kramdown:
   input: GFM
   syntax_highlighter: rouge

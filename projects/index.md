@@ -3,90 +3,18 @@ layout: page
 title: Projects
 description: Things I've built, open source contributions I've made and talks I've given.
 ---
+
 # Projects
 
-### Mpchadwick_PageCacheHitRate
+{% assign sorted_projects = site.projects | sort: 'position' %}
 
-I built a Magento 1 plugin that allows users to monitor their page cache hit rate. It supports multiple storage backends for hit rate data including New Relic, Redis, or log file based.
+{% for project in sorted_projects %}
 
-It also includes many dimensions for drilling down into the data such as by route, hostname, or URL.
+### {{ project.title }}
 
-<a class="call-to-action" href="https://github.com/mpchadwick/Mpchadwick_PageCacheHitRate">View on GitHub</a>
+{{ project.content }}
 
-### SomethingDigital_InfluxDb
-
-I built a Magento 1 plugin at Something Digital that pushes metrics from Magento to InfluxDb for tracking in time series. There are many metrics that it can be configured to push. Here are a few...
-
-- Cron execution history
-- Changelog table status
-- Full page cahe size
-
-Additionally, it includes a `Measurement` interface which user's can implement to add push their own metrics to InfluxDb.
-
-<a class="call-to-action" href="https://github.com/sdinteractive/SomethingDigital_InfluxDb">View on GitHub</a>
-
-### jekyll-pre-commit
-
-I built a Jekyll plugin which uses git pre-commit hooks to run checks before allowing users to commit changes to their Jekyll sites. Some things it can check...
-
-- Is your `<title>` and `<meta name="description">` a good length (for SEO purposes)?
-- Did you forget to include anything in your front matter (for example forgetting to write a description)?
-- Are any of the values in your front matter duplicated (for example you copy / pasted them from another post)?
-
-In addition to the checks it ships with, users can write their own checks by placing them in their site's `_plugins/` directory.
-
-<a class="call-to-action" href="https://github.com/mpchadwick/jekyll-pre-commit">View on GitHub</a>
-
-### mod_log_header_size
-
-I build an Apache plugin which adds `%` directives for logging request and response header sizes (in bytes). This was built in response to several issues I've seen where application code leads to header size limits being exceeded on both requests and responses. The module allows users to monitor and alert on header size.
-
-<a class="call-to-action" href="https://github.com/mpchadwick/mod_log_header_size">View on GitHub</a>
-
-### jQuery.nonSuckyYouTubeEmbed
-
-jQuery.nonSuckyYouTubeEmbed is a jQuery plugin designed to improve front end performance when working with YouTube embeds.
-
-The plugin works by fetching the fetching a thumbnail image and overlaying a play button, and replacing the thumbnail with the embedded YouTube iFrame when only when the user clicks the play button. This is important *always* but especially important for sites the embed multiple videos on a single page.
-
-I also took a deep dive on YouTube embeds in [this blog post]({{site.url}}/blog/non-sucky-youtube-embed)
-
-<a class="call-to-action" href="https://github.com/mpchadwick/jquery.nonSuckyYouTubeEmbed">View on GitHub</a>
-
-### Mpchadwick_SearchAutocompleteConfigmarator
-
-Mpchadwick_SearchAutocompleteConfigmarator is a Magento extension I built that enhances the functionality of Magento's out-of-the-box search autocomplete functionality.
-
-It adds a few key features that are missing...
-
-- On/off switch
-- Result limit
-- On/off switch for result count
-- SQL `LIKE` match position
-
-All these features can be configured through the admin panel (hence the "configmarator" name).
-
-I was inspired to build this based on actual frustration I saw merchants having with the OOB functionality (especially the inability to control the result limit)
-
-<a class="call-to-action" href="https://github.com/mpchadwick/Mpchadwick_SearchAutocompleteConfigmarator">View on GitHub</a>
-
-### ruby-whois-api
-
-ruby-whois-api is a basic Sinatra wrapper for the Ruby WHOIS gem.
-
-My work on Domain Clamp forced me to do [a deep dive on WHOIS parsing]({{site.url}}/blog/dealing-with-whois-records) at which point it was pretty clear that the Ruby gem was the best solution available.
-
-ruby-whois-api is a minimal web service that receives domain name and responds with a parsed WHOIS record.
-
-<a class="call-to-action" href="https://github.com/mpchadwick/ruby-whois-api">View on GitHub</a>
-
-### Mpchadwick_BigAssImageWarning
-
-My most starred repo on GitHub, this is partially a joke, but I've seen cases where this type of thing is actually needed. This is a Magento extension, the idea behind which is to alert store admins if they upload an image that is bigger than a predetermined threshold.
-
-While at Something Digital I had seen a store admin who will remain unnamed upload a 7.2MB image to a blog post, which prompted me to build this...
-
-<a class="call-to-action" href="https://github.com/mpchadwick/Mpchadwick_BigAssImageWarning">View on GitHub</a>
+{% endfor %}
 
 ---
 

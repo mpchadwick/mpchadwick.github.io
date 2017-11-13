@@ -42,16 +42,17 @@ I like to contribute back to the tools I use. Here are some of my open source co
 - [Add a filter to hide silenced alerts in Prometheus Alert Manager](https://github.com/prometheus/alertmanager/pull/319)
 - [Add option to show percentage in legend to Grafana Piechart Panel plugin](https://github.com/grafana/piechart-panel/pull/41)
 
+### Ruby
+
+- [Add the ability to return relative luminance in wcag_color_contrast](https://github.com/mkdynamic/wcag_color_contrast/pull/2)
+- [Add .xyz parser to whois gem](https://github.com/weppos/whois/pull/460)
+- [Create a TLD subfolder when using mkwhois in whois-parser](https://github.com/weppos/whois-parser/pull/3/files)
+
+
 ### Go
 
 - [Add ability to log alerts in Chronograf](https://github.com/influxdata/chronograf/pull/1477)
 - [Move SMTP auth to the config file in Prometheus Alertmanager](https://github.com/prometheus/alertmanager/pull/308)
-
-### Ruby
-
-
-- [Add .xyz parser to whois gem](https://github.com/weppos/whois/pull/460)
-- [Create a TLD subfolder when using mkwhois in whois-parser](https://github.com/weppos/whois-parser/pull/3/files)
 
 ### DevOps
 

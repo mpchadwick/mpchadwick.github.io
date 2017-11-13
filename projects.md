@@ -57,6 +57,10 @@ I like to contribute back to the tools I use. Here are some of my open source co
 
 - [Allow vagrant up with no sites in Laravel Homestead](https://github.com/laravel/homestead/pull/326)
 
+### Docs
+
+- [Mention utils/mkwhois.rb in CONTRIBUTING.md in whois gem](https://github.com/weppos/whois-parser/pull/4)
+
 ### ETC
 
 - [Retain additional cron history by default in Magento 2](https://github.com/magento/magento2/pull/11463)

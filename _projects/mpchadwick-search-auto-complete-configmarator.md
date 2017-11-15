@@ -1,6 +1,8 @@
 ---
 title: Mpchadwick_SearchAutocompleteConfigmarator
 position: 600
+technologies: PHP
+tags: Magento
 ---
 
 Mpchadwick_SearchAutocompleteConfigmarator is a Magento extension I built that enhances the functionality of Magento's out-of-the-box search autocomplete functionality.

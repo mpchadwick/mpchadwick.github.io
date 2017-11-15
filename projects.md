@@ -12,7 +12,7 @@ redirect_from:
 
 {% for project in sorted_projects %}
 
-### {{ project.title }}
+## {{ project.title }}
 
 {{ project.content }}
 

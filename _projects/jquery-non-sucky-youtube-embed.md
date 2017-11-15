@@ -1,6 +1,8 @@
 ---
 title: jquery.nonSuckyYouTubeEmbed
 position: 500
+languages: JavaScript
+tags: Frontend, Performance
 ---
 
 jQuery.nonSuckyYouTubeEmbed is a jQuery plugin designed to improve front end performance when working with YouTube embeds.

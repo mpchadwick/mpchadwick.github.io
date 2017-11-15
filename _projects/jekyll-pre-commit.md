@@ -2,6 +2,8 @@
 title: jekyll-pre-commit
 position: 300
 selected: true
+languages: Ruby
+tags: Jekyll
 ---
 
 I built a Jekyll plugin which uses git pre-commit hooks to run checks before allowing users to commit changes to their Jekyll sites. Some things it can check...

@@ -1,6 +1,7 @@
 ---
 title: ruby-whois-api
 position: 700
+languages: Ruby
 ---
 
 ruby-whois-api is a basic Sinatra wrapper for the Ruby WHOIS gem.

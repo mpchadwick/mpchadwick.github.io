@@ -2,6 +2,8 @@
 title: Mpchadwick_PageCacheHitRate
 position: 100
 selected: true
+languages: PHP
+tags: Magento, Monitoring
 ---
 
 I built a Magento 1 plugin that allows users to monitor their page cache hit rate. It supports multiple storage backends for hit rate data including New Relic, Redis, or log file based.

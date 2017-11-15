@@ -1,6 +1,8 @@
 ---
 title: Mpchadwick_BigAssImageWarning
 position: 800
+languages: PHP, JavaScript
+tags: Magento, Performance
 ---
 
 My most starred repo on GitHub, this is partially a joke, but I've seen cases where this type of thing is actually needed. This is a Magento extension, the idea behind which is to alert store admins if they upload an image that is bigger than a predetermined threshold.

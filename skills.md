@@ -2,6 +2,8 @@
 layout: page
 title: Skills
 description: Programming languages, frameworks, platforms, data stores and tools I know.
+redirect_from:
+  - /skills/
 ---
 # Skills
 

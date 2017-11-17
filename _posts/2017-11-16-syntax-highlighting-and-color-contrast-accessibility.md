@@ -1,6 +1,6 @@
 ---
 layout: blog-single
-title:  Syntax Highlighting And Color Contrast Accessiblity
+title:  Syntax Highlighting And Color Contrast Accessibility
 description: My journey looking for, and ultimately building out my own solution for color contrast accessibility and syntax highlighting.
 date: November 16, 2017
 image: /img/blog/syntax-highlighting-and-color-constrast-accessibility/google-chrome-accessibility-audit@2x.jpg

@@ -1,0 +1,37 @@
+.social-links {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+
+  ul {
+    margin: 0;
+    list-style: none;
+    display: block;
+  }
+
+  li {
+    display: inline-block;
+    float: left;
+    padding-right: 10px;
+  }
+
+  a:hover {
+    text-decoration: none;
+  }
+
+  .social-icon {
+    fill: #f7f7f7;
+  }
+
+  svg:hover .social-icon {
+    fill: #e0e0e0;
+  }
+
+}
+
+

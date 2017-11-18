@@ -23,6 +23,11 @@
             &__button {
                 width: 50px;
                 border-left: 0;
+                border-radius: 0;
+                &:hover {
+                  background-color: darken(#ffffff, 5%);
+                  cursor: pointer;
+                }
             }
         }
 

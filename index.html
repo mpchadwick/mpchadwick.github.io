@@ -12,14 +12,14 @@ include-social: true
         <li class="home-menu__item"><a class="home-menu__item-link" href="/projects">Projects</a></li>
         <li class="home-menu__item"><a class="home-menu__item-link" href="/blog/">Blog</a></li>
     </ul>
-    <div class="home-featured-writing">
-    <h3 class="home-featured-writing__header">Selected Writing</h3>
-    <ul class="home-featured-writing__list">
+    <div class="home-featured-content-section">
+    <h3 class="home-featured-content-section__header">Selected Writing</h3>
+    <ul class="home-featured-content-section__list">
         {% assign selected_posts = site.posts | where:"selected","true" %}
         {% for post in selected_posts %}
-        <li class="home-featured-writing__item">
-            <a class="home-featured-writing__link" href="{{ post.url }}">{{ post.title }}</a>
-            <p class="home-featured-writing__post-date">{{post.date | date: "%B %-d, %Y"}}</p>
+        <li class="home-featured-content-section__item">
+            <a class="home-featured-content-section__link" href="{{ post.url }}">{{ post.title }}</a>
+            <p class="home-featured-content-section__post-date">{{post.date | date: "%B %-d, %Y"}}</p>
             {% if post.tags.size > 0 %}
                 <div class="tags-list">
                     <strong>Tags:</strong>
@@ -34,8 +34,8 @@ include-social: true
         {% endfor %}
     </ul>
     </div>
-    <div class="home-featured-writing">
-        <h3 class="home-featured-writing__header">Selected Projects</h3>
+    <div class="home-featured-content-section">
+        <h3 class="home-featured-content-section__header">Selected Projects</h3>
         {% assign selected_projects = site.projects | where:"selected","true" | sort: 'position' %}
         {% for project in selected_projects %}
         <h4>{{ project.title }}</h4>

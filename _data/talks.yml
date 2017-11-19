@@ -1,0 +1,35 @@
+- event_name: Meet Magento NYC
+  event_url: https://meetmagento.nyc/index.html
+  talk_name: Imagining a World Without Caching
+  talk_url: https://meetmagento.nyc/speakers.html
+  date: October 18, 2017
+
+- event_name: Mage Titans USA
+  event_url: https://usa.magetitans.com/
+  talk_name: Imagining a World Without Caching
+  talk_url: https://usa.magetitans.com/speakers/max-chadwick/
+  date: September 15, 2017
+
+- event_name: NYC Magento Meetup
+  event_url: https://www.meetup.com/NYC-Magento-Developers/
+  talk_name: Imagining a World Without Caching
+  talk_url: https://www.meetup.com/NYC-Magento-Developers/events/242254135/
+  date: August 24, 2017
+
+- event_name: Nomad Mage
+  event_url: https://nomadmage.com/
+  talk_name: Imagining a World Without Caching
+  talk_url: https://nomadmage.com/product/imagining-world-without-caching/
+  date: July 18, 2017
+
+- event_name: NYC Magento Meetup
+  event_url: https://www.meetup.com/NYC-Magento-Developers/
+  talk_name: Monitoring (and improving) Your Full Page Cache Hit Rate with Enterprise_PageCache
+  talk_url: https://www.meetup.com/NYC-Magento-Developers/events/233797698/
+  date: September 29, 2016
+
+- event_name: Nomad Mage
+  event_url: https://nomadmage.com/
+  talk_name: Monitoring (and improving) Your Full Page Cache Hit Rate with Enterprise_PageCache
+  talk_url: https://nomadmage.com/product/monitoring-improving-full-page-cache-hit-rate-enterprise_pagecache/
+  date: August 16, 2016

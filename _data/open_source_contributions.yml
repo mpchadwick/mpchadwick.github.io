@@ -1,0 +1,99 @@
+- project: Magento 2
+  title: Report Handled Exceptions To New Relic
+  link: https://github.com/magento/magento2/pull/11944
+  type: PHP
+
+- project: Magento 2
+  title: Add Role column to admin user grid
+  link: https://github.com/magento/magento2/pull/10891#issuecomment-332806807
+  type: PHP
+
+- project: n98-magerun2
+  title: Strip admin users when generating a development DB
+  link: https://github.com/netz98/n98-magerun2/pull/309
+  type: PHP
+
+- project: phpggc
+  title: Add Magento 1 SQL injection gadget
+  link: https://github.com/ambionics/phpggc/pull/9
+  type: PHP
+
+- project: phpggc
+  title: Add Zend Framework 1 gadget
+  link: https://github.com/ambionics/phpggc/pull/8
+  type: PHP
+
+- project: phpggc
+  title: Use `/usr/bin/env` to resolve PHP 
+  link: https://github.com/ambionics/phpggc/pull/5
+  type: PHP
+
+- project: Cm_Cache_Backend_Redis
+  title: Add Auto Expiry Feature
+  link: https://github.com/colinmollenhour/Cm_Cache_Backend_Redis/pull/111
+  type: PHP
+
+- project: Cm_RedisSession
+  title: Fix timeout so that it can actually be configured
+  link: https://github.com/colinmollenhour/Cm_RedisSession/pull/86
+  type: PHP
+
+- project: GridControl
+  title: Allow passing arguments to `<options>` methods
+  link: https://github.com/magento-hackathon/GridControl/pull/19
+  type: PHP
+
+- project: Magento 2
+  title: Refactor bindRemoveButtons for improved performance
+  link: https://github.com/magento/magento2/pull/1144
+  type: JavaScript
+
+- project: Prometheus Alert Manager
+  title: Add a filter to hide silenced alerts
+  link: https://github.com/prometheus/alertmanager/pull/319
+  type: JavaScript
+
+- project: Grafana Piechart Panel plugin
+  title: Add option to show percentage in legend
+  link: https://github.com/grafana/piechart-panel/pull/41
+  type: JavaScript
+
+- project: wcag_color_contrast
+  title: Add the ability to return relative luminance
+  link: https://github.com/mkdynamic/wcag_color_contrast/pull/2
+  type: Ruby
+
+- project: whois gem
+  title: Add .xyz parser
+  link: https://github.com/weppos/whois/pull/460
+  type: Ruby
+
+- project: whois-parser
+  title: Create a TLD subfolder when using mkwhois
+  link: https://github.com/weppos/whois-parser/pull/3/files
+  type: Ruby
+
+- project: Chronograf
+  title: Add ability to log alerts
+  link: https://github.com/influxdata/chronograf/pull/1477
+  type: Go
+
+- project: Prometheus Alertmanager
+  title: Move SMTP auth to the config file
+  link: https://github.com/prometheus/alertmanager/pull/308
+  type: Go
+
+- project: Laravel Homestead
+  title: Allow vagrant up with no sites
+  link: https://github.com/laravel/homestead/pull/326
+  type: DevOps
+
+- project: whois gem
+  title: Mention utils/mkwhois.rb in CONTRIBUTING.md
+  link: https://github.com/weppos/whois-parser/pull/4
+  type: Docs
+
+- project: Magento 2
+  title: Retain additional cron history by default
+  link: https://github.com/magento/magento2/pull/11463
+  type: ETC

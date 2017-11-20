@@ -3,6 +3,8 @@ layout: page
 title: Search
 body-class: search
 description: Something you're looking for? Use this page to search my entire blog.
+redirect_from:
+  - /search/
 ---
 
 <h1>Search</h1>
@@ -66,7 +68,7 @@ description: Something you're looking for? Use this page to search my entire blo
     document.querySelectorAll('.search-form__button')[0].addEventListener('click', function(e) {
         e.preventDefault();
         var query = document.querySelectorAll('.search-form__input')[0].value
-        var location = '/search/?query=' + query;
+        var location = '/search?query=' + query;
         if (window.ga && ga.create) {
             ga('set', 'page', location);
             ga('send', 'pageview');

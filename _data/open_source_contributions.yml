@@ -88,6 +88,11 @@
   link: https://github.com/weppos/whois-parser/pull/3/files
   type: Ruby
 
+- project: Laravel Homestead
+  title: Allow vagrant up with no sites
+  link: https://github.com/laravel/homestead/pull/326
+  type: Ruby
+
 - project: Chronograf
   title: Add ability to log alerts
   link: https://github.com/influxdata/chronograf/pull/1477
@@ -97,11 +102,6 @@
   title: Move SMTP auth to the config file
   link: https://github.com/prometheus/alertmanager/pull/308
   type: Go
-
-- project: Laravel Homestead
-  title: Allow vagrant up with no sites
-  link: https://github.com/laravel/homestead/pull/326
-  type: DevOps
 
 - project: Elastic beats
   title: Link to article outlining CA creation

@@ -93,6 +93,11 @@
   link: https://github.com/laravel/homestead/pull/326
   type: DevOps
 
+- project: Elastic beats
+  title: Link to article outlining CA creation
+  link: https://github.com/elastic/beats/pull/2401
+  type: Docs
+
 - project: magento-malware-scanner
   title: Document external scanning
   link: https://github.com/gwillem/magento-malware-scanner/pull/135

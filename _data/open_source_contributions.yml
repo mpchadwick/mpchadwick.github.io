@@ -48,6 +48,11 @@
   link: https://github.com/Vinai/nicer-image-names/pull/33
   type: PHP
 
+- project: nicer-image-names
+  title: Add ability to append hash of file contents to file name
+  link: https://github.com/Vinai/nicer-image-names/pull/34
+  type: PHP
+
 - project: Magento 2
   title: Refactor bindRemoveButtons for improved performance
   link: https://github.com/magento/magento2/pull/1144

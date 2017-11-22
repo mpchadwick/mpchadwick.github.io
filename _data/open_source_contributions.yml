@@ -43,6 +43,11 @@
   link: https://github.com/magento-hackathon/GridControl/pull/19
   type: PHP
 
+- project: nicer-image-names
+  title: Add safety in case getSource was called
+  link: https://github.com/Vinai/nicer-image-names/pull/33
+  type: PHP
+
 - project: Magento 2
   title: Refactor bindRemoveButtons for improved performance
   link: https://github.com/magento/magento2/pull/1144

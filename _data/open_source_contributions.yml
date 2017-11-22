@@ -58,6 +58,11 @@
   link: https://github.com/grafana/piechart-panel/pull/41
   type: JavaScript
 
+- project: isso
+  title: Fix hungarian translation
+  link: https://github.com/posativ/isso/pull/355
+  type: JavaScript
+
 - project: wcag_color_contrast
   title: Add the ability to return relative luminance
   link: https://github.com/mkdynamic/wcag_color_contrast/pull/2

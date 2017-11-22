@@ -93,6 +93,11 @@
   link: https://github.com/laravel/homestead/pull/326
   type: DevOps
 
+- project: magento-malware-scanner
+  title: Document external scanning
+  link: https://github.com/gwillem/magento-malware-scanner/pull/135
+  type: Docs
+
 - project: whois gem
   title: Mention utils/mkwhois.rb in CONTRIBUTING.md
   link: https://github.com/weppos/whois-parser/pull/4

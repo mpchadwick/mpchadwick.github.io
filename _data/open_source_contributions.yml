@@ -122,3 +122,8 @@
   title: Retain additional cron history by default
   link: https://github.com/magento/magento2/pull/11463
   type: ETC
+
+- project: isso
+  title: Darken placeholder text
+  link: https://github.com/posativ/isso/pull/354
+  type: HTML / CSS

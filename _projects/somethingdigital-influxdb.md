@@ -9,7 +9,7 @@ I built a Magento 1 plugin at Something Digital that pushes metrics from Magento
 
 - Cron execution history
 - Changelog table status
-- Full page cahe size
+- Full page cache size
 
 Additionally, it includes a `Measurement` interface which user's can implement to add push their own metrics to InfluxDb.
 

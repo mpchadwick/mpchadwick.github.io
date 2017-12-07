@@ -73,6 +73,11 @@
   link: https://github.com/posativ/isso/pull/355
   type: JavaScript
 
+- project: Samson
+  title: Add global concurrent job limit
+  link: https://github.com/zendesk/samson/pull/2402
+  type: Ruby
+
 - project: wcag_color_contrast
   title: Add the ability to return relative luminance
   link: https://github.com/mkdynamic/wcag_color_contrast/pull/2

@@ -58,7 +58,7 @@
 
       {% if page.tags.size > 0 %}
       {% for tag in page.tags %}
-        ga('send', 'event', 'taggedPost', 'view', '{{ tag }}');
+        ga('send', 'event', 'taggedPost', 'view', '{{ tag }}', { nonInteraction: true });
       {% endfor %}
       {% endif %}
 

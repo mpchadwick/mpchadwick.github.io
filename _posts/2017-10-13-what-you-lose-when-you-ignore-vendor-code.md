@@ -37,10 +37,18 @@ In addition to debugging vendor code locally, occasionally you need to debug it 
 
 ### Code Is Hidden During Code Review
 
-One final issue with not committing the code is that it makes it much less likely that anyone will look at the code during code review. Instead, they'll just be looking at a diff of a `composer.json` and `composer.lock` file. At that point, what is there to really review anyway, right? If the entire library / plugin being added is committed it makes it easier to review and comment on the code being added.
+Another issue with not committing the code is that it makes it much less likely that anyone will look at the code during code review. Instead, they'll just be looking at a diff of a `composer.json` and `composer.lock` file. At that point, what is there to really review anyway, right? If the entire library / plugin being added is committed it makes it easier to review and comment on the code being added.
+
+### Vendor Code Is Not Browseable / Searchable In GitHub
+
+Working at a software development agency, we manage the a large number of code bases across our client portfolio. It is not feasible for all our developers (myself included) to have local working copies of **all** these code bases with vendor code installed. However, it beneficial for **any** developer to be able to quickly browse vendor code to provide direction to other team mates via code reference points. Additionally, during code reviews it can be helpful to reference vendor code as "the right way of doing things". When vendor code is not committed the only way to do either of these is to browse the upstream repository, which is in the best case cumbersome, but in the worst case impossible (in the case of private repos).
 
 ### Conclusion
 
 The point of this post is **not** to say that we shouldn't be ignor-ing `vendor/`. I **absolutely** think we should. There are **many**(!!) benefits to it that I won't touch on here. Instead, the point is to say that, like everything, there are some tradeoffs and things that you lose if you ignore vendor.
 
 Hope you found this post interesting!
+
+<div class="tout tout--alt">
+<p><strong>December 20th, 2017</strong>: Updated to reflect an additional challenge I've been having recently with ignoring vendor code ("Vendor Code Is Not Browseable / Searchable In GitHub").</p>
+</div>

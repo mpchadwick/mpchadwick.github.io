@@ -7,6 +7,12 @@
     display: block;
     border-left: 10px solid brown;
 
+    &--alt {
+      background-color: $color-bg-subtle;
+      color: black;
+      border-left: 10px solid #c1c1c1;
+    }
+
     p {
       margin-bottom: 0;
       line-height: 1.3rem;

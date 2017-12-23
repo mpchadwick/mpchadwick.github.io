@@ -13,6 +13,13 @@ layout: page
   </ul>
 </div>
 {% endif %}
+{% if page.edits.size > 0 %}
+<div class="tout tout--alt">
+    {% for edit in page.edits %}
+    <p><strong>{{ edit.date }}</strong>: {{ edit.content }}</p>
+    {% endfor %}
+</div>
+{% endif %}
 {{ content }}
 {% include bio.html %}
 <div id="disqus_thread"></div>

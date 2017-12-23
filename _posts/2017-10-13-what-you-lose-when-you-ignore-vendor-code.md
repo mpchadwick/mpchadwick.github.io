@@ -5,6 +5,9 @@ description: Ignoring vendor code is typically thought to be best practice. But 
 date: October 13, 2017
 image:
 tags: [Thoughts]
+edits:
+  - date: December 20th, 2017
+    content: Updated to reflect an additional challenge I've been having recently with ignoring vendor code ("Vendor Code Is Not Browseable / Searchable In GitHub").
 ---
 
 It's more or less universally accepted as best practice to ignore "vendor" code from your project's source control. 
@@ -48,7 +51,3 @@ Working at a software development agency, we manage the a large number of code b
 The point of this post is **not** to say that we shouldn't be ignor-ing `vendor/`. I **absolutely** think we should. There are **many**(!!) benefits to it that I won't touch on here. Instead, the point is to say that, like everything, there are some tradeoffs and things that you lose if you ignore vendor.
 
 Hope you found this post interesting!
-
-<div class="tout tout--alt">
-<p><strong>December 20th, 2017</strong>: Updated to reflect an additional challenge I've been having recently with ignoring vendor code ("Vendor Code Is Not Browseable / Searchable In GitHub").</p>
-</div>

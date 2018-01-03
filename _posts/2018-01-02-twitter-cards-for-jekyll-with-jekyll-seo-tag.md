@@ -3,7 +3,7 @@ layout: blog-single
 title:  Twitter Cards for Jekyll with jekyll-seo-tag
 description: A look at how jekyll-seo-tag can be used to add Twitter Card support to a Jekyll site.
 date: January 02, 2018
-image: 
+image: /img/blog/jekyll-seo-tag-twitter-cards/code.jpg
 tags: [Jekyll]
 ---
 

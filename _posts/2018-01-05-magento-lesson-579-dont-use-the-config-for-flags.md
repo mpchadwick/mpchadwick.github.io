@@ -77,6 +77,8 @@ After this, any other job cannot get past the `isRunning()` check until the conf
 
 The solution is simple...don't use the config for storing flags. Instead, use the flagging system provided by the framework (starting with `Mage_Core_Model_Flag`).
 
+**NOTE**: `Mage_Index_Model_Lock` is another option.
+
 Using this framework the methods look something like this instead...
 
 **`isRunning()`**
@@ -102,5 +104,4 @@ Mage::getModel('core/flag', ['flag_code' => 'vendor_extension_flag'])
 	->setFlagCode(false)
 	->save();
 ```
-
 

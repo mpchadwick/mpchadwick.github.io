@@ -52,7 +52,9 @@ Doing some research, I found there is [quite](http://stackoverflow.com/questions
 
 ### There's Got To Be A Better Way!
 
-> **NOTE**: This is theoretical and doesn't actually exist yet.
+<div class="tout tout--secondary">
+<p><strong>NOTE</strong>: This is theoretical and doesn't actually exist yet.</p>
+</div>
 
 Meet the `timeout` attribute.
 

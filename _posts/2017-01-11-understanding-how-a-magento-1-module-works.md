@@ -22,7 +22,9 @@ This is the best place to start when reviewing a module as **this is where all b
 
 For the duration of this post, I'll go through various declarations you'll find in `config.xml`.
 
-> **NOTE** This post does not cover *every* possible thing one can declare in `config.xml`, but covers some of the most popular ones.
+<div class="tout tout--secondary">
+<p><strong>NOTE</strong>: This post does not cover *every* possible thing one can declare in `config.xml`, but covers some of the most popular ones.</p>
+</div>
 
 ### Observers
 

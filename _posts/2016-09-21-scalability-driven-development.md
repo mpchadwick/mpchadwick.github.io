@@ -22,7 +22,9 @@ Let's take a look at real life example and demonstrate how an SDD mindset can be
 
 ### The Feature Request
 
-> **NOTE** This example is this post is based off implementing a feature in Magento 1 Enterprise Edition, but the overall subject of the post is relevant regardless of what platform you're using.
+<div class="tout tout--secondary">
+<p><strong>NOTE</strong>: This example is this post is based off implementing a feature in Magento 1 Enterprise Edition, but the overall subject of the post is relevant regardless of what platform you're using.</p>
+</div>
 
 The feature request in this case was pretty simple. The client wanted to be able to use a URL in marketing materials that, when accessed, would automatically apply a coupon code on behalf of the user. That's it.
 

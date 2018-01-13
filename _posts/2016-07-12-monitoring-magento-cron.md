@@ -12,7 +12,9 @@ Ultimately, if you have a site where cron is getting stuck frequently you're goi
 
 We've implemented a good system for doing this at [Something Digital](http://www.somethingdigital.com/). We're using two tools from [the "TICK" stack](https://influxdata.com/time-series-platform/) - [InfluxDb](https://influxdata.com/time-series-platform/influxdb/), a time-series database which we use to store data from `cron_schedule`, and [Kapacitor](https://influxdata.com/time-series-platform/kapacitor/), an agent that runs alongside InfluxDb and can stream or batch query data and react to it (e.g. send alerts). In this post I'll outline our set up.
 
-> **NOTE:** Magento 2 has significantly improved reliability of cron through new features such as groups (which are actually available in Magento 1 if you use `Aoe_Scheduler`) and the ability to parallelize jobs with the `use_separate_process` setting. That being said, cron is always mission critical and there's never a case where you shouldn't be monitoring it.
+<div class="tout tout--secondary">
+<p><strong>NOTE</strong>: Magento 2 has significantly improved reliability of cron through new features such as groups (which are actually available in Magento 1 if you use Aoe_Scheduler) and the ability to parallelize jobs with the use_separate_process setting. That being said, cron is always mission critical and there's never a case where you shouldn't be monitoring it.</p>
+</div>
 
 <!-- excerpt_separator -->
 

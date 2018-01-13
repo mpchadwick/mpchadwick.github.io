@@ -31,7 +31,9 @@ Here, I'll dive into the code, to investigate how this works...
 
 ### Passing The Data To The Renderer
 
-> **NOTE:** This blog post is based on the Magento v2.1.5 code base
+<div class="tout tout--secondary">
+<p><strong>NOTE</strong>: This blog post is based on the Magento v2.1.5 code base</p>
+</div>
 
 As mentioned in [Magento 2 REST API method return processing](/blog/magento-2-rest-api-method-return-processing), REST requests are handled by `Magento\Webapi\Controller\Rest::processApiRequest()`. To understand how the response format is negotiated, we need to start with that last line of that method...
 

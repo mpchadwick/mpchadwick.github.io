@@ -80,7 +80,7 @@ If PHP-FPM is listening on a port you can send requests to it with `cgi-fcgi` as
 SCRIPT_NAME=/status \ 
   SCRIPT_FILENAME=/status \
   REQUEST_METHOD=GET \
-  cgi-fcgi -bind -connect 127.0.0.1:900
+  cgi-fcgi -bind -connect 127.0.0.1:9000
 ```
 
 If it's listening on a socket simply update the connection name to point to the Unix socket.

@@ -52,7 +52,9 @@ Once installed you'll be able to use the `cgi-fcgi` binary to talk directly to P
 
 By default, PHP-FPM does not make the status page available. You'll need to ensure that the following is included in your PHP-FPM configuration...
 
-> **NOTE**: You don't need to use `/status` for the path and can use another path if you'd prefer
+<div class="tout tout--secondary">
+<p><strong>NOTE</strong>: You don't need to use `/status` for the path and can use another path if you'd prefer.</p>
+</div>
 
 ```
 pm.status_path = /status

@@ -10,7 +10,9 @@ ad: domain-clamp-ad-b.html
 
 Partial reindexing was only a thing in Enterprise Edition of Magento 1. In Magento 2, however, it's part of Community Edition. While the overall architecture is pretty much the same, as with all of Magento 2, the code is very different. In this post I'll dig through Magento 2's core code to investigate the implementation.
 
-> **NOTE**  This post is based on the Magento 2.1.4 code base.
+<div class="tout tout--secondary">
+<p><strong>NOTE</strong>: This post is based on the Magento 2.1.4 code base.</p>
+</div>
 
 <!-- excerpt_separator -->
 

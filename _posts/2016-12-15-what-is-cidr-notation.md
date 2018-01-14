@@ -74,7 +74,7 @@ Curious as always, I did a little investigation and found out that this way of r
 
 In order to answer this question, it's helpful to have a basic understanding of IP addresses and IP address classes.
 
-The total range of possible IPv4 addresses spans from 0.0.0.0 to 255.255.255.255. This range is divided up into a number of classes
+The total range of possible IPv4 addresses spans from 0.0.0.0 to 255.255.255.255. This range is divided up into a number of classes.
 
 ##### Class A: 0.0.0.0 - 127.255.255.255.  
 
@@ -88,7 +88,7 @@ In class of IP addresses the first two octets refers to the network and the last
 
 In this class of IP addresses the first 3 octets refer to the network and the last octet refers to the host. Each network can only have 255 hosts on this type of network.
 
-IP addresses above 223.255.255.255 are split into Class C and D, however those classes are used for multi-casting protocols and experimental use
+IP addresses above 223.255.255.255 are split into Class C and D, however those classes are used for multi-casting protocols and experimental use.
 
 ### What Does This Have To Do With CIDR Notation?
 

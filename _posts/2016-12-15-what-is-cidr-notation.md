@@ -11,7 +11,7 @@ ad: domain-clamp-ad-b.html
 Recently, I was involved in mitigating malicious scripted activity against a site that was found to be coming from a range of IP addresses. [`whois`](http://www.manpagez.com/man/1/whois/) is a useful tool when dealing with this type of an issue. It can provide a network range for a given IP address.
 
 ```
-➜  ~ whois 104.232.39.143
+$ whois 104.232.39.143
 
 NetRange:       104.232.32.0 - 104.232.47.255
 CIDR:           104.232.32.0/20
@@ -67,9 +67,10 @@ Curious as always, I did a little investigation and found out that this way of r
  
 ### What Is CIDR Notation?
 
-> **NOTE:** We will only be talking about IPv4 in this post.
->
-> **ALSO:** This post doesn't go into detail on how CIDR notation is calculated. I recommend [this post](https://www.digitalocean.com/community/tutorials/understanding-ip-addresses-subnets-and-cidr-notation-for-networking) if that's what you're after.
+<div class="tout tout--secondary">
+<p><strong>NOTE</strong>: We will only be talking about IPv4 in this post.</p>
+<p><strong>ALSO</strong>: This post doesn't go into detail on how CIDR notation is calculated. I recommend <a href="https://www.digitalocean.com/community/tutorials/understanding-ip-addresses-subnets-and-cidr-notation-for-networking">this post</a> if that's what you're after.</p>
+</div>
 
 In order to answer this question, it's helpful to have a basic understanding of IP addresses and IP address classes.
 

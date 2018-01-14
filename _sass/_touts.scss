@@ -7,21 +7,12 @@
     display: block;
     border-left: 10px solid brown;
 
-    &--alt {
-      background-color: $color-bg-subtle;
-      color: black;
-      border-left: 10px solid #c1c1c1;
-    }
-
-    &--secondary {
-      background-color: #e3daff;
-      color: black;
-      border-left: 10px solid purple;
-    }
-
     p {
-      margin-bottom: 0;
       line-height: 1.3rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
 
     a {
@@ -32,6 +23,23 @@
         color: $color-bg-pop-link-hover;
       }
     }
+
+    &--alt {
+      background-color: $color-bg-subtle;
+      color: black;
+      border-left: 10px solid #c1c1c1;
+    }
+
+    &--secondary {
+      background-color: #e3daff;
+      color: black;
+      border-left: 10px solid purple;
+
+      a {
+        color: purple;
+      }
+    }
+
     &__avatar {
       width: 20%;
       max-width: 80px !important;

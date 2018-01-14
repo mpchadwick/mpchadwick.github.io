@@ -35,7 +35,7 @@ Our implementation leverages InfluxDb and Telegraf, moving the responsibility of
 The TICK stack is very easy to set up. First follow the installation instructions for InfluxDb [here](https://docs.influxdata.com/influxdb/v0.13/introduction/installation/). On my Mac I have it installed through Homebrew, but I've also `yum install`ed the `rpm ` on CentOS boxes. On my Mac I launch it with the following command...
 
 ```
-influxd -config /usr/local/etc/influxdb.conf
+$ influxd -config /usr/local/etc/influxdb.conf
 ```
 
 Once you've started the service you can navigate to `localhost:8083` to see the admin panel.
@@ -94,7 +94,7 @@ Then you'd add a `crontab` entry to execute this `group` every 15 minutes
 
 For now, though, we'll just execute the job ourselves.
 
-```bash
+```
 $ /usr/bin/php /var/www/html/shell/sd_influxdb.php --group fifteen_minutes
 ```
 
@@ -115,7 +115,7 @@ Kapacitor is another piece of [the "TICK" stack](https://influxdata.com/time-ser
 Once installed you'll need to [generate a configuration file](https://docs.influxdata.com/kapacitor/v0.13//introduction/installation/#configuration).  This contains things like details for the InfluxDb connection, or SMTP credentials. Once configured you can start Kapacitor. Here's how I start the service on my Macbook.
 
 ```
-kapacitord -config kapacitor.generated.conf
+$ kapacitord -config kapacitor.generated.conf
 ```
 
 The main things to understand about Kapacitor are...
@@ -142,7 +142,7 @@ I find TICKScript to be pretty intuitive, but essentially we're fetching the low
 Now that we have the required TICKScript we need to define a task to use that script.
 
 ```
-kapacitor define cron_alert -type batch -tick cron_alert.tick -dbrp mydb.default
+$ kapacitor define cron_alert -type batch -tick cron_alert.tick -dbrp mydb.default
 ```
 Again, I find this to be pretty straight forward, but there are a couple things worth calling out...
 
@@ -152,20 +152,18 @@ Again, I find this to be pretty straight forward, but there are a couple things 
 Once you've defined your task you'll see it registered via the `kapacitor list tasks` command...
 
 ```
-➜  ~ kapacitor list tasks
+$ kapacitor list tasks
 ID                            Type      Status    Executing Databases and Retention Policies
 cron_alert_batch              batch     disabled  false     ["mydb"."default"]
-➜  ~
 ```
 
 However, by default it's disabled. Let's enable it...
 
 ```
-➜  ~ kapacitor enable cron_alert_batch
-➜  ~ kapacitor list tasks
+$ kapacitor enable cron_alert_batch
+$ kapacitor list tasks
 ID                            Type      Status    Executing Databases and Retention Policies
 cron_alert_batch              batch     enabled   true      ["mydb"."default"]
-➜  ~
 ```
 
 Awesome! Cron monitoring set up is complete. The TICK stack has provided a super clean solution the "The Cron Monitoring Dilemma", and helped us avoid a "Yo Dawg" moment..

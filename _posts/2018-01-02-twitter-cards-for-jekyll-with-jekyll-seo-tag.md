@@ -15,9 +15,11 @@ While this is certainly a valid approach, there's another way to do it that does
 
 Here's let's take a look at how this can be done.
 
-> Note: This post is based on jekyll-seo-tag as of version 2.4.0.
-
 <!-- excerpt_separator -->
+
+<div class="tout tout--secondary">
+<p><strong>NOTE</strong>: This post is based on jekyll-seo-tag as of version 2.4.0.</p>
+</div>
 
 ### Installing The Plugin
 

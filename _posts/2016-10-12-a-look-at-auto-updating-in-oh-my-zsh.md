@@ -1,7 +1,7 @@
 ---
 layout: blog-single
 title: "Auto-updating software: Diving into oh-my-zsh"
-description: In this post we take a look at community opinion on this question, and then I voice my own.
+description:
 date: October 12, 2016
 tags: [Shell, Thoughts]
 ---
@@ -102,8 +102,8 @@ fi
 
 If the prompt is disabled or you answer the prompt with "Y" it goes ahead and auto-updates which ultimately executes a `git pull` in `~/.oh-my-zsh/tools/upgrade.sh`. 
 
-```bash
-git pull --rebase --stat origin master
+```
+$ git pull --rebase --stat origin master
 ```
 
 It then updates `~/.zsh-update` to note the latest date the update happened.

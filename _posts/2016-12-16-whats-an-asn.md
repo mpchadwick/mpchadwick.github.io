@@ -29,7 +29,7 @@ Initially ASNs were intended to be only 16 bits in length for a range of 0 to 65
 Typically you can find the ASN of an IP address with [`whois`](http://www.manpagez.com/man/1/whois/). For example if you [`dig`](https://linux.die.net/man/1/dig) maxchadwick.xyz you'll see that I have an A record pointing to 104.18.41.207.
 
 ```
-➜  ~ dig maxchadwick.xyz
+$ dig maxchadwick.xyz
 
 ; <<>> DiG 9.8.3-P1 <<>> maxchadwick.xyz
 ;; global options: +cmd
@@ -53,7 +53,7 @@ maxchadwick.xyz.	300	IN	A	104.18.40.207
 Running `whois` against that IP address provides a lot of information, including the ASN (listed as "OriginAS").
 
 ```
-➜  ~ whois 104.18.41.207
+$ whois 104.18.41.207
 
 NetRange:       104.16.0.0 - 104.31.255.255
 CIDR:           104.16.0.0/12
@@ -124,7 +124,7 @@ If you don't specify a host (via the `-h` flag) when running `whois` it will que
 This question was asked (and answered) in [this StackExchange thread](http://superuser.com/questions/405666/how-to-find-out-all-ip-ranges-belonging-to-a-certain-as). [This answer](http://superuser.com/questions/405666/how-to-find-out-all-ip-ranges-belonging-to-a-certain-as#answer-978189) includes a bash one-liner. For example, we can see the first 10 found networks that belong to Cloudflare (in CIDR notation) as follows.
 
 ```
-➜  ~ whois -h whois.radb.net -- '-i origin AS13335' | grep -Eo "([0-9.]+){4}/[0-9]+" | head
+$ whois -h whois.radb.net -- '-i origin AS13335' | grep -Eo "([0-9.]+){4}/[0-9]+" | head
 64.68.192.0/24
 141.101.68.0/24
 141.101.69.0/24

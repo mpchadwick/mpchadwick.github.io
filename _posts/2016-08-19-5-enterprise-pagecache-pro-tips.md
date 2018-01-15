@@ -10,7 +10,9 @@ I recently gave [a talk on monitoring and improving your full page cache hit rat
 
 <!-- excerpt_separator -->
 
-> **NOTE** The talk covers a lot more than just these 5 items. [Slide can be found here](http://maxchadwick.xyz/monitoring-and-improving-fpc-hit-rate).
+<div class="tout tout--secondary">
+<p><strong>NOTE</strong>: The talk covers a lot more than just these 5 items. <a href="http://maxchadwick.xyz/monitoring-and-improving-fpc-hit-rate">Slide can be found here</a>.</p>
+</div>
 
 ### 1. FPC Doesn't Expire
 
@@ -203,6 +205,6 @@ $this->_requestCacheId  = $this->prepareCacheId($this->_requestId);
 
 This means the for a given URL, there are separate FPC entries for (amongst other things) each customer group / customer segment combination.
 
-<hr><br>
+<hr>
 
 Hope you found these tips helpful. Leave a comment below with any questions or comments.

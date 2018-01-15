@@ -45,9 +45,9 @@ ga:
 
 pre-commit:
   - check: FrontMatterVariableExists
-    variables: ['description', 'image']
+    variables: ['description']
   - check: FrontMatterVariableIsNotDuplicate
-    variables: ['description', 'image']
+    variables: ['description']
   - check: FrontMatterVariableMeetsLengthRequirements
     variables: ['description||165', 'title||100']
   - check: NoDuplicateTags

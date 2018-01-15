@@ -3,7 +3,15 @@ url: https://maxchadwick.xyz
 permalink: /blog/:title
 markdown: kramdown
 paginate: 6
-paginate_path: "/blog/:num/"
+paginate_path: "/blog/page/:num/"
+
+defaults:
+  -
+    scope:
+      path: "blog/page"
+    values:
+      sitemap: false
+
 author: "Max Chadwick"
 twitter:
   username: maxpchadwick

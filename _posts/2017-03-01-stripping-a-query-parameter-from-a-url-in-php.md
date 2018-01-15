@@ -31,7 +31,7 @@ var_dump(http_strip_query_param($url)) . PHP_EOL;
 
 When we execute this...
 
-```bash
+```
 $ php http_strip_query_param.php
 array(4) {
   ["scheme"]=>
@@ -70,7 +70,7 @@ var_dump(http_strip_query_param($url)) . PHP_EOL;
 
 Here's how this will execute...
 
-```bash
+```
 $ php http_strip_query_param.php
 array(2) {
   ["keep"]=>
@@ -107,7 +107,7 @@ var_dump(http_strip_query_param($url, $param)) . PHP_EOL;
 
 **Result:**
 
-```bash
+```
 $ php http_strip_query_param.php
 array(1) {
   ["keep"]=>
@@ -141,7 +141,7 @@ var_dump(http_strip_query_param($url, $param)) . PHP_EOL;
 
 **Result**
 
-```bash
+```
 $ php http_strip_query_param.php
 array(4) {
   ["scheme"]=>
@@ -230,7 +230,7 @@ var_dump(http_strip_query_param($url, $param)) . PHP_EOL;
 
 **Result**
 
-```bash
+```
 $ php http_strip_query_param.php
 string(30) "http://example.com/page?keep=1"
 ```

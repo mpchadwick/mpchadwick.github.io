@@ -112,8 +112,8 @@ My top commands when looking at log files are the following
 
 The thing is, usage of this tool set is much easier if each entry in the log file is on one line (the way that Apache and Nginx do logging, for example). Here's a command I might use to look for an increase in 503 errors over a period of time.
 
-```bash
-sudo tail -n 99999 /var/log/httpd/access.log \
+```
+$ sudo tail -n 99999 /var/log/httpd/access.log \
     | grep ' 503 ' \  
     | awk '{ print $4 }' \
     | awk -F":" '{ print $1 }' \
@@ -145,11 +145,12 @@ Now that same file will now look like this...
 ```json
 2016-11-30T20:45:59+00:00 {"request":{"amt":"46.13","acct":"****","expdate":"****","cvv2":"****","currency":"USD","firstname":"Bob","lastname":"Smith","street":"123 Main St","city":"New York","state":"NY","zip":"12345","country":"US","email":"bob@example.com"},"result":{"result":"125","respmsg":"Declined by Fraud Service","authcode":"111111","avsaddr":"N","avszip":"N","cvv2match":"Y","procavs":"N","proccvv2":"M","iavs":"N","prefpsmsg":"No Rules Triggered","postfpsmsg":"Reject AVS","result_code":"125"}}
 ```
+{:.wrap}
 
 Now I can `grep` and `awk` and get the answers I want easily.
 
-```bash
-grep 'Declined' payment_file.log \
+```
+$ grep 'Declined' payment_file.log \
     | awk '{ print $1 }' \
     | awk -F"T" '{ print $1 }' \
     | sort \

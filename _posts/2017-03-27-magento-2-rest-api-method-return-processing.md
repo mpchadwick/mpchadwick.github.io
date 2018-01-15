@@ -14,7 +14,9 @@ As such, I spent a while digging through the code to understand. Here I'll detai
 
 <!-- excerpt_separator -->
 
-> **NOTE:** This blog post is based on the Magento v2.1.5 code base
+<div class="tout tout--secondary">
+<p><strong>NOTE</strong>: This blog post is based on the Magento v2.1.5 code base</p>
+</div>
 
 ### How Your Method Gets Called
 
@@ -164,7 +166,9 @@ elseif (is_object($data)) {
 
 Can't really tell much about what's going on here, let's take a look at `Magento\Framework\Reflection\DataObjectProcessor::buildOutputDataArray`.
 
-> **NOTE** This is a beefy method and I've trimmed it down a lot to only focus on the parts that are relevant to this discussion...
+<div class="tout tout--secondary">
+<p><strong>NOTE</strong>: This is a beefy method and I've trimmed it down a lot to only focus on the parts that are relevant to this discussion...</p>
+</div>
 
 ```php?start_inline=1
 /**

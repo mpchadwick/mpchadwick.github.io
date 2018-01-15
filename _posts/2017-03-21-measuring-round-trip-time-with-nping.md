@@ -33,7 +33,9 @@ Fortunately, there are several alternatives which you can use to send TCP packet
 
 `nping` does not output in _exactly_ the same form as `ping`, but it's very similar.
 
-> **NOTE** In order to use `nping` in TCP mode you need to `sudo`
+<div class="tout tout--secondary">
+<p><strong>NOTE</strong>: In order to use <code>nping</code> in TCP mode you need to <code>sudo</code>.</p>
+</div>
 
 ```
 $ sudo nping --tcp -p 6379 -c 10 172.24.16.119

@@ -20,7 +20,9 @@ In this post I'll explore that question...
 
 ### Resolving Referrer URLs
 
-> **NOTE** This post is based on the Magento 1 code base. However, Magento 2 contains the same implementation of `uenc`.
+<div class="tout tout--secondary">
+<p><strong>NOTE</strong>: This post is based on the Magento 1 code base. However, Magento 2 contains the same implementation of <code>uenc</code>.</p>
+</div>
 
 In `Mage_Core_Controller_Varien_Action` there is a function called `_getRefererUrl`. It looks like this...
 

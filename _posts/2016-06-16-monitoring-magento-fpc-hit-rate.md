@@ -13,7 +13,9 @@ We've been breaking some new ground (at least from what I can see in my Google s
 
 <!-- excerpt_separator -->
 
-> **NOTE**: I've published [a module on Github](https://github.com/mpchadwick/Mpchadwick_PageCacheHitRate) that you can use to get started with monitoring right away. Stick with me here, though, I'll show you why this is so important.
+<div class="tout tout--secondary">
+<p><strong>NOTE</strong>: I've published <a href="https://github.com/mpchadwick/Mpchadwick_PageCacheHitRate">a module on Github</a> that you can use to get started with monitoring right away. Stick with me here, though, I'll show you why this is so important.</p>
+</div>
 
 ### Why Should I Track Hit Rate?
 
@@ -145,8 +147,10 @@ public function extractContent($content)
 
 For partials and misses we can take advantage of Magento's eventing system. `controller_front_send_response_before` works fine here. <strike>We can check the contents of `Mage::registry('cached_page_containers')` to determine whether or not we have a hit.</strike>
 
-> **NOTE:** `Mage::registry('cached_page_containers')` is [not always a safe way to check if its a miss or a partial](https://github.com/mpchadwick/Mpchadwick_PageCacheHitRate/issues/11). I plan to have this fixed in v0.2.0.
- 
+<div class="tout tout--secondary">
+<p><strong>NOTE</strong>: <code>Mage::registry('cached_page_containers')</code> is <a href="https://github.com/mpchadwick/Mpchadwick_PageCacheHitRate/issues/11">not always a safe way to check if its a miss or a partial</a>. I plan to have this fixed in v0.2.0.</p>
+</div>
+
 In addition, in the case of misses, it can be useful to track which container caused the miss. We can do that by getting the class of all the containers in `Mage::registry('cached_page_containers')`.
 
 ```php
@@ -178,7 +182,9 @@ Hit rate is tracked via a [New Relic custom event](https://docs.newrelic.com/doc
 - Of course, you need a paid New Relic account with New Relic insights to take advantage of this.
 - Currently insights cannot be hooked up to New Relic's alerting suite.
 
-> **NOTE**: I am planning to also add a tracker that stores the data in Redis. The data can the be scraped and stored in a time series database such as [Prometheus](https://prometheus.io/) or [InfluxDB](https://influxdata.com/).
+<div class="tout tout--secondary">
+<p><strong>NOTE</strong>: I am planning to also add a tracker that stores the data in Redis. The data can the be scraped and stored in a time series database such as <a href="https://prometheus.io/">Prometheus</a> or <a href="https://influxdata.com/">InfluxDB</a>.</p>
+</div>
 
 ### Conclusion
 

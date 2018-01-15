@@ -7,7 +7,9 @@ image:
 tags: [Magento]
 ---
 
-> **Warning:** This article is highly critical of some blog posts, Stack Exchange answers, and GitHub issue comments. This is not a personal attack on the authors of those posts or answers. Instead, the intent is to call out the issues with some information that is floating around and provide alternate solutions to mitigate the risk of many users adopting practices that are harmful to the usage of the page cache in Magento 2.
+<div class="tout tout--secondary">
+<p><strong>WARNING</strong>: This article is highly critical of some blog posts, Stack Exchange answers, and GitHub issue comments. This is not a personal attack on the authors of those posts or answers. Instead, the intent is to call out the issues with some information that is floating around and provide alternate solutions to mitigate the risk of many users adopting practices that are harmful to the usage of the page cache in Magento 2.</p>
+</div>
 
 Recently I wrote a post titled ["How Magento 2 Decides If A Page Is Cacheable"]({{ site.baseurl }}{% link _posts/2017-10-20-how-magento-2-decides-if-a-page-is-cacheable.md %}). After I posted it on Twitter I got a response about the depersonalizer
 

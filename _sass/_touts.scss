@@ -37,6 +37,10 @@
 
       a {
         color: purple;
+
+        &:hover {
+          color: darken(purple, 5%);
+        }
       }
     }
 

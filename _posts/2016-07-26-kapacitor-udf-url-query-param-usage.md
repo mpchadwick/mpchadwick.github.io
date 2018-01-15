@@ -15,13 +15,17 @@ Page caching implementations such as Varnish store unique cache entries for each
 
 In this post I'll show you how to monitor query parameter usage on your site using [Kapcitor UDFs](https://docs.influxdata.com/kapacitor/v0.13/nodes/u_d_f_node/).
 
-> **NOTE** The UDF we'll be looking at is written in Go.
+<div class="tout tout--secondary">
+<p><strong>NOTE</strong>: The UDF we'll be looking at is written in Go.</p>
+</div>
 
 ### Getting the raw data into InfluxDb
 
 In order to monitor query parameter usage, we first need to get the URL for each request into InfluxDb. [Once you have InfluxDb installed](https://github.com/influxdata/telegraf/tree/986735234b68359812f4ab65fb26f6a926874e31/plugins/inputs/logparser) the best way to do this is with [the Telegraf logparser plugin](https://github.com/influxdata/telegraf/tree/986735234b68359812f4ab65fb26f6a926874e31/plugins/inputs/logparser).
 
-> Note: At the time of writing this, the logparser plugin is not included in the latest stable v0.13 release of Telegraf. You'll need to follow [the instructions for downloading the nightly release](https://influxdata.com/downloads/#telegraf).
+<div class="tout tout--secondary">
+<p><strong>NOTE</strong>: At the time of writing this, the logparser plugin is not included in the latest stable v0.13 release of Telegraf. You'll need to follow <a href="https://influxdata.com/downloads/#telegraf">the instructions for downloading the nightly release</a>.</p>
+</div>
 
 Telegraf is *really* easy to set up. Just follow [the instructions from the Telegraf docs](https://docs.influxdata.com/telegraf/v0.13/introduction/installation/). Once you've downloaded Telegraf you'll need to...
 
@@ -154,7 +158,9 @@ stream
 
 ### UDF Starting Formula
 
-> **NOTE**: I have published the UDF in question to Github [here](https://github.com/mpchadwick/kapacitor_utils/blob/858695f4c47e618c41d08f5b1e85510047d78801/query_parser/query_parser.go).
+<div class="tout tout--secondary">
+<p><strong>NOTE</strong>: I have published the UDF in question to Github <a href="https://github.com/mpchadwick/kapacitor_utils/blob/858695f4c47e618c41d08f5b1e85510047d78801/query_parser/query_parser.go">here</a>.</p>
+</div>
 
 Everything is now in place to pass the data to our UDF, but there's a big problem...our UDF doesn't actually exist yet! Let's take a look at the basic starting formula for a UDF in Go.
 
@@ -244,7 +250,9 @@ Any UDF you write will certainly be interacting with `udf.Point`s.
 
 Now, let's take a look at `queryParserHandler`'s `Point` method.
 
-> **NOTE**: Our UDF also requires importing the `strings` library. I didn't show that in the "starting formula" because it isn't needed there and thus Go wouldn't compile the code.
+<div class="tout tout--secondary">
+<p><strong>NOTE</strong>: Our UDF also requires importing the `strings` library. I didn't show that in the "starting formula" because it isn't needed there and thus Go wouldn't compile the code.</p>
+</div>
 
 ```go
 func (q *queryParserHandler) Point(p *udf.Point) error {

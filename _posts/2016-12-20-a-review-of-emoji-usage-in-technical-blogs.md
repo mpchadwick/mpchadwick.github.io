@@ -31,8 +31,8 @@ This provided the perfect data source for my analysis for the following reasons.
 
 I grabbed a copy of the markdown source of the file and used a bash one-liner to isolate the URLs to the relevant repositories.
 
-```bash
-➜ cat jekyll-sites.md \
+```
+$ jekyll-sites.md \
     | awk -F"(" '{ print $4 }' \
     | awk -F")" '{ print $1 }' \
     > repos.txt
@@ -40,8 +40,8 @@ I grabbed a copy of the markdown source of the file and used a bash one-liner to
 
 Next I downloaded them. 
 
-```bash
-➜  cat repos.txt \
+```
+$  cat repos.txt \
     | awk -F'/' '{ print "http://user:password@github.com/" $4 "/" $5}' \
     | head -n 300 \
     | xargs -L1 git clone
@@ -53,7 +53,9 @@ Downloading all this data took quite a bit of time, especially on my home intern
 
 To detect emoji usage, I made an assumption that [jemoji](https://rubygems.org/gems/jemoji) is being used. It's what I'm using on this blog and is [available on GitHub pages](https://pages.github.com/versions/), where many [Jekyll users host their sites](https://jekyllrb.com/docs/github-pages/). Jemoji allows you to use the same emoji system that is available on GitHub. For example, you can write `:shipit`: and you'll see this. :shipit:
 
-> **NOTE** I did `grep` the data for [twemoji](https://github.com/twitter/twemoji), another popular emoji system that provides users with the same set of emoji available on Twitter. The search turned up no results.
+<div class="tout tout--secondary">
+<p><strong>NOTE</strong>: I did <code>grep</code> the data for <a href="https://github.com/twitter/twemoji">twemoji</a>, another popular emoji system that provides users with the same set of emoji available on Twitter. The search turned up no results.</p>
+</div>
 
 In order to detect jemoji usage I used the following regular expression... `'\:.+\:'`. On its own, this RegEx leads to a lot of false positives. For example, 09:02:15 (such as in the case of a time) would be incorrectly matched. As a result, I validated each match against the list of known GitHub emojis [obtained via the GitHub API](https://developer.github.com/v3/emojis/). 
 

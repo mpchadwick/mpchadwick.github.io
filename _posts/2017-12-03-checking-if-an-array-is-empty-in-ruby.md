@@ -92,7 +92,7 @@ end
 Rubocop is still not happy...
 
 ```
-$ ruby
+$ rubocop
 Inspecting 1 file
 C
 

@@ -21,7 +21,7 @@ It's not currently documented in the README, but it turns out you can. To do so,
 The signature is as follows...
 
 ```
-ebooks consume-all <model_name> <corpus_path> [corpus_path2] [...]
+$ ebooks consume-all <model_name> <corpus_path> [corpus_path2] [...]
 ```
 
 You'll see `consume-all` mentioned in the usage string if you run `ebooks` with no arguments.

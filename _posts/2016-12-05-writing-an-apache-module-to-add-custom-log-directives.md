@@ -48,10 +48,12 @@ AP_DECLARE_MODULE(log_header_size) =
 At this point let's compile our module with [`apxs`](https://httpd.apache.org/docs/current/programs/apxs.html). Run the following command...
 
 ```
-sudo apxs -i -a -c mod_log_header_size.c
+$ sudo apxs -i -a -c mod_log_header_size.c
 ```
 
-> **NOTE:** I ran into [this issue](http://apple.stackexchange.com/questions/58186/how-to-compile-mod-wsgi-mod-fastcgi-etc-on-mountain-lion-mavericks-by-fixing) running `apxs` on my MacBook Pro.
+<div class="tout tout--secondary">
+<p><strong>NOTE</strong>: I ran into <a href="http://apple.stackexchange.com/questions/58186/how-to-compile-mod-wsgi-mod-fastcgi-etc-on-mountain-lion-mavericks-by-fixing">this issue</a> running <code>apxs</code> on my MacBook Pro.</p>
+</div>
 
 Congratulations, you have created your first Apache module!
 
@@ -237,7 +239,7 @@ AP_DECLARE_MODULE(log_header_size) =
 Let's go ahead and compile it.
 
 ```
-sudo apxs -i -a -c mod_log_header_size.c
+$ sudo apxs -i -a -c mod_log_header_size.c
 ```
 
 You should now be able to add `%^IH` to a `LogFormat` string and see "Example" added to the logs.

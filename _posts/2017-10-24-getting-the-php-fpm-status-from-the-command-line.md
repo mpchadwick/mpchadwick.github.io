@@ -35,7 +35,7 @@ In order to communicate with a FastCGI application (like PHP-FPM) you can use th
 Per the article ["Directly connecting to PHP-FPM" from www.thatsgeeky.com](https://www.thatsgeeky.com/2012/02/directly-connecting-to-php-fpm/) you can `yum install` it as follows...
 
 ```
-yum --enablerepo=epel install fcgi
+$ yum --enablerepo=epel install fcgi
 ```
 
 I personally tested the `yum install` out on a CentOS machine and it worked fine.
@@ -43,7 +43,7 @@ I personally tested the `yum install` out on a CentOS machine and it worked fine
 If you're using `apt`, according to [easyengine.io's similarly titled blog post "Directly connect to PHP-FPM"](https://easyengine.io/tutorials/php/directly-connect-php-fpm/) it is available as follows...
 
 ```
-apt-get install libfcgi0ldbl
+$ apt-get install libfcgi0ldbl
 ```
 
 Once installed you'll be able to use the `cgi-fcgi` binary to talk directly to PHP-FPM.
@@ -79,7 +79,7 @@ listen = /var/run/php-fpm/www.sock
 If PHP-FPM is listening on a port you can send requests to it with `cgi-fcgi` as follows...
 
 ```
-SCRIPT_NAME=/status \ 
+$ SCRIPT_NAME=/status \ 
   SCRIPT_FILENAME=/status \
   REQUEST_METHOD=GET \
   cgi-fcgi -bind -connect 127.0.0.1:9000
@@ -88,7 +88,7 @@ SCRIPT_NAME=/status \
 If it's listening on a socket simply update the connection name to point to the Unix socket.
 
 ```
-SCRIPT_NAME=/status \
+$ SCRIPT_NAME=/status \
   SCRIPT_FILENAME=/status \
   REQUEST_METHOD=GET \
   cgi-fcgi -bind -connect /var/run/php-fpm/www.sock

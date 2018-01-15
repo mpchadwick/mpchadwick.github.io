@@ -28,7 +28,7 @@ kramdown:
 sass:
   style: compressed
 
-gems:
+plugins:
   - octopress-autoprefixer
   - jekyll-paginate
   - jekyll-feed

@@ -139,7 +139,7 @@ echo 'TOTAL (WITH TMP): ' . (round($end * 1000) - round($start * 1000)) . PHP_EO
 
 And the result
 
-```bash
+```
 $ php mage-get-store-config.php
 TOTAL (WITHOUT TMP): 29
 TOTAL (WITH TMP): 1
@@ -151,7 +151,7 @@ With the temporary variables it still took around 1ms. However, hitting `Mage::g
 
 5000 really isn't that many iterations. Imagine, instead of attribute options, this loop was working with products on a store that had 50,000 products. Bumping `$iterations` to 50,000 leads to the following result...
 
-```bash
+```
 $ php mage-get-store-config.php
 TOTAL (WITHOUT TMP): 278
 TOTAL (WITH TMP): 12
@@ -161,7 +161,7 @@ This would cut off around a quarter of a second. Not to shabby.
 
 Just for fun what let's see what would happen on a store with 1,000,000 products.
 
-```bash
+```
 $ php mage-get-store-config.php
 TOTAL (WITHOUT TMP): 5647
 TOTAL (WITH TMP): 218

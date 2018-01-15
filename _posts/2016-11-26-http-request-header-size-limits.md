@@ -60,15 +60,15 @@ It takes two parameters, the first it the URL to send the request to. The second
 Here are a few examples playing around with it...
 
 ```
-➜  ~ ./sendRequest.php http://www.amazon.com 4000
+$ ./send-request http://www.amazon.com 4000
 Response Code: 200
-➜  ~ ./sendRequest.php http://www.amazon.com 8000
+$ ./send-request http://www.amazon.com 8000
 Response Code: 400
-➜  ~ ./sendRequest.php http://www.google.com 4000
+$ ./send-request http://www.google.com 4000
 Response Code: 200
-➜  ~ ./sendRequest.php http://www.google.com 8000
+$ ./send-request http://www.google.com 8000
 Response Code: 200
-➜  ~ ./sendRequest.php http://www.google.com 16000
+$ ./send-request http://www.google.com 16000
 Response Code: 413
 ```
 

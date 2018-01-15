@@ -10,7 +10,7 @@ ad: domain-clamp-ad-b.html
 
 [`aspell`](http://aspell.net/) really doesn't like curly quotes...
 
-```bash
+```
 $ echo "This really shouldn’t fail" | aspell list
 shouldn
 $
@@ -69,7 +69,7 @@ Some people even seem to be looking to turn off curly quotes entirely for this r
 
 I spent some time researching this issue myself, and from what I can see this best option at this point seems to be to replace the curly quotes with straight quotes (via `sed`) before sending to `aspell` as outlined [here](http://vi.stackexchange.com/questions/118/how-can-i-use-vims-spellcheck-with-smart-quotes#answer-172). Per the below, `aspell` is OK with things if you do that...
 
-```bash
+```
 $ echo "This really shouldn’t fail" | sed "s/’/'/g" | aspell list
 $
 ```

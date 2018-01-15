@@ -15,8 +15,9 @@ Aside from [my co-worker Gil's "insightful" idea](https://twitter.com/Intradox/s
 
  <!-- excerpt_separator -->
 
-> **NOTE** The technique outlined here is relevant if your deck is powered by [Reveal.js](https://github.com/hakimel/reveal.js/).
-
+<div class="tout tout--secondary">
+<p><strong>NOTE</strong>: The technique outlined here is relevant if your deck is powered by <a href="https://github.com/hakimel/reveal.js/">Reveal.js</a>.</p>
+</div>
  
 ### The Wrong Path
  

@@ -17,9 +17,11 @@ The lesson learned...don't use the config for storing flags.
 
 Let's take a look at what happened
 
-**NOTE:** Examples here are based on Magento 1, but the same principle applies to Magento 2.
-
 <!-- excerpt_separator -->
+
+<div class="tout tout--secondary">
+<p><strong>NOTE</strong>: Examples here are based on Magento 1, but the same principle applies to Magento 2.</p>
+</div>
 
 ### The (pseudo) code
 
@@ -77,7 +79,9 @@ After this, any other job cannot get past the `isRunning()` check until the conf
 
 The solution is simple...don't use the config for storing flags. Instead, use the flagging system provided by the framework (starting with `Mage_Core_Model_Flag`).
 
-**NOTE**: `Mage_Index_Model_Lock` is another option.
+<div class="tout tout--secondary">
+<p><strong>NOTE</strong>: <code>Mage_Index_Model_Lock</code> is another option.</p>
+</div>
 
 Using this framework the methods look something like this instead...
 

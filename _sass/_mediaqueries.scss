@@ -2,6 +2,11 @@
     blockquote, ul, ol {
         margin-left: 50px;
     }
+    blockquote {
+      ul, ol {
+        margin-left: 25px;
+      }
+    }
     .page-wrapper h1 {
         font-size: 48px;
     }

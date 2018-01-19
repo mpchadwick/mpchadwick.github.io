@@ -34,6 +34,29 @@ description: My blog. Where I write about security, performance and much more.
     <a class="page" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Prev</a>
   {% endif %}
 
+  {% assign total_minus_one = paginator.total_pages | minus: 1 %}
+  {% for page in (1..paginator.total_pages) %}
+    {% assign before = paginator.page | minus: page %}
+    {% assign after = page | minus: paginator.page %}
+    {% if page != paginator.total_pages and page != 1 and before >= 3 or after >= 3 %}
+      {% continue %}
+    {% endif %}
+    {% if page == paginator.page %}
+      <strong>{{ page }}</strong>
+    {% elsif page == 1 %}
+      <a class="page" href="{{ site.baseurl }}/blog">{{ page }}</a>
+    {% else %}
+      {% if last == 1 and page != 2 %}
+        ...
+      {% endif %}
+      {% if page == paginator.total_pages and last != total_minus_one %}
+        ...
+      {% endif %}
+      <a class="page" href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
+    {% endif %}
+    {% assign last = page %}
+  {% endfor %}
+
   {% if paginator.next_page %}
     <a class="page" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next &raquo;</a>
   {% endif %}

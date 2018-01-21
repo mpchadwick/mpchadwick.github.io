@@ -1,7 +1,7 @@
 ---
 layout: blog-single
 title: Scaling Magento's SalesRule Module to Handle 20 Million Coupons and Beyond
-description: A look at how we cut 99% of the time resolved to the discount for a given coupon code in a database with 20 million coupon codes.
+description: A look at how we cut 99% of the time required to resolve the discount for a given coupon code in a database with 20 million coupon codes.
 date: April 18, 2017
 image: 
 tags: [Magento, Scaling, Performance]

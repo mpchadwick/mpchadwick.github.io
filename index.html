@@ -15,10 +15,7 @@ include-social: true
         </ul>
     </div>
     <div class="home-featured-content-section">
-        <h2 class="home-featured-content-section__header">Hi, I'm Max!</h2>
-        <p>I'm a software developer who mainly works in <a href="{{ site.baseurl }}/tags/#php">PHP</a>, but also dabbles in <a href="{{ site.baseurl }}/tags/#ruby">Ruby</a> and <a href="{{ site.baseurl }}/tags/#go">Go</a>. Technical topics that interest me are <a href="{{ site.baseurl }}/tags/#monitoring">monitoring</a>, <a href="{{ site.baseurl }}/tags/#security">security</a> and <a href="{{ site.baseurl }}/tags/#performance">performance</a>.</p>
-        <p>During the day I solve challenging technical problems at <a href="https://www.somethingdigital.com/">Something Digital</a> where I mainly work with the <a href="{{ site.baseurl }}/tags/#magento">Magento</a> platform. I also <a href="{{ site.baseurl }}/blog">blog about tech</a>, <a href="https://github.com/mpchadwick">work on open source</a> and <a href="https://bugcrowd.com/mpchadwick">hunt for bugs</a>.</p>
-        <p>If you'd like to get in touch with me the best way is <a href="https://twitter.com/maxpchadwick">on Twitter</a>.</p>
+        {% include bio.html is_home="true" %}
     </div>
     <div class="home-featured-content-section home-featured-content-section--blog">
         <h2 class="home-featured-content-section__header">Things I've Written</h2>

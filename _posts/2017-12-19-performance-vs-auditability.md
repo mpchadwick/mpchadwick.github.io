@@ -1,7 +1,7 @@
 ---
 layout: blog-single
 title:  Performance vs. Auditability
-description: Have anyone ever told you they turn off logging for performance reasons? This posts explores the tradeoffs of performance and auditability.
+description: Has anyone ever told you they turn off logging for performance reasons? This posts explores the tradeoffs of performance and auditability.
 date: December 19, 2017
 image: 
 tags: [Thoughts]

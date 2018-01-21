@@ -1,11 +1,14 @@
 ---
 layout: blog-single
 title: Why Local Profiling Alone Is Insufficient For Performance Optimization
-description: If you just profile your code locally, you're sure to miss something. In this post I'll tell you what you _should_ be doing any why.
+description: If you just profile your code locally, you're sure to miss something. In this post I'll tell you what you _should_ be doing and why.
 date: January 03, 2017
 image: /img/blog/why-local-profiling-alone-is-insufficient-for-performance-optimization/new-relic@1x.jpg
+image_alt: "A screenshot showing New Relic's production traces"
 tags: [Thoughts, Backend, Scaling]
 ad: domain-clamp-ad-b.html
+selected: true
+position: 30
 ---
 
 When your goal is to make a web site load faster, the first logical step is to hook your local development environment up to a tool like [XHProf](http://php.net/manual/en/book.xhprof.php), or [Blackfire](https://blackfire.io/). This is definitely a good thing to do to get some sense of how the code is executing and where the bottlenecks are. However, if this is the only thing you do to review performance, there's a good chance you're going to miss something. Let me tell you what else is needed and why.

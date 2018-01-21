@@ -4,7 +4,10 @@ title:  Syntax Highlighting And Color Contrast Accessibility
 description: My journey looking for, and ultimately building out my own solution for color contrast accessibility and syntax highlighting.
 date: November 16, 2017
 image: /img/blog/syntax-highlighting-and-color-constrast-accessibility/google-chrome-accessibility-audit@2x.jpg
+image_alt: "Google Chrome Accessibility Audit"
 tags: [Frontend, Accessibility]
+selected: true
+position: 20
 ---
 
 <style>

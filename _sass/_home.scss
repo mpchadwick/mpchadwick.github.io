@@ -87,6 +87,11 @@ body.home {
     color: black;
   }
 
+  img {
+    max-width: 100%;
+    margin-bottom: 1em;
+  }
+
   &__header {
     margin-bottom: 0.5em;
     margin-top: 1em;

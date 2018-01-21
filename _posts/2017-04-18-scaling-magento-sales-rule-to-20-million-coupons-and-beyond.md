@@ -6,7 +6,6 @@ date: April 18, 2017
 image: 
 tags: [Magento, Scaling, Performance]
 ad: domain-clamp-ad-b.html
-selected: true
 ---
 
 In a recent New Relic performance audit on a client's site, we found that the `Mage_SalesRule` totals collectors were causing some serious slowness. At best, totals collection would execute in around 1.2s when coupons were at play. However, in the worst cases, **it would take up to 30 seconds**. 

@@ -5,7 +5,8 @@ selected: true
 languages: Ruby
 tags: Jekyll
 description: A Jekyll plugin to make sure your post is _really_ ready for publishing
-url: https://github.com/mpchadwick/jekyll-pre-commit
+view_url: https://github.com/mpchadwick/jekyll-pre-commit
+call_to_action: View on GitHub
 ---
 
 I built a Jekyll plugin which uses git pre-commit hooks to run checks before allowing users to commit changes to their Jekyll sites. Some things it can check...
@@ -15,5 +16,3 @@ I built a Jekyll plugin which uses git pre-commit hooks to run checks before all
 - Are any of the values in your front matter duplicated (for example you copy / pasted them from another post)?
 
 In addition to the checks it ships with, users can write their own checks by placing them in their site's `_plugins/` directory.
-
-<a class="call-to-action" href="https://github.com/mpchadwick/jekyll-pre-commit">View on GitHub</a>

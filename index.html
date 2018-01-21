@@ -50,7 +50,7 @@ include-social: true
         {% for project in selected_projects %}
         <h4><a href="{{ project.url }}">{{ project.title }}</a></h4>
         <p>{{ project.description }}</p>
-        <a class="call-to-action" href="{{ project.url }}">View on GitHub</a>
+        <a class="call-to-action" href="{{ project.view_url }}">{{ project.call_to_action }}</a>
         {% endfor %}
     </div>
 </div>

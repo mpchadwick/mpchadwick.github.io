@@ -5,15 +5,23 @@ body-class: home
 include-social: true
 ---
 <div class="home-wrapper">
-    <img class="home__avatar" alt="Max Chadwick" src="/img/me.jpg">
-    <h1 class="home__header">Max Chadwick</h1>
-    <ul class="home-menu">
-        <li class="home-menu__item"><a class="home-menu__item-link" href="/skills">Skills</a></li>
-        <li class="home-menu__item"><a class="home-menu__item-link" href="/projects">Projects</a></li>
-        <li class="home-menu__item"><a class="home-menu__item-link" href="/blog/">Blog</a></li>
-    </ul>
+    <div class="home-top">
+        <img class="home__avatar" alt="Max Chadwick" src="/img/me.jpg">
+        <h1 class="home__header">Max Chadwick</h1>
+        <ul class="home-menu">
+            <li class="home-menu__item"><a class="home-menu__item-link" href="/skills">Skills</a></li>
+            <li class="home-menu__item"><a class="home-menu__item-link" href="/projects">Projects</a></li>
+            <li class="home-menu__item"><a class="home-menu__item-link" href="/blog/">Blog</a></li>
+        </ul>
+    </div>
     <div class="home-featured-content-section">
-    <h3 class="home-featured-content-section__header">Selected Writing</h3>
+        <h3 class="home-featured-content-section__header">Hi, I'm Max!</h3>
+        <p>I'm a software developer who mainly works in <a href="{{ site.baseurl }}/tags/#php">PHP</a>, but also dabbles in <a href="{{ site.baseurl }}/tags/#ruby">Ruby</a> and <a href="{{ site.baseurl }}/tags/#go">Go</a>. Technical topics that interest me are <a href="{{ site.baseurl }}/tags/#monitoring">monitoring</a>, <a href="{{ site.baseurl }}/tags/#security">security</a> and <a href="{{ site.baseurl }}/tags/#performance">performance</a>.</p>
+        <p>During the day I solve challenging technical problems at <a href="https://www.somethingdigital.com/">Something Digital</a> where I mainly work with the <a href="{{ site.baseurl }}/tags/#magento">Magento</a> platform. I also <a href="{{ site.baseurl }}/blog">blog about tech</a>, <a href="https://github.com/mpchadwick">work on open source</a> and <a href="https://bugcrowd.com/mpchadwick">hunt for bugs</a>.</p>
+        <p>If you'd like to get in touch with me the best way is <a href="https://twitter.com/maxpchadwick">on Twitter</a>.</p>
+    </div>
+    <div class="home-featured-content-section">
+    <h3 class="home-featured-content-section__header">Things I've Written</h3>
     <ul class="home-featured-content-section__list">
         {% assign selected_posts = site.posts | where:"selected","true" %}
         {% for post in selected_posts %}
@@ -35,7 +43,7 @@ include-social: true
     </ul>
     </div>
     <div class="home-featured-content-section">
-        <h3 class="home-featured-content-section__header">Selected Projects</h3>
+        <h3 class="home-featured-content-section__header">Things I've Built</h3>
         {% assign selected_projects = site.projects | where:"selected","true" | sort: 'position' %}
         {% for project in selected_projects %}
         <h4>{{ project.title }}</h4>

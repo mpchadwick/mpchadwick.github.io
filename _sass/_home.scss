@@ -77,10 +77,19 @@ body.home {
   max-width: 600px;
   margin: 0 auto;
 
+  &--blog {
+    h4 {
+      margin-bottom: 0;
+    }
+  }
+
+  h4 a {
+    color: black;
+  }
+
   &__header {
     margin-bottom: 1em;
     margin-top: 1em;
-    text-align: center;
     padding-top: 10px;
     padding-bottom: 10px;
     margin-left: auto;
@@ -90,7 +99,7 @@ body.home {
   &__list {
     margin-left: 0px;
     margin-right: 0px;
-    margin-bottom: 2em;
+    margin-bottom: 0;
   }
 
   &__item {
@@ -101,10 +110,6 @@ body.home {
 
   &__post-date {
     font-size: 0.8em;
-  }
-
-  &__post-description {
-    margin-bottom: 2em;
   }
 
 }

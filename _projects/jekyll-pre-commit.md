@@ -4,6 +4,8 @@ position: 300
 selected: true
 languages: Ruby
 tags: Jekyll
+description: A Jekyll plugin to make sure your post is _really_ ready for publishing
+url: https://github.com/mpchadwick/jekyll-pre-commit
 ---
 
 I built a Jekyll plugin which uses git pre-commit hooks to run checks before allowing users to commit changes to their Jekyll sites. Some things it can check...

@@ -20,35 +20,37 @@ include-social: true
         <p>During the day I solve challenging technical problems at <a href="https://www.somethingdigital.com/">Something Digital</a> where I mainly work with the <a href="{{ site.baseurl }}/tags/#magento">Magento</a> platform. I also <a href="{{ site.baseurl }}/blog">blog about tech</a>, <a href="https://github.com/mpchadwick">work on open source</a> and <a href="https://bugcrowd.com/mpchadwick">hunt for bugs</a>.</p>
         <p>If you'd like to get in touch with me the best way is <a href="https://twitter.com/maxpchadwick">on Twitter</a>.</p>
     </div>
-    <div class="home-featured-content-section">
-    <h3 class="home-featured-content-section__header">Things I've Written</h3>
-    <ul class="home-featured-content-section__list">
-        {% assign selected_posts = site.posts | where:"selected","true" %}
-        {% for post in selected_posts %}
-        <li class="home-featured-content-section__item">
-            <a class="home-featured-content-section__link" href="{{ post.url }}">{{ post.title }}</a>
-            <p class="home-featured-content-section__post-date">{{post.date | date: "%B %-d, %Y"}}</p>
-            {% if post.tags.size > 0 %}
-                <div class="tags-list">
-                    <strong>Tags:</strong>
-                    <ul>
-                    {% for tag in post.tags %}
-                    <li><a href="/tags/#{{ tag | slugify }}">{{ tag }}</a>
-                    {% endfor %}
-                    </ul>
-                </div>
-            {% endif %}
-            <p class="home-featured-content-section__post-description">{{post.description}}</p>
-        </li>
-        {% endfor %}
-    </ul>
+    <div class="home-featured-content-section home-featured-content-section--blog">
+        <h3 class="home-featured-content-section__header">Things I've Written</h3>
+        <ul class="home-featured-content-section__list">
+            {% assign selected_posts = site.posts | where:"selected","true" %}
+            {% for post in selected_posts %}
+            <li class="home-featured-content-section__item">
+                <h4><a href="{{ post.url }}">{{ post.title }}</a></h4>
+                <p class="home-featured-content-section__post-date">Published: {{post.date | date: "%B %-d, %Y"}}</p>
+                {% if post.tags.size > 0 %}
+                    <div class="tags-list">
+                        <strong>Tags:</strong>
+                        <ul>
+                        {% for tag in post.tags %}
+                        <li><a href="/tags/#{{ tag | slugify }}">{{ tag }}</a>
+                        {% endfor %}
+                        </ul>
+                    </div>
+                {% endif %}
+                <p class="home-featured-content-section__post-description">{{post.description}}</p>
+                <p><a href="{{ post.url }}" class="call-to-action">Read more</a></p>
+            </li>
+            {% endfor %}
+        </ul>
     </div>
     <div class="home-featured-content-section">
         <h3 class="home-featured-content-section__header">Things I've Built</h3>
         {% assign selected_projects = site.projects | where:"selected","true" | sort: 'position' %}
         {% for project in selected_projects %}
-        <h4>{{ project.title }}</h4>
-        {{ project.content }}
+        <h4><a href="{{ project.url }}">{{ project.title }}</a></h4>
+        <p>{{ project.description }}</p>
+        <a class="call-to-action" href="{{ project.url }}">View on GitHub</a>
         {% endfor %}
     </div>
 </div>

@@ -97,6 +97,7 @@ return Mage::getModel('core/flag', ['flag_code' => 'vendor_extension_flag'])
 
 ```php?start_inline=1
 Mage::getModel('core/flag', ['flag_code'= > 'vendor_extension_flag'])
+	->loadSelf()
 	->setFlagData(true)
 	->save();
 ```
@@ -105,6 +106,7 @@ Mage::getModel('core/flag', ['flag_code'= > 'vendor_extension_flag'])
 
 ```php?start_inline=1
 Mage::getModel('core/flag', ['flag_code' => 'vendor_extension_flag'])
+	->loadSelf()
 	->setFlagCode(false)
 	->save();
 ```

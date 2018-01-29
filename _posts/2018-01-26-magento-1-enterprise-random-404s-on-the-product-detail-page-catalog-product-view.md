@@ -5,6 +5,10 @@ description: My investigation into and findings on an issue that can poison the 
 date: January 26, 2018
 image: 
 tags: [Magento]
+edits:
+  - date: January 29, 2018
+    content: Recommendation to use <code>&lt;rewrite&gt;</code> replaced with recommendation to use code pool override as <code>&lt;rewrite&gt;</code>s cannot be used here
+last_modified_at: January 29, 2018
 ---
 
 Recently, I received the following email from a client...
@@ -125,24 +129,7 @@ index 98b9d3338..bd0d66d9c 100755
              }
 ```
 
-Or, because modifying core is never encouraged (despite all the bugs) this can be handled as a rewrite...
-
-```php?start_inline=1
-class Mpchadwick_NonFpcPoisoningSession_Model_Session extends Mage_Core_Model_Session_Abstract_Varien
-{
-	public function validate()
-	{
-		try {
-			parent::validate();
-		} catch (Mage_Core_Model_Session_Exception $e) {
-			Mage::app()->getCacheInstance()->banUse('full_page');
-			throw $e;
-		}
-
-		return $this;
-	}
-}
-```
+While putting this change in a `<rewrite>` would be ideal, it's not possible as `Mage_Core_Model_Session_Abstract_Varien ` is not instantiated via `Mage::getModel()` and is rather the (grand)parent to 23(!) different session (grand)child classes. As such, a code pool override (copy / pasting the file to `app/code/local/Mage` is the best option).
 
 ### But Why Did The Session Fail Validation In The First Place?
 

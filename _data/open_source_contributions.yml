@@ -1,3 +1,8 @@
+- project: Aoe_DbRetry
+  title: Dispatch an event if there is an exception
+  link: https://github.com/AOEpeople/Aoe_DbRetry/pull/5
+  type: PHP
+
 - project: Magento 2
   title: Report Handled Exceptions To New Relic
   link: https://github.com/magento/magento2/pull/11944

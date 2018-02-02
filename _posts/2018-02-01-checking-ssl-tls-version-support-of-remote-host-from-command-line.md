@@ -19,25 +19,25 @@ I checked the New Relic UI for more details and saw the following...
 
 "fatal alert: protocol_version" :open_mouth:
 
-I did a little bit of research and found a question titled ["Availability report - connection error (Received fatal alert: protocol_version)"](https://discuss.newrelic.com/t/availability-report-connection-error-received-fatal-alert-protocol-version/52483) in the New Relic forums. There I found the following answer...
+I did a little bit of research and arrived at the New Relic forums where I found a question titled ["Availability report - connection error (Received fatal alert: protocol_version)"](https://discuss.newrelic.com/t/availability-report-connection-error-received-fatal-alert-protocol-version/52483). There I found the following answer...
 
 > The legacy Availability Monitor in APM only supports TLS 1.0 which is why it began throwing errors once you disabled older TLS protocols.
 > 
 > [https://discuss.newrelic.com/t/availability-report-connection-error-received-fatal-alert-protocol-version/52483/5](https://discuss.newrelic.com/t/availability-report-connection-error-received-fatal-alert-protocol-version/52483/5)
 
-My next course of action was to check where or not the site in question supported TLS 1.0. In this post let's take a look at how we can do that.
+My next course of action was to check whether or not the site in question supported TLS 1.0. In post, let's review our options for checking SSL / TLS version support from the command line.
 
 <!-- excerpt_separator -->
 
 <div class="tout tout--secondary">
-<p><strong>NOTE</strong>: This post if focused on Unix systems. Windows is ignored.</p>
+<p><strong>NOTE</strong>: This post is focused on Unix systems. Windows is ignored.</p>
 </div>
 
 ### openssl s_client
 
 The simplest way to check support for a given version of SSL / TLS is via `openssl s_client`. openssl comes installed by default on most unix systems.
 
-For the issue I was dealing with, checking was a matter of running the following command...
+Checking for TLS 1.0 support can be done with the following command...
 
 ```
 $ openssl s_client -connect www.example.com:443 -tls1
@@ -143,7 +143,7 @@ Another option for checking SSL / TLS version support is nmap. nmap is *not* typ
 $ nmap --script ssl-enum-ciphers -p 443 www.example.com
 ```
 
-nmap's `ssl-enum-ciphers` script will not only check SSL / TLS version support for all version (TLS 1.0, TLS 1.1, and TLS 1.2) in one go, but will also check cipher support for each version including giving providing a grade. Here's what we see for www.google.com...
+nmap's `ssl-enum-ciphers` script will not only check SSL / TLS version support for all versions (TLS 1.0, TLS 1.1, and TLS 1.2) in one go, but will also check cipher support for each version including giving providing a grade. Here's what we see for www.google.com...
 
 ```
 $ nmap --script ssl-enum-ciphers -p 443 www.google.com

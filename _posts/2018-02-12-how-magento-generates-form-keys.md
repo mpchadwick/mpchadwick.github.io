@@ -1,6 +1,6 @@
 ---
 layout: blog-single
-title:  "How Magento Generates Form Keys"
+title:  "How Magento Generates Form&nbsp;Keys"
 description: A look a Magento core code to understand how form keys are generated.
 date: February 12, 2018
 image: 

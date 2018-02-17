@@ -13,7 +13,7 @@ redirect_from:
 
 {% for project in sorted_projects %}
 
-## {{ project.title }}
+<h2 id="{{ project.title | slugify }}">{{ project.title }}</h2>
 
 {{ project.content }}
 

@@ -1,9 +1,9 @@
 ---
 layout: blog-single
 title: What's an ASN?
-description: 
+description: A review of AS numbers and a discussion about why it's a useful concept to understand for application developers.
 date: December 16, 2016
-image: A review of AS numbers and a discussion about why it's a useful concept to understand for application developers.
+image:
 tags: [Networking]
 ad: domain-clamp-ad-b.html
 ---

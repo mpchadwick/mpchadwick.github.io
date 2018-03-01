@@ -1,3 +1,8 @@
+- project: Magento 2
+  title: Add The Ability To Limit Autocomplete Results
+  link: https://github.com/magento/magento2/pull/11572
+  type: PHP
+
 - project: Aoe_DbRetry
   title: Dispatch an event if there is an exception
   link: https://github.com/AOEpeople/Aoe_DbRetry/pull/5

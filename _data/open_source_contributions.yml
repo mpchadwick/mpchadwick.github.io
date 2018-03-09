@@ -1,3 +1,8 @@
+- project: jekyll-seo-tag
+  title: Include page number in title
+  link: https://github.com/jekyll/jekyll-seo-tag/pull/250
+  type: Ruby
+
 - project: Magento 2
   title: Add The Ability To Limit Autocomplete Results
   link: https://github.com/magento/magento2/pull/11572

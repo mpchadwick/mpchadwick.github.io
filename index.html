@@ -46,6 +46,9 @@ include-social: true
         <h2 class="home-featured-content-section__header">Things I've Built</h2>
         {% assign selected_projects = site.projects | where:"selected","true" | sort: 'position' %}
         {% for project in selected_projects %}
+        {% if project.image %}
+        <a href="/projects#{{ project.title | slugify }}"><img src="{{ project.image }}" alt="{{ project.image_alt }}"></a>
+        {% endif %}
         <h4><a href="/projects#{{ project.title | slugify }}">{{ project.title }}</a></h4>
         <p>{{ project.description }}</p>
         <a class="call-to-action" href="{{ project.view_url }}">{{ project.call_to_action }}</a>

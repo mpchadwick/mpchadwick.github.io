@@ -45,6 +45,12 @@ I like to contribute back to the tools I use. Here are some of my open source co
 
 ## Talks
 
+<div class="embed-container" style="margin-bottom: 10px;">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/tmOJxIyjvcQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
+
+<p><em>Delivery of my talk "Imagining A World Without Caching" at Meet Magento NY 2017</em></p>
+
 Here's a list of talks I've given...
 
 {% for talk in site.data.talks %}

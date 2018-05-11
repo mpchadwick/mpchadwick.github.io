@@ -69,6 +69,11 @@ body.home {
   .home__header {
     font-size: 48px;
   }
+  body.home {
+    h2 {
+      font-size: 1.75em;
+    }
+  }
 }
 
 .home-featured-content-section {

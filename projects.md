@@ -59,3 +59,10 @@ Here's a list of talks I've given...
 
 {% endfor %}
 
+Here's are links to my slides
+
+{% for slide in site.data.slides %}
+
+- [{{ slide.title }}]({{ slide.link }})
+
+{% endfor %}

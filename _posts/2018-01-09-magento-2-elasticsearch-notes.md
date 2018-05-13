@@ -86,6 +86,64 @@ $ curl 'localhost:9200/magento2_product_1_v1/_search?pretty&q=*:*'
 
 By default it will return 10 documents.
 
+#### Search By SKU
+
+<div class="tout tout--secondary">
+<p><strong>NOTE</strong>: When querying Elasticsearch it's important to understand the concept of  <a href="(https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-analyzers.html">analyzers</a>. If you're product has a SKU of "SKU", Elasticsearch's analyzers will convert it to lowercase, you need to search for "sku", not "SKU".</p>
+</div>
+
+```
+$ curl "localhost:9200/magento2_product_1_v1/_search?pretty" -d'
+{
+  "query": {
+    "term": {
+      "sku": "sku"
+    }
+  }
+}
+'
+{
+  "took" : 2,
+  "timed_out" : false,
+  "_shards" : {
+    "total" : 5,
+    "successful" : 5,
+    "failed" : 0
+  },
+  "hits" : {
+    "total" : 1,
+    "max_score" : 0.30685282,
+    "hits" : [ {
+      "_index" : "magento2_product_1_v1",
+      "_type" : "document",
+      "_id" : "1",
+      "_score" : 0.30685282,
+      "_source" : {
+        "store_id" : "1",
+        "sku" : "SKU",
+        "status_value" : "Enabled",
+        "status" : "1",
+        "visibility_value" : "Catalog, Search",
+        "visibility" : "4",
+        "tax_class_id_value" : "Taxable Goods",
+        "tax_class_id" : "2",
+        "name" : "Product",
+        "category_ids" : "2 3",
+        "position_category_2" : "0",
+        "name_category_2" : "Default Category",
+        "position_category_3" : "0",
+        "name_category_3" : "My Category",
+        "price_0_1" : "1.000000",
+        "price_1_1" : "1.000000",
+        "price_2_1" : "1.000000",
+        "price_3_1" : "1.000000",
+        "price_4_1" : "1.000000"
+      }
+    } ]
+  }
+}
+```
+
 ### Viewing A Query Log
 
 It appears that the best option for viewing a query log is to decrease the the slowlog threshold to "0s". This can be done at runtime without restarting Elasticsearch.

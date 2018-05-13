@@ -159,6 +159,15 @@ The location for log files is defined by the `path.logs` configuration value in 
 
 Reference: [Logging Requests to Elasticsearch](http://blog.florian-hopf.de/2016/03/logging-requests-to-elasticsearch.html)
 
+Logged queries look something like this...
+
+```
+[2018-05-13 11:49:17,789][DEBUG][index.search.slowlog.query] [magento2-2-2-b2b-ee_product_1_v2]took[1.4ms], took_millis[1], types[document], stats[], search_type[QUERY_THEN_FETCH], total_shards[5], source[{"from":0,"size":"10000","fields":["_id","_score"],"query":{"bool":{"must":[{"term":{"category_ids":"4"}},{"terms":{"visibility":["2","4"]}}],"minimum_should_match":1}},"aggregations":{"price_bucket":{"extended_stats":{"field":"price_0_1"}},"category_bucket":{"terms":{"field":"category_ids"}},"manufacturer_bucket":{"terms":{"field":"manufacturer"}},"color_bucket":{"terms":{"field":"color"}}}}], extra_source[],
+```
+{:.wrap}
+
+The actual query received can be found inside brackets after the word `source[`...
+
 ### Index Version Naming
 
 The version number is increased by when `Magento\Elasticsearch\Model\Adapter\Elasticsearch::cleanIndex()` is called.

@@ -3,6 +3,7 @@ layout: blog-single
 title:  "Magento 2 Elasticsearch Notes"
 description: A catch all location for notes related to working with Elasticsearch in Magento 2
 date: January 9, 2018
+last_modified_at: May 13, 2018
 image:
 tags: [Magento]
 ---
@@ -178,7 +179,7 @@ The version number is increased by when `Magento\Elasticsearch\Model\Adapter\Ela
 
 #### Search Results Page
 
-Below is an example of how Magento queries Elasticsearch when searching for the term "Product". Fields queried are determined by the "Use in Search" attribute property and the [boosts](https://www.elastic.co/guide/en/elasticsearch/guide/current/query-time-boosting.html)...
+Below is an example of how Magento queries Elasticsearch when searching for the term "Product". Fields queried are determined by the "Use in Search" attribute property and the [boosts](https://www.elastic.co/guide/en/elasticsearch/guide/current/query-time-boosting.html) are determined by the "Search Weight" attribute property...
 
 ```
 $ curl "localhost:9200/magento2_product_1_v1/_search?pretty" -d'
@@ -287,8 +288,58 @@ $ curl "localhost:9200/magento2_product_1_v1/_search?pretty" -d'
   },
   "size": "10000"
 }
+'
 ```
 
+#### Category Pages
+
+When Elasticsearch is configured as Magento's search engine, Elasticsearch will also be consulted to retrieve the product set while browsing category pages. Here's a query to return all the product in category "3" with color "12"
+
+```
+$ curl "localhost:9200/magento2_product_1_v1/_search?pretty" -d'
+{
+  "aggregations": {
+    "prices": {
+      "histogram": {
+        "field": "price_0_1",
+        "interval": 1
+      }
+    }
+  },
+  "fields": [
+    "_id",
+    "_score"
+  ],
+  "from": 0,
+  "query": {
+    "bool": {
+      "minimum_should_match": 1,
+      "must": [
+        {
+          "term": {
+            "category_ids": "3"
+          }
+        },
+        {
+          "terms": {
+            "visibility": [
+              "2",
+              "4"
+            ]
+          }
+        },
+        {
+          "term": {
+            "color": "13"
+          }
+        }
+      ]
+    }
+  },
+  "size": "10000"
+}
+'
+```
 
 
 

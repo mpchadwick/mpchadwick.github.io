@@ -168,11 +168,126 @@ Logged queries look something like this...
 
 The actual query received can be found inside brackets after the word `source[`...
 
+Note that Magento automatically renames the Elasticsearch index during a full catalog search reindex (as documented below), so these settings can go away...
+
 ### Index Version Naming
 
 The version number is increased by when `Magento\Elasticsearch\Model\Adapter\Elasticsearch::cleanIndex()` is called.
 
+### How Magento Queries Elasticsearch
 
+#### Search Results Page
+
+Below is an example of how Magento queries Elasticsearch when searching for the term "Product". Fields queried are determined by the "Use in Search" attribute property and the [boosts](https://www.elastic.co/guide/en/elasticsearch/guide/current/query-time-boosting.html)...
+
+```
+$ curl "localhost:9200/magento2_product_1_v1/_search?pretty" -d'
+{
+  "aggregations": {
+    "prices": {
+      "histogram": {
+        "field": "price_0_1",
+        "interval": 1
+      }
+    }
+  },
+  "fields": [
+    "_id",
+    "_score"
+  ],
+  "from": 0,
+  "query": {
+    "bool": {
+      "minimum_should_match": 1,
+      "must": [
+        {
+          "terms": {
+            "visibility": [
+              "3",
+              "4"
+            ]
+          }
+        }
+      ],
+      "should": [
+        {
+          "match": {
+            "sku": {
+              "boost": 2,
+              "query": "product"
+            }
+          }
+        },
+        {
+          "match": {
+            "_all": {
+              "boost": 2,
+              "query": "product"
+            }
+          }
+        },
+        {
+          "match": {
+            "name": {
+              "boost": 6,
+              "query": "product"
+            }
+          }
+        },
+        {
+          "match": {
+            "description": {
+              "boost": 11,
+              "query": "product"
+            }
+          }
+        },
+        {
+          "match": {
+            "short_description": {
+              "boost": 2,
+              "query": "product"
+            }
+          }
+        },
+        {
+          "match": {
+            "manufacturer": {
+              "boost": 2,
+              "query": "product"
+            }
+          }
+        },
+        {
+          "match": {
+            "color": {
+              "boost": 2,
+              "query": "product"
+            }
+          }
+        },
+        {
+          "match": {
+            "status_value": {
+              "boost": 2,
+              "query": "product"
+            }
+          }
+        },
+        {
+          "match": {
+            "tax_class_id_value": {
+              "boost": 2,
+              "query": "product"
+            }
+          }
+        }
+      ]
+    }
+  },
+  "size": "10000"
+}
+```
 
 
 

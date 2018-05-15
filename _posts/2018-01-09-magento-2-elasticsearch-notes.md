@@ -1,9 +1,9 @@
 ---
 layout: blog-single
-title:  "Magento 2 Elasticsearch Notes"
+title:  "Magento 2 Elasticsearch Cheatsheet"
 description: A catch all location for notes related to working with Elasticsearch in Magento 2
 date: January 9, 2018
-last_modified_at: May 13, 2018
+last_modified_at: May 14, 2018
 image:
 tags: [Magento]
 ---
@@ -24,7 +24,11 @@ yellow open   magento2_product_1_v1             5   1          1            0   
 
 ### Inspecting Indexed Data
 
-This request will match **any** indexed documents.
+<div class="tout tout--secondary">
+<p><strong>NOTE</strong>: All examples will be run against the example "magento2_product_1_v1" index. Replace the index as needed when running your queries...</p>
+</div>
+
+This request will match **any** indexed documents...
 
 ```
 $ curl 'localhost:9200/magento2_product_1_v1/_search?pretty&q=*:*'
@@ -93,6 +97,10 @@ By default it will return 10 documents.
 <p><strong>NOTE</strong>: When querying Elasticsearch it's important to understand the concept of  <a href="(https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-analyzers.html">analyzers</a>. If you're product has a SKU of "SKU", Elasticsearch's analyzers will convert it to lowercase, you need to search for "sku", not "SKU".</p>
 </div>
 
+There are a few ways you can do this. Here's the simplest (searching for a product with a sku value of "sku")...
+
+**Request**
+
 ```
 $ curl "localhost:9200/magento2_product_1_v1/_search?pretty" -d'
 {
@@ -103,6 +111,11 @@ $ curl "localhost:9200/magento2_product_1_v1/_search?pretty" -d'
   }
 }
 '
+```
+
+**Response**
+
+```
 {
   "took" : 2,
   "timed_out" : false,
@@ -143,6 +156,178 @@ $ curl "localhost:9200/magento2_product_1_v1/_search?pretty" -d'
     } ]
   }
 }
+```
+
+#### Search For Products Named T-Shirt
+
+**Request**
+
+This [`bool`](todo) query moves closer to the direction of how Magento queries Elasticsearch. Note the double-escaping of `t\\-shirt`. This is again due to analyzers. 
+
+```
+$ curl "localhost:9200/magento2_product_1_v1/_search?pretty" -d'
+{
+  "query": {
+    "bool": {
+      "should": [
+        {
+          "match": {
+            "name": {
+              "query": "t\\-shirt"
+            }
+          }
+        }
+      ]
+    }
+  }
+}
+'
+```
+
+#### Queries With Multiple Words
+
+By default Elasticsearch will do an "or" search when receiving a query with multiple words. If an "and" is desired this can be achieved by providing `and` as the `operator`...
+
+**Request**
+
+```
+$ curl "localhost:9200/magento2_product_1_v1/_search?pretty" -d'
+{
+  "query": {
+    "bool": {
+      "should": [
+        {
+          "match": {
+            "name": {
+              "query": "green t\\-shirt",
+              "operator": "and"
+            }
+          }
+        }
+      ]
+    }
+  }
+}
+'
+```
+
+<div class="tout tout--secondary">
+<p><strong>NOTE</strong>: Magento does an "or" search. There's no way to change this out-of-box...</p>
+</div>
+
+#### Returning Specific Fields
+
+By default Elasticsearch will return all the fields for each document. An array of fields can by provided to only retrieve specific ones...
+
+**Request**
+
+```
+curl "localhost:9200/magento2_product_1_v1/_search?pretty" -d'
+{
+  "fields": [
+    "_id",
+    "_score",
+    "name",
+    "sku"
+  ],
+  "query": {
+    "bool": {
+      "should": [
+        {
+          "match": {
+            "name": {
+              "query": "green t\\-shirt"
+            }
+          }
+        }
+      ]
+    }
+  }
+}
+'
+```
+
+#### `should` vs. `must`
+
+So far the `bool` examples we've looked at all use `should` exclusively. When using `should` with multiple conditions a `minimum_should_match` can be used to define how many of the conditions need to match. Here's an example...
+
+**Request**
+
+```
+curl "localhost:9200/magento2_product_1_v1/_search?pretty" -d'
+{
+  "fields": [
+    "_id",
+    "_score",
+    "name",
+    "sku",
+    "color"
+  ],
+  "query": {
+    "bool": {
+      "minimum_should_match": "1",
+      "should": [
+        {
+          "match": {
+            "name": {
+              "query": "t\\-shirt"
+            }
+          }
+        },
+        {
+          "match": {
+            "color": {
+              "query": "16"
+            }
+          }
+        }
+      ]
+    }
+  }
+}
+'
+```
+
+As the `minimum_should_match` is set to 1 either the name of the product can contain the string "t-shirt" or the color can be option id "16". Only one of those conditions need to be true. 
+
+Setting the `minimum_should_match` to "100%" would require all the conditions to match.
+
+Another way to achieve this is via a `must`. All conditions provided as `must`s must match (as you'd expect)...
+
+**Request**
+
+```
+curl "localhost:9200/magento2_product_1_v1/_search?pretty" -d'
+{
+  "fields": [
+    "_id",
+    "_score",
+    "name",
+    "sku",
+    "color"
+  ],
+  "query": {
+    "bool": {
+      "must": [
+        {
+          "match": {
+            "name": {
+              "query": "t\\-shirt"
+            }
+          }
+        },
+        {
+          "match": {
+            "color": {
+              "query": "16"
+            }
+          }
+        }
+      ]
+    }
+  }
+}
+'
 ```
 
 ### Viewing A Query Log

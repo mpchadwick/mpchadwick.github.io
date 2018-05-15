@@ -94,7 +94,7 @@ By default it will return 10 documents.
 #### Search By SKU
 
 <div class="tout tout--secondary">
-<p><strong>NOTE</strong>: When querying Elasticsearch it's important to understand the concept of  <a href="(https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-analyzers.html">analyzers</a>. If you're product has a SKU of "SKU", Elasticsearch's analyzers will convert it to lowercase, you need to search for "sku", not "SKU".</p>
+<p><strong>NOTE</strong>: When querying Elasticsearch it's important to understand the concept of  <a href="(https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-analyzers.html">analyzers</a>. If your product has a SKU of "SKU", Elasticsearch's analyzers will convert it to lowercase. Therefore, you need to search for "sku", not "SKU".</p>
 </div>
 
 There are a few ways you can do this. Here's the simplest (searching for a product with a sku value of "sku")...
@@ -162,7 +162,7 @@ $ curl "localhost:9200/magento2_product_1_v1/_search?pretty" -d'
 
 **Request**
 
-This [`bool`](todo) query moves closer to the direction of how Magento queries Elasticsearch. Note the double-escaping of `t\\-shirt`. This is again due to analyzers. 
+This [`bool query`](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-bool-query.html) moves closer to the direction of how Magento queries Elasticsearch. Note the double-escaping of `t\\-shirt`. This is again due to analyzers. 
 
 ```
 $ curl "localhost:9200/magento2_product_1_v1/_search?pretty" -d'

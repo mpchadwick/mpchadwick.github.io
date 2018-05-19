@@ -133,3 +133,5 @@ log-bin = /var/lib/mysql/bin-log
 ```
 
 Note that per MySQL's ["Server System Variables"](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_server_id) documentation in MySQL 5.7 the `server-id` is required if binary logging is enabled. Otherwise MySQL will refuse to start.
+
+Test your changes in a non-production environment first and schedule a maintenance window for making them in production!

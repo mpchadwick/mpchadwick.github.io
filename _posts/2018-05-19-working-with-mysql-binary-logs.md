@@ -105,7 +105,7 @@ $ sudo mysqlbinlog /var/lib/mysql/bin-log | tail
 
 The article ["15 mysqlbinlog Command Examples for MySQL Binary Log Files"](https://www.thegeekstuff.com/2017/08/mysqlbinlog-examples/) documents some of the useful flags the `mysqlbinlog` utility offers such as `--start-datetime` and  `--end-datetime`. The `man` page is also provides some useful information.
 
-### Translating Row-based Binary Logsd to SQL
+### Translating Row-based Binary Logs to SQL
 
 The `-v` (`--verbose`) flag can be used to translate row-based MySQL binary logs to "pseudo-sql".
 

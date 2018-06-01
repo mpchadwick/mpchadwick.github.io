@@ -5,7 +5,7 @@ description: A catch all location for notes related to working with Elasticsearc
 date: January 9, 2018
 last_modified_at: May 14, 2018
 image:
-tags: [Magento]
+tags: [Magento, Elasticsearch]
 ---
 
 This post is a catch all location for my notes on working with Elasticsearch in Magento 2. It will be continually updated as I continue to spend more time with Elasticsearch.

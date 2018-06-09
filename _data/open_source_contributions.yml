@@ -123,6 +123,11 @@
   link: https://github.com/prometheus/alertmanager/pull/308
   type: Go
 
+- project: magento-malware-scanner
+  title: Use HTTPS in instructions
+  link: https://github.com/gwillem/magento-malware-scanner/pull/206
+  type: Docs
+
 - project: Elastic beats
   title: Link to article outlining CA creation
   link: https://github.com/elastic/beats/pull/2401

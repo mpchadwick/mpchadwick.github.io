@@ -1,0 +1,17 @@
+.blog-post-wrapper {
+  @media (min-width: 920px) {
+    p, h3, h4, div.edits {
+      max-width: 780px;
+      margin-left: 10px;
+
+      /* Negate the styling for images */
+      img:not(.emoji) {
+        max-width: 800px;
+        margin-left: -10px;
+      }
+    }
+    blockquote p {
+      margin-left: 0;
+    }
+  }
+}

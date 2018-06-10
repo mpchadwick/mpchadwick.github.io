@@ -13,15 +13,17 @@ layout: page
   </ul>
 </div>
 {% endif %}
+<div class="blog-post-wrapper">
 {{ content }}
 {% if page.edits.size > 0 %}
-<div class="tout tout--alt">
+<div class="tout tout--alt edits">
     <p><strong><em>Edits</em></strong></p>
     {% for edit in page.edits %}
     <p><strong>{{ edit.date }}</strong>: {{ edit.content }}</p>
     {% endfor %}
 </div>
 {% endif %}
+</div>
 <div class="tout">
 {% include bio.html %}
 </div>

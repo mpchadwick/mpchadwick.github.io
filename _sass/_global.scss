@@ -42,6 +42,12 @@ ul > li > ul {
 p, blockquote, li {
     line-height: 1.5rem;
 }
+@media (min-width: 920px) {
+  p, blockquote, li {
+      line-height: 1.6rem;
+      font-size: 1.05rem;
+  }
+}
 pre {
     white-space: nowrap;
     padding: 10px;

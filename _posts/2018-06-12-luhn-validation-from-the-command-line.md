@@ -11,22 +11,22 @@ Today I received an alert that a credit card scanning tool had detected data tha
 
 Reviewing the details I found that the tool was reporting it had found what appeared to be a credit card number in an image file on the server. This gave me quite the scare as I knew that there's [a common strain of malware](https://support.hypernode.com/knowledgebase/about-the-visbot-malware/) for Magento (the platform this site was running) which steals credit card numbers and stores them in images files to be harvested by the attacker.
 
-The tool was reporting the the credit card number started with "304428". I was able to find the match in the reported file using [exiftool](https://www.sno.phy.queensu.ca/~phil/exiftool/)...
+The tool was reporting the credit card number started with "304428". I was able to find the match in the reported file using [exiftool](https://www.sno.phy.queensu.ca/~phil/exiftool/)...
 
 ```
 $ exiftool -m 00080878182947_2.jpg | grep -o '.\{20\}304428.\{20\}'
 8cca4b4231, xmp.did:304428740720681188C6DBD8EA
 ```
 
-`xmp.did:`? I wasn't sure what this was, but from some quick research I learned that it was embedded [Adobe metadata ("XMP")](https://en.wikipedia.org/wiki/Extensible_Metadata_Platform).
+`xmp.did:`? I wasn't sure what this was, but from some quick research I learned that it was metadata added for [Adobe's Extensible Metadata Platform ("XMP")](https://en.wikipedia.org/wiki/Extensible_Metadata_Platform).
 
-As a quick check I did want to see if the number passed [Luhn validation](https://en.wikipedia.org/wiki/Luhn_algorithm). I didn't want to copy paste the data into an online tool for obvious reasons, so I decided to some some further research on how to run Luhn validation from the command line. Here I'll document my findings.
+As a quick check I did want to see if the number passed [Luhn validation](https://en.wikipedia.org/wiki/Luhn_algorithm). I didn't want to copy / paste the data into an online tool for obvious reasons, so I decided to do some further research on how to run Luhn validation from the command line. Here I'll document my findings.
 
 <!-- excerpt_separator -->
 
 ### No Built Ins!
 
-As far as I can tell, there are no built in command on Unix systems to do this. Additionally, I checked how to do this in many common languages (Python, Ruby, PHP) and didn't see native functions for this in any of them. Time to look for alternatives.
+As far as I can tell, there are no built in commands on Unix systems to do this. Additionally, I checked how to do this in many common languages (Python, Ruby, PHP) and didn't see native functions for this in any of them. Time to look for alternatives.
 
 ### Using node
 
@@ -57,7 +57,7 @@ If you don't have node and npm installed and don't want to go the node route the
 $ isLUHNValid 3044287407206811
 ```
 
-If it passes will exit with exit code 0. Otherwise it will exit with exit code 1.
+If it passes it will exit with exit code 0. Otherwise it will exit with exit code 1.
 
 
 ```

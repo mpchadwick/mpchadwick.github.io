@@ -3,6 +3,7 @@ layout: blog-single
 title:  Getting The PHP-FPM Status From The Command Line
 description: You can't curl PHP-FPM directly because it doesn't use HTTP. Here I outline how you _can_ talk directly to PHP-FPM.
 date: October 24, 2017
+last_modified_at: June 20, 2018
 image:
 tags: [Shell, Tools, PHP]
 ---
@@ -79,7 +80,7 @@ listen = /var/run/php-fpm/www.sock
 If PHP-FPM is listening on a port you can send requests to it with `cgi-fcgi` as follows...
 
 ```
-$ SCRIPT_NAME=/status \ 
+$ SCRIPT_NAME=/status \
   SCRIPT_FILENAME=/status \
   REQUEST_METHOD=GET \
   cgi-fcgi -bind -connect 127.0.0.1:9000
@@ -94,4 +95,21 @@ $ SCRIPT_NAME=/status \
   cgi-fcgi -bind -connect /var/run/php-fpm/www.sock
 ```
 
-When connecting to a Unix socket, you need to ensure the user you're running the command as has permissions to read the socket file.
+When connecting to a Unix socket, you need to ensure the user you're running the command as has permissions to read the socket file. You may need to `sudo`...
+
+```
+$ sudo -uapache SCRIPT_NAME=/status \
+  SCRIPT_FILENAME=/status \
+  REQUEST_METHOD=GET \
+  cgi-fcgi -bind -connect /var/run/php-fpm/www.sock
+```
+
+Finally, in order to get the full status, you can pass a query string as follows...
+
+```
+$ sudo -uapache SCRIPT_NAME=/status \
+  SCRIPT_FILENAME=/status \
+  REQUEST_METHOD=GET \
+  QUERY_STRING=full \
+  cgi-fcgi -bind -connect /var/run/php-fpm/www.sock
+```

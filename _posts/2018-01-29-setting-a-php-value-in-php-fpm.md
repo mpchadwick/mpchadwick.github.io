@@ -3,9 +3,14 @@ layout: blog-single
 title:  "Setting a php_value in PHP&#x2011;FPM"
 description: An exploration of the many options available for setting a php_value in an environment running PHP-FPM
 date: January 29, 2018
+last_modified_at: July 2, 2018
 image: 
 tags: [PHP]
 ---
+
+<div class="tout tout--secondary">
+<p><strong>NOTE</strong>: The example used in this post is setting PHP's <code>error_reporting</code> level, which is <a href="https://bugs.php.net/bug.php?id=71340#1525616824">no longer supported as of PHP 7.0</a>. Regardless approaches documented in this post are still applicable for setting other <code>php_value</code>s</p>
+</div>
 
 Recently I needed to adjust PHP's [`error_reporting`](http://php.net/manual/en/function.error-reporting.php) level.
 

@@ -3,7 +3,7 @@ layout: blog-single
 title:  Getting The PHP-FPM Status From The Command Line
 description: You can't curl PHP-FPM directly because it doesn't use HTTP. Here I outline how you _can_ talk directly to PHP-FPM.
 date: October 24, 2017
-last_modified_at: June 20, 2018
+last_modified_at: July 3, 2018
 image:
 tags: [Shell, Tools, PHP]
 ---
@@ -54,7 +54,7 @@ Once installed you'll be able to use the `cgi-fcgi` binary to talk directly to P
 By default, PHP-FPM does not make the status page available. You'll need to ensure that the following is included in your PHP-FPM configuration...
 
 <div class="tout tout--secondary">
-<p><strong>NOTE</strong>: You don't need to use `/status` for the path and can use another path if you'd prefer.</p>
+<p><strong>NOTE</strong>: You don't need to use <code>/status</code> for the path and can use another path if you'd prefer.</p>
 </div>
 
 ```
@@ -104,12 +104,22 @@ $ sudo -uapache SCRIPT_NAME=/status \
   cgi-fcgi -bind -connect /var/run/php-fpm/www.sock
 ```
 
-Finally, in order to get the full status, you can pass a query string as follows...
+In order to get the full status, you can pass a query string as follows...
 
 ```
 $ sudo -uapache SCRIPT_NAME=/status \
   SCRIPT_FILENAME=/status \
   REQUEST_METHOD=GET \
   QUERY_STRING=full \
+  cgi-fcgi -bind -connect /var/run/php-fpm/www.sock
+```
+
+You can also use `QUERY_STRING` to request an alternate format, such as JSON.
+
+```
+$ sudo -uapache SCRIPT_NAME=/status \
+  SCRIPT_FILENAME=/status \
+  REQUEST_METHOD=GET \
+  QUERY_STRING="full&json" \
   cgi-fcgi -bind -connect /var/run/php-fpm/www.sock
 ```

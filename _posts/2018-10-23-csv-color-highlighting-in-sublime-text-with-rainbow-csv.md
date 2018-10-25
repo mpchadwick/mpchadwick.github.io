@@ -4,7 +4,7 @@ title:  "CSV Color Highlighting in Sublime Text with rainbow_csv"
 description: Details on a Sublime Text plugin I recently fell in love with which adds color highlighting to CSV files.
 date: October 23, 2018
 image: /img/blog/rainbow-csv/advanced-pricing@2x.jpg
-tags: [Tool]
+tags: [Tools]
 ---
 
 If you're a developer, I'd be willing to wage a bet on the following...

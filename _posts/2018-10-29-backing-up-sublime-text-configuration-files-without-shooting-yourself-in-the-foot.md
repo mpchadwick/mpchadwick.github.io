@@ -25,4 +25,4 @@ Moral of the story: Don't blindly commit the `Packages/User` folder as it may co
 
 ### Footnotes
 
- <b id="f1">1 </b>. Yes, I know connecting my editor to a production instance is a worst practice, but in the real-world it's something that I've done before.
+ <b id="f1">1 </b>. Yes, I know connecting my editor to a production instance is a worst practice, but in the real-world it's something that I've done before.[↩](#a1)

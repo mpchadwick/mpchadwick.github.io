@@ -1,3 +1,15 @@
+- event_name: Meet Magento NYC
+  event_url: https://meetmagento.nyc/
+  talk_name: "Redis for Magento Developers"
+  talk_url: https://meetmagento.nyc/agenda/
+  date: November 1, 2018
+
+- event_name: Mage Titans USA
+  event_url: https://www.magetitans.us/
+  talk_name: "Redis for Magento Developers"
+  talk_url: https://www.magetitans.us/max-chadwick.html
+  date: October 26, 2018
+
 - event_name: Magento Imagine
   event_url: https://imagine.magento.com/
   talk_name: "Magento Commerce: Evolution to the Cloud"

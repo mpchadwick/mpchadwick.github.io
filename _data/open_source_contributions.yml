@@ -1,3 +1,8 @@
+- project: magescan
+  title: Add Webgility
+  link: https://github.com/steverobbins/magescan/pull/151
+  type: PHP
+
 - project: jekyll-seo-tag
   title: Include page number in title
   link: https://github.com/jekyll/jekyll-seo-tag/pull/250

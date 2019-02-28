@@ -9,7 +9,7 @@ tags: [Magento]
 
 UI components are notoriously one of the most painful aspects of working with Magento 2.
 
-TODO Tweet
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">I had some folks ask me about Magento 2&#39;s UI Component recently and realized everything I wrote about (now two years ago) has fled my head -- and I&#39;m not sure I want to let it back in. <a href="https://t.co/Ubi9KVA1I0">https://t.co/Ubi9KVA1I0</a><a href="https://t.co/jtlTvuKEF9">https://t.co/jtlTvuKEF9</a></p>&mdash; Alan Storm (@alanstorm) <a href="https://twitter.com/alanstorm/status/1034565823552266240?ref_src=twsrc%5Etfw">August 28, 2018</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 One aspect that's thrown me for a loop is the "magical data providers". For example, if you look at `vendor/dotdigital/dotmailer-magento2-extension/view/adminhtml/ui_component/dotdigitalgroup_order_grid.xml` you'll see the following...
 

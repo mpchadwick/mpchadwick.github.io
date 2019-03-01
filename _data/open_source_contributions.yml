@@ -1,3 +1,8 @@
+- project: phpggc
+  title: Add Zend Framework 1 File Delete Chain
+  link: https://github.com/ambionics/phpggc/pull/33
+  type: PHP
+
 - project: magescan
   title: Add Webgility
   link: https://github.com/steverobbins/magescan/pull/151

@@ -8,19 +8,19 @@
             &__input,
             &__button {
                 float: left;
-                height: 50px;
                 border: 1px solid #9a9a9a;
             }
 
             &__input {
-                padding-left: 10px;
-                width: calc(100% - 50px);
+                width: calc(100% - 51px);
                 border-right: 0;
                 font-size: 18px;
                 font-family: Georgia, serif;
+                height: 48px;
             }
 
             &__button {
+                height: 50px;
                 width: 50px;
                 border-left: 0;
                 border-radius: 0;

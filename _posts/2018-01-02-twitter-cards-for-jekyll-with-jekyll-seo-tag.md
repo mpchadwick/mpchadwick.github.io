@@ -34,6 +34,12 @@ This will make GitHub pages know to use the plugin.
 
 To install locally run `gem install jekyll-seo-tag` at the command line.
 
+Finally, add the following tag inside the `<head>` in your site's template(s):
+
+```
+{% raw %}{% seo %}{% endraw %}
+```
+
 ### Declaring Your Twitter Username In _config.yml
 
 Next, you'll need to declare your Twitter username in your `_config.yml`. Without this, jekyll-seo-tag will not include the meta tags. 

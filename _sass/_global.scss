@@ -81,12 +81,16 @@ blockquote {
 .shadow {
     box-shadow: 0px 0px 12px 3px #c3c3c3;
 }
+
 *[id] {
   padding-top: 40px;
   margin-top: -40px;
 }
 
-#disqus_thread, #disqus_thread *, .twitter-tweet {
+input[id],
+#disqus_thread,
+#disqus_thread *,
+.twitter-tweet {
     padding-top: 0;
     margin-top: 0;
 }

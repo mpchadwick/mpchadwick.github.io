@@ -26,8 +26,8 @@ curl https://api.authorize.net/xml/v1/request.api -d '
 {
   "authenticateTestRequest": {
     "merchantAuthentication": {
-      "name": "5KP3u95bQpv",
-      "transactionKey": "346HZ32z3fP4hTG2"  
+      "name": "API-LOGIN-ID",
+      "transactionKey": "TRANSACTION-KEY"  
     }
   }
 }

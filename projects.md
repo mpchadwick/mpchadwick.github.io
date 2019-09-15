@@ -55,7 +55,7 @@ Here's a list of talks I've given...
 
 {% for talk in site.data.talks %}
 
-- [**{{- talk.event_name }}**]({{ talk.event_url }}) - [{{ talk.talk_name }}]({{ talk.talk_url }}), {{ talk.date }}
+- [**{{- talk.event_name }}**]({{ talk.event_url }}) - [{{ talk.talk_name }}{% if talk.url_is_video %} &#128249;{% endif %}]({{ talk.talk_url }}), {{ talk.date }}
 
 {% endfor %}
 

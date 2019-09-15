@@ -7,8 +7,9 @@
 - event_name: Meet Magento NYC
   event_url: https://meetmagento.nyc/
   talk_name: "Redis for Magento Developers"
-  talk_url: https://meetmagento.nyc/agenda/
+  talk_url: https://www.youtube.com/watch?v=SaZBRiOosNo
   date: November 1, 2018
+  url_is_video: true
 
 - event_name: Mage Titans USA
   event_url: https://www.magetitans.us/
@@ -31,7 +32,8 @@
 - event_name: Meet Magento NYC
   event_url: https://meetmagento.nyc/index.html
   talk_name: Imagining a World Without Caching
-  talk_url: https://meetmagento.nyc/2017-speaker-archive/max-chadwick/
+  talk_url: https://www.youtube.com/watch?v=tmOJxIyjvcQ
+  url_is_video: true
   date: October 18, 2017
 
 - event_name: Mage Titans USA

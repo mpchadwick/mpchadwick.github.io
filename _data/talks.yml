@@ -1,5 +1,11 @@
 - event_name: Meet Magento NYC
   event_url: https://meetmagento.nyc/
+  talk_name: "What Agencies Want From Extension Providers"
+  talk_url: https://meetmagento.nyc/agenda-2019/
+  date: September 4, 2019 
+
+- event_name: Meet Magento NYC
+  event_url: https://meetmagento.nyc/
   talk_name: "Redis for Magento Developers"
   talk_url: https://meetmagento.nyc/agenda/
   date: November 1, 2018

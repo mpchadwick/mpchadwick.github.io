@@ -1,6 +1,6 @@
 ---
 layout: blog-single
-title:  New Relic Alert When No Data is Received
+title: Forcing HTTP Version with PHP cURL
 date: January 8, 2020
 image: 
 tags: [PHP]

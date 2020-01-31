@@ -76,6 +76,10 @@ If you want to check out how it works under the hood check out:
  
 I haven't personally tested these yet, but according to the documentation the files go "in the appropriate folders for layout XML files." Either the theme's `Magento_Catalog/layout` folder, or a dedicated `SelectableLayouts` module seem to make sense to me.
 
+### How Can I Check If My Store Uses Custom Layout Updates?
+
+The best way to do this is by querying the database. I've reviewed this and shared SQL queries that can be used in [this gist](https://gist.github.com/mpchadwick/d732c289120ef9955e77e5801dd2fc1d).
+
 ### Is The New Implementation Sane?
 
 Good question. One project I checked, for better or worse, was re-using the same custom layout update across ~800 categories. In order to migrate to the new system this would require 800 physical custom layout files, one for each category, which is a laughable prospect.

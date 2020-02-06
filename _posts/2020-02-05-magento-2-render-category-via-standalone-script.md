@@ -1,18 +1,18 @@
 ---
 layout: blog-single
-title: Render a Category page via a standalone script in Magento 2
+title: Render a Category page via a Standalone script in Magento 2
 date: February 4, 2020
 image:
 tags: [Magento]
 ---
 
-In this post I'll share a standalone script that can be used to render a Magento 2 category page. This script can come in handy when debugging production issues on category pages (e.g. unexpected product set). For example, it can be executed under `strace` to review files opened, queries send, and their corresponding results.
+In this post I'll share a standalone script that can be used to render a Magento 2 category page programmatically. This script can come in handy when debugging production issues on category pages (e.g. unexpected product set). For example, it can be executed under `strace` to review files opened, queries sent, and their corresponding results.
 
 <!-- excerpt_separator -->
 
 ### The Script
 
-The script is as follows. Change `$categoryId` an `$storeId` as needed.
+The script is as follows. Change `$categoryId` and `$storeId` as needed.
 
 ```php
 <?php

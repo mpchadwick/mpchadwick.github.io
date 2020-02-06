@@ -1,7 +1,7 @@
 ---
 layout: blog-single
 title: Render a Category page via a Standalone script in Magento 2
-date: February 4, 2020
+date: February 5, 2020
 image:
 tags: [Magento]
 ---

@@ -88,3 +88,5 @@ paste -sd+ - | bc
 ----
 
 For the example in question the result of this command was "10745", meaning that out of the initial 32,551 changes reported by `git diff --shortstat` 10,745 of those were to files outside of the `Test/` directory.
+
+This isn't the most elegant solution, but it works. If you know of a better way I'd love to hear it in the comments below.

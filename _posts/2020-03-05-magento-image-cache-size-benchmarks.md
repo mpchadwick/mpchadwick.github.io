@@ -27,4 +27,4 @@ The table below contains my findings:
 
 Per the table, the median image cache was 2.5X the size of the source images, meaning that the client in question was not unusual at all.
 
-In the course of this research I also came across [this](https://github.com/magento/magento2/commit/41b1cd54488dd6709124d618f1c570e9d0eab51a) git commit. It looks like in Magento 2.4 it will be possible to offload image resizing to a 3rd party such as [Fastly](https://docs.fastly.com/en/guides/serving-images).
+In the course of this research I also came across [this](https://github.com/magento/magento2/commit/41b1cd54488dd6709124d618f1c570e9d0eab51a) git commit. It looks like in Magento 2.4 it will be possible to offload image resizing to a 3rd party such as [Fastly](https://docs.fastly.com/en/guides/serving-images). This should significantly decrease the overall media storage burden for merchants running Magento.

@@ -15,7 +15,7 @@ Some notes:
 - The script is expected to be run from the `var/` directory
 - You'll need to update the `$index` variable to the current index name
 - The script outputs in the following format:
-    - `{{product id}}`: `{{number of documents in elasticsearch}}`
+    - `{product id}`: `{number of documents in elasticsearch}`
 
 In my case I was able to use this script to identify that a large number of products in the client's catalog were not assigned to any website.
 

@@ -14,6 +14,7 @@ The following is a list of technologies I like and know.
 Each section is ordered by a blending my self-rated proficiency and my own personal interest. So the items that are highest on the list are those that I am most proficient _and_ interested in.
 
 ### Languages
+
 - PHP
 - JavaScript
 - SQL
@@ -25,32 +26,36 @@ Each section is ordered by a blending my self-rated proficiency and my own perso
 - Bash
 
 ### Frameworks & Platforms
+
 - Magento
 - Laravel
 - WordPress
 - Jekyll
+- Shopify
 - ExpressJS
 - Sinatra
 - Rails
 
 ### Developer Tools
+
 - Sublime Text
 - Git / GitHub
 - UNIX shell
 - New Relic
+- Gatling
 - Gulp
 - Grunt
 - Sequel Pro
 - Vagrant
 - Chrome Developer Tools
 - Google Analytics
-- Gatling
 
 ### Data Stores
+
 - MySQL
 - Redis
+- Elasticsearch
 - InfluxDB
 - Solr
 - Prometheus
-- Elasticsearch
 - MongoDB

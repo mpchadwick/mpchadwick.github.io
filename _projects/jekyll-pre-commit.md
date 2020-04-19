@@ -9,6 +9,8 @@ view_url: https://github.com/mpchadwick/jekyll-pre-commit
 call_to_action: View on GitHub
 image: /img/projects/jekyll-pre-commit.jpg
 image_alt: A screenshot of a terminal while using jekyll-pre-commit
+image_width: 1928
+image_height: 1418
 ---
 
 I built a Jekyll plugin which uses git pre-commit hooks to run checks before allowing users to commit changes to their Jekyll sites. Some things it can check...

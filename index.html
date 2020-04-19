@@ -53,7 +53,13 @@ include-social: true
         {% assign selected_projects = site.projects | where:"selected","true" | sort: 'position' %}
         {% for project in selected_projects %}
         {% if project.image %}
-        <a href="/projects#{{ project.title | slugify }}"><img src="{{ project.image }}" alt="{{ project.image_alt }}" loading="lazy"></a>
+        <a href="/projects#{{ project.title | slugify }}">
+            <img src="{{ project.image }}"
+                alt="{{ project.image_alt }}"
+                width="{{ project.image_width }}"
+                height="{{ project.image_height }}"
+            >
+        </a>
         {% endif %}
         <h4><a href="/projects#{{ project.title | slugify }}">{{ project.title }}</a></h4>
         <p>{{ project.description }}</p>

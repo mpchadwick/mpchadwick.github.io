@@ -5,6 +5,8 @@ description: My journey looking for, and ultimately building out my own solution
 date: November 16, 2017
 image: /img/blog/syntax-highlighting-and-color-constrast-accessibility/google-chrome-accessibility-audit@2x.jpg
 image_alt: "Google Chrome Accessibility Audit"
+image_width: 2052
+image_height: 1026
 tags: [Frontend, Accessibility]
 selected: true
 position: 20

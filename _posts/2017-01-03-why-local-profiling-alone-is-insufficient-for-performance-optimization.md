@@ -5,6 +5,8 @@ description: If you just profile your code locally, you're sure to miss somethin
 date: January 03, 2017
 image: /img/blog/why-local-profiling-alone-is-insufficient-for-performance-optimization/new-relic@1x.jpg
 image_alt: "A screenshot showing New Relic's production traces"
+image_width: 972
+image_height: 548
 tags: [Thoughts, Backend, Scaling]
 ad: domain-clamp-ad-b.html
 selected: true

@@ -5,6 +5,7 @@ description: "A rant on the subject of vulnerabilities in Magento modules"
 date: February 07, 2019
 image:
 tags: [Magento, Thoughts]
+has_tweet: true
 ---
 
 The topic of Magento module security has been heating up. Here are just a few things that have happened recently:
@@ -15,7 +16,7 @@ The topic of Magento module security has been heating up. Here are just a few th
 
 I have some strong thoughts on the matter which I haven't been shy about sharing in the past...
 
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">So I think a requirement that <a href="https://twitter.com/ext_dn?ref_src=twsrc%5Etfw">@ext_dn</a> should impose is around proper disclosure of vulnerabilities in modules.</p>&mdash; Max Chadwick (@maxpchadwick) <a href="https://twitter.com/maxpchadwick/status/1067241826933985280?ref_src=twsrc%5Etfw">November 27, 2018</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">So I think a requirement that <a href="https://twitter.com/ext_dn?ref_src=twsrc%5Etfw">@ext_dn</a> should impose is around proper disclosure of vulnerabilities in modules.</p>&mdash; Max Chadwick (@maxpchadwick) <a href="https://twitter.com/maxpchadwick/status/1067241826933985280?ref_src=twsrc%5Etfw">November 27, 2018</a></blockquote>
 
 Here, I want to express them in long form.
 

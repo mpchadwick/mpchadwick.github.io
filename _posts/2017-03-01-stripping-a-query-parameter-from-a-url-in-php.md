@@ -6,6 +6,7 @@ date: March 01, 2017
 image: 
 tags: [PHP]
 ad: domain-clamp-ad-b.html
+has_tweet: true
 ---
 
 Recently I needed a function to remove a single query parameter from a given URL in PHP. This seems like the type of thing that there should be a canonical answer for, but, if you run [a Google search](https://www.google.com/search?q=stripping+query+parameter+from+url+in+php), you'll see that there are many ways to skin this cat.
@@ -160,7 +161,6 @@ array(4) {
 For some reason native PHP does not provide a built in function for re-assembling a URL that has been dis-assembled via `parse_url`. This seems odd to me considering it provides you with a means to dis-assemble a URL natively.
 
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Why is `http_build_url` not built in to <a href="https://twitter.com/hashtag/php?src=hash">#php</a> . If I can parse natively with `parse_url` don&#39;t you think I&#39;d want to re-assemble?</p>&mdash; Max Chadwick (@maxpchadwick) <a href="https://twitter.com/maxpchadwick/status/837044864177041412">March 1, 2017</a></blockquote>
-<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 There are a few options...
 

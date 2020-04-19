@@ -5,12 +5,12 @@ description: Details on a recent production issue caused by inefficient use of t
 date: November 27, 2018
 image: /img/blog/magento-mysql-query-cache-2/new-relic-apm-overview@2x.jpg
 tags: [Magento, MySQL]
+has_tweet: true
 ---
 
 Back in April of 2018 I published [a case study]({{ site.baseurl }}{% post_url 2018-04-01-magento-mysql-query-cache-case-study %}) demonstrating the (positive) impact the MySQL query cache generally has on application performance and scalability for Magento. A recent issue at work has further highlighted this. I posted a quick update about it on Twitter:
 
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Biggest Black Friday / Cyber Monday issue so far caused by Amasty module preventing query cache from being used efficiently. I&#39;ve said it before but very opposed to query cache deprecation in MySQL 8.0</p>&mdash; Max Chadwick (@maxpchadwick) <a href="https://twitter.com/maxpchadwick/status/1067197024880205824?ref_src=twsrc%5Etfw">November 26, 2018</a></blockquote>
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 Here I'll share full details on the incident...
 

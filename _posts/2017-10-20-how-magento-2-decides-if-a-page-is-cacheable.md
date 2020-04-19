@@ -5,12 +5,12 @@ description: A look at the checks that Magento runs to determine whether or not 
 date: October 20, 2017
 image:
 tags: [Magento]
+has_tweet: true
 ---
 
 A high page cache hit rate is one of the most important factors in having a performant Magento 2 site. Unfortunately, it's very easy to screw up.
 
 <blockquote class="twitter-tweet" data-cards="hidden" data-lang="en"><p lang="en" dir="ltr">I can safely say I&#39;ve seen issues with cacheable=&quot;false&quot; in every store with <a href="https://twitter.com/hashtag/Varnish?src=hash&amp;ref_src=twsrc%5Etfw">#Varnish</a> I worked on, mostly in 3rd party extensions.<a href="https://twitter.com/hashtag/Magento2?src=hash&amp;ref_src=twsrc%5Etfw">#Magento2</a> <a href="https://t.co/cHoOuFOSlp">pic.twitter.com/cHoOuFOSlp</a></p>&mdash; Miguel Balparda (@mbalparda) <a href="https://twitter.com/mbalparda/status/897836632233181184?ref_src=twsrc%5Etfw">August 16, 2017</a></blockquote>
-<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 In this post I'll go into the Magento internals to demonstrate how Magento decides whether or not to cache a response. This is useful to know to help debug in cases where a site is not getting the most bang for buck out of the page cache.
 

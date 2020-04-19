@@ -4,13 +4,12 @@ title: "5 Enterprise_PageCache Missing Features"
 description: What can't Enterprise_PageCache do that it *should* be able to do? This post dives into the module's critical missing features.
 date: October 27, 2016
 tags: [Magento, Caching, Scaling]
+has_tweet: true
 ---
 
 A while back I published [a post on improving your full page cache hit rate]({{ site.baseurl }}{% link _posts/2016-06-16-monitoring-magento-fpc-hit-rate.md %}). In a conversation on Twitter, I was asked to provide suggestions on what Magento can do to improve hit rates.
 
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr"><a href="https://twitter.com/maxpchadwick">@maxpchadwick</a> Do you have suggestions on what we can do to improve cache hit rates?</p>&mdash; Blue_Bovine (@Blue_Bovine) <a href="https://twitter.com/Blue_Bovine/status/743819564983672832">June 17, 2016</a></blockquote>
-<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-
 Riding on the coattails of [my previous listicle, 5 Enterprise Page Cache Pro Tips]({{ site.baseurl }}{% link _posts/2016-08-19-5-enterprise-pagecache-pro-tips.md %}), I decided to publish a post in response. However, I've broadened the subject from "What can Magento do to improve hit rates?" to "What can Magento do to improve the `Enterprise_PageCache` module". Based on my experience working with the module, these are the top 5 missing features that I've identified...
 
 <!-- excerpt_separator -->

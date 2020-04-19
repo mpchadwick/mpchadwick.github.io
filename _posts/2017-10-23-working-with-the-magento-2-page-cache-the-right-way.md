@@ -5,6 +5,7 @@ description: Developing for an environment with full page caching is tough. Here
 date: October 23, 2017
 image:
 tags: [Magento]
+has_tweet: true
 ---
 
 <div class="tout tout--secondary">
@@ -14,7 +15,6 @@ tags: [Magento]
 Recently I wrote a post titled ["How Magento 2 Decides If A Page Is Cacheable"]({{ site.baseurl }}{% link _posts/2017-10-20-how-magento-2-decides-if-a-page-is-cacheable.md %}). After I posted it on Twitter I got a response about the depersonalizer
 
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">... And don&#39;t forget about the depersonaliser: <a href="https://t.co/nqile0R5ny">https://t.co/nqile0R5ny</a></p>&mdash; Giel Berkers (@kanduvisla) <a href="https://twitter.com/kanduvisla/status/921982698394214400?ref_src=twsrc%5Etfw">October 22, 2017</a></blockquote>
-<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 I read through the article and felt a twinge of horror when I read this line...
 

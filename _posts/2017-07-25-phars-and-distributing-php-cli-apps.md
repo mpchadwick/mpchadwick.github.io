@@ -6,6 +6,7 @@ date: July 25, 2017
 image: /img/blog/phars-and-distributing-php-cli-apps/php.jpg
 tags: [PHP]
 ad: domain-clamp-ad-b.html
+has_tweet: true
 ---
 
 First things first, let's address a question that I couldn't easily find an answer to on Google. Is PHP required to execute a phar?
@@ -46,7 +47,6 @@ And even with tools targeting PHP developers, distributing phars typically preve
 So what are the alternatives for packaging and delivering software written in PHP for users to execute themselves. Unfortunately the options are not great...
 
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">And a couple other options listed here depending on your needs / audience <a href="https://t.co/2m3oItTfN1">https://t.co/2m3oItTfN1</a></p>&mdash; hardy johnson (@hardyjohnson) <a href="https://twitter.com/hardyjohnson/status/887924769974214656">July 20, 2017</a></blockquote>
-<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 [Phalanger](https://github.com/devsense/phalanger) is the only thing that is appears to be actively maintained. However, it converts PHP to .NET, not exactly what I'm looking for.
 

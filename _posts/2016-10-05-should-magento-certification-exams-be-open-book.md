@@ -4,6 +4,7 @@ title: "Should Magento Certification Exams Be \"Open Book?\""
 description: In this post we take a look at community opinion on this question, and then I voice my own.
 date: October 05, 2016
 tags: [Magento, Thoughts]
+has_tweet: true
 ---
 
 I recently obtained [my first Magento certification](https://www.magentocommerce.com/certification/directory/dev/1629453/), passing the Certified Developer exam. I had taken the exam a year and a half prior and didn't pass. I'd been doing Magento development professionally for nearly 18 months at that point.
@@ -17,7 +18,6 @@ Now, the results are in, let's take a look at what [the #realmagento community o
 ### What the Community Thinks
 
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">POLL 🎙️ <a href="https://twitter.com/hashtag/Magento?src=hash">#Magento</a> <a href="https://twitter.com/hashtag/realmagento?src=hash">#realmagento</a> community... What access should be allowed when taking certification exam? Please vote / retweet / share</p>&mdash; Max Chadwick (@maxpchadwick) <a href="https://twitter.com/maxpchadwick/status/781101629567332352">September 28, 2016</a></blockquote>
-<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 As you can see,  with a little less than one third of the votes, "closed book" is the minority. 
 

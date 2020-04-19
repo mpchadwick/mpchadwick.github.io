@@ -6,6 +6,7 @@ date: November 30, 2016
 image:
 tags: [PHP, Sysadmin, Debugging]
 ad: domain-clamp-ad-b.html
+has_tweet: true
 ---
 
 > How should I log a PHP array?
@@ -27,7 +28,6 @@ Typically, they point to PHP's `print_r` function.
 Unfortunately, they're wrong :open_mouth:
 
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">PSA: print_r() for logs sucks...</p>&mdash; Max Chadwick (@maxpchadwick) <a href="https://twitter.com/maxpchadwick/status/803992503930286081">November 30, 2016</a></blockquote>
-<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 So why, exactly, does `print_r` suck for logging? Allow me to elaborate.
 

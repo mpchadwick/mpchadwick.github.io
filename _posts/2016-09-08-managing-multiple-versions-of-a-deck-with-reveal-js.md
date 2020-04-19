@@ -4,12 +4,12 @@ title: Managing Multiple Versions of a Deck with Reveal.js
 description: How do you manage multiple versions of the same deck? This guide outlines a simple approach the will eliminate the need to update content twice.
 date: September 08, 2016
 tags: [Thoughts, Tools, Public Speaking]
+has_tweet: true
 ---
 
 I'm currently in the process of paring down a 60 minute talk to fit into a 30 minute time slot. Going in, I had a pretty good idea of what needed to be cut, but one challenge I wasn't sure how to tackle was how to manage multiple versions of a single deck.
 
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">how do you manage 30 minute and 60 minute version of a deck for the same talk?</p>&mdash; Max Chadwick (@maxpchadwick) <a href="https://twitter.com/maxpchadwick/status/771746555552563201">September 2, 2016</a></blockquote>
-<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 Aside from [my co-worker Gil's "insightful" idea](https://twitter.com/Intradox/status/772271225376804865) I didn't get much of a response on Twitter [nor did I find much on Google](https://www.google.com/#q=reveal+js+multiple+versions). I did, however, come up with a solution for this that I think it pretty sweet. I figured I'd write up a quick blog post to outline what I did.
 

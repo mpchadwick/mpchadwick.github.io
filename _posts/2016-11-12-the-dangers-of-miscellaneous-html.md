@@ -4,6 +4,7 @@ title: "The Dangers of \"Miscellaneous HTML\""
 description: A discussion on the dangers of globally rendering any content from a text area in the admin
 date: November 12, 2016
 tags: [Magento, Security]
+has_tweet: true
 ---
 
 Recently, I've been giving some thought to the risks associated with the "Miscellaneous HTML" and "Scripts and Style Sheets" (a.k.a. "Miscellaneous Scripts" in Magento 1) features in Magento. For those who don't know, these are two text fields that accept any arbitrary input which is then rendered globally in the footer or header (respectively).
@@ -16,7 +17,6 @@ Recently, I've been giving some thought to the risks associated with the "Miscel
 This was mainly spurred by [Willem de Groot's findings on credit card skimming](http://gwillem.gitlab.io/2016/10/11/5900-online-stores-found-skimming/). These fields are [typically implicated in these types of exploits](https://productforums.google.com/forum/#!msg/webmasters/aCMWg2CkGuc/bojnf5bAMFkJ). I took Twitter to voice some initial thoughts on the matter.
 
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr"><a href="https://twitter.com/hashtag/realmagento?src=hash">#realmagento</a> idea in light of research done by <a href="https://twitter.com/gwillem">@gwillem</a>. Content security policy, but for core config data rows.</p>&mdash; Max Chadwick (@maxpchadwick) <a href="https://twitter.com/maxpchadwick/status/789066489139716096">October 20, 2016</a></blockquote>
-<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 My Tweet there was just something that had popped into my head, but at this point, I've had more time to think on the matter and wanted to share my thoughts.
 

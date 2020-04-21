@@ -19,4 +19,17 @@ description: Something you're looking for? Use this page to search my entire blo
 <div class="search-results__container">
 </div>
 <script src="/scripts/lunr.min.js" integrity="sha256-1qDTTA+irpHkZeH2aByrG8o1hJnYW/p1l2XvY4H5VUM="></script>
-<script src="/scripts/search.js"></script>
+<script type="application/json" id="search-data">
+	{
+	{% for post in site.posts %}
+        "{{ post.url | slugify }}": {
+            "id": "{{ post.url | slugify }}",
+            "title": "{{ post.title | xml_escape }}",
+            "url": "{{ post.url | xml_escape }}",
+            "tags": "{{ post.tags | array_to_sentence_string }}"
+        }
+        {% unless forloop.last %},{% endunless %}
+    {% endfor %}
+	}
+</script>
+<script src="/scripts/search.js" integrity="sha256-jYts2qdrV4S840pHgysLmyNu6dh7+BwrvqepHJG/ahE="></script>

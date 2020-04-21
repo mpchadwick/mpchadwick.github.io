@@ -1,18 +1,4 @@
----
-layout: null
----
-
-var data = {
-    {% for post in site.posts %}
-        "{{ post.url | slugify }}": {
-            'id': "{{ post.url | slugify }}",
-            'title': "{{ post.title | xml_escape }}",
-            'url': "{{ post.url | xml_escape }}",
-            'tags': "{{ post.tags | array_to_sentence_string }}"
-        }
-        {% unless forloop.last %},{% endunless %}
-    {% endfor %}
-}
+var data = JSON.parse(document.getElementById('search-data').textContent);
 
 var idx = lunr(function() {
     this.field('id');

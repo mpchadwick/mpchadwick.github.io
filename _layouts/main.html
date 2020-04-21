@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="{{ site.url }}/style/main.css">
     {% feed_meta %}
     {% seo %}
+    {% if jekyll.environment != 'production' %}
+    {% include content-security-policy.html %}
+    {% endif %}
     <meta name="theme-color" content="#d62454"/>
     <meta name="google-site-verification" content="l6xDSpQNWdivp7ROV4KoDsW4If0WC3OvFhZ0x46b8gc" />
     <meta name="msvalidate.01" content="09AF6CE80D8F0363FA3BFC5CE6386EC3" />
@@ -42,7 +45,11 @@
     <script type="application/json" id="ga-tags">
         {{ page.tags | jsonify }}
     </script>
-    <script src="/scripts/ga.js"></script>
+    <script
+        src="/scripts/ga.js"
+        integrity="{% if jekyll.environment == 'production' %}sha256-wHWt8DtfWtD0yarLho9jpGFUGMnHl6UwzcL5R5nw4tI={% else %}sha256-Sr4uPu3cmsGnvXJ3ezqRvkH9JsXfTAsZJVoe0ndtL0Q={%endif%}"
+        >
+    </script>
 
 </body>
 </html>

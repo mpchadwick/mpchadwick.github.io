@@ -2,7 +2,7 @@
 layout: blog-single
 title: Free Shipping Cart Rule After Discounts
 date: April 21, 2020
-image: /img/blog/magento-free-shipping-after-discounts/cart-price-rule-free-shipping@1x.png 1x, /img/blog/magento-free-shipping-after-discounts/cart-price-rule-free-shipping@2x.png
+image: /img/blog/magento-free-shipping-after-discounts/cart-price-rule-free-shipping@1x.png
 tags: [Magento]
 ---
 

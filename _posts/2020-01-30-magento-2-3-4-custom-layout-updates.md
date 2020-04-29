@@ -50,7 +50,7 @@ Instead you'll see the "Use existing" option selected from the new "Custom Layou
 
 ### How Does The Functionality Work Moving Forward?
 
-Magento has documented this in the ["Create cms-page/product/category-specific layouts" section of the "Common layout customization tasks" document](https://devdocs.magento.com/guides/v2.3/frontend-dev-guide/layouts/xml-manage.html#create-cms-pageproductcategory-specific-layouts). The tl;dr; on it is you need to create a physical file within your theme which includes your custom layout instructions. The file name needs to follow a specific pattern, the specifics of which differ spending on whether it's for a category, cms page or product.
+Magento has documented this in the ["Create cms-page/product/category-specific layouts" section of the "Common layout customization tasks" document](https://devdocs.magento.com/guides/v2.3/frontend-dev-guide/layouts/xml-manage.html#create-cms-pageproductcategory-specific-layouts). The tl;dr; on it is you need to create a physical file within your theme which includes your custom layout instructions. The file name needs to follow a specific pattern, the specifics of which differ depending on whether it's for a category, cms page or product.
 
 **Categories**
 

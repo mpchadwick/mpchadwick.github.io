@@ -102,4 +102,4 @@ As a next step, you can consider doing the same with your CMS content, particula
 
 You can also consider doing this with Google Tag Manager, which has the potential to also be abused for Magecart.
 
-If you're doing all these things and you still want to take things to the next level Content Security Policy could be an option for you at some point. As of Magento 2.3.5, it's not a good option though. And even if all the issues called out above are resolved in Magento core, keep in mind it will likely be a big investment to integrate it into your website, will be difficult to get right, and in the end should not be perceived as offering a guarantee of any sort.
+If you're doing all these things and you still want to take things to the next level Content Security Policy could be an option for you at some point. As of Magento 2.3.5, it's not a good option though. And even if all the issues called out above are resolved in Magento core, keep in mind it will likely be a big investment to integrate it into your website, will be difficult to get right, will be expensive to maintain, and in the end should not be perceived as offering a guarantee of any sort.

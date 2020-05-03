@@ -26,19 +26,47 @@ if (Array.isArray(tags)) {
 };
 
 try {
-  const observer = new PerformanceObserver((list) => {
+  const paintObserver = new PerformanceObserver((list) => {
     for (const entry of list.getEntries()) {
       ga('send', 'timing', {
-        'timingCategory': 'Paint metrics',
+        'timingCategory': 'Paint',
         'timingVar': entry.name,
         'timingValue': Math.round(entry.startTime)
       });
     }
   });
-  observer.observe({
+  paintObserver.observe({
     type: 'paint',
     buffered: true
   });
+
+  let lcp;
+  const lcpObserver = new PerformanceObserver((entryList) => {
+    const entries = entryList.getEntries();
+    const lastEntry = entries[entries.length - 1];
+
+    // Update `lcp` to the latest value, using `renderTime` if it's available,
+    // otherwise using `loadTime`. (Note: `renderTime` may not be available if
+    // the element is an image and it's loaded cross-origin without the
+    // `Timing-Allow-Origin` header.)
+    lcp = lastEntry.renderTime || lastEntry.loadTime;
+  });
+
+  lcpObserver.observe({
+    type: 'largest-contentful-paint',
+    buffered: true
+  });
+
+  addEventListener('visibilitychange', function fn() {
+    if (lcp && document.visibilityState === 'hidden') {
+      ga('send', 'timing', {
+        'timingCategory': 'Paint',
+        'timingVar': 'largest-contentful-paint',
+        'timingValue': Math.round(lcp)
+      })
+      removeEventListener('visibilitychange', fn, true);
+    }
+  }, true);
 } catch (e) {
   // Do nothing if the browser doesn't support this API
 }

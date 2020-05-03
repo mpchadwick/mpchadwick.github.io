@@ -24,3 +24,21 @@ if (Array.isArray(tags)) {
 		ga('send', 'event', 'taggedPost', 'view', tag, { nonInteraction: true });
 	});
 };
+
+try {
+  const observer = new PerformanceObserver((list) => {
+    for (const entry of list.getEntries()) {
+      ga('send', 'timing', {
+        'timingCategory': 'Paint metrics',
+        'timingVar': entry.name,
+        'timingValue': Math.round(entry.startTime)
+      });
+    }
+  });
+  observer.observe({
+    type: 'paint',
+    buffered: true
+  });
+} catch (e) {
+  // Do nothing if the browser doesn't support this API
+}

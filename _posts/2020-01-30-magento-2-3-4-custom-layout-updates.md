@@ -4,6 +4,10 @@ title: WTF Happened to Custom Layout Updates in Magento v2.3.4
 date: January 30, 2020
 image: /img/blog/magento-2-3-4-custom-layout-updates/magento-2-3-3-category-edit-design-tab@2x.png
 tags: [Magento]
+related_posts:
+- "Magento 2.3.5 + Content Security Policy (CSP): A Fool's Errand"
+- "Magento 2 Elasticsearch Cheatsheet"
+- "Magento 2 Enterprise Special Price Confusion"
 ---
 
 In versions on Magento prior to v2.3.4, users had the ability to add custom layout updates to category, product and cms pages via a textarea input from the Magento admin panel.

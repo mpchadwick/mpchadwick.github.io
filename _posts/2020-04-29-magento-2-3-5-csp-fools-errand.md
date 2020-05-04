@@ -5,6 +5,10 @@ date: April 29, 2020
 image: /img/blog/magento-2-3-5-csp/magento-miscellaneous-html@2x.png
 tags: [Magento, Security]
 has_tweet: true
+related_posts:
+- "On Magento Module Vulnerabilities"
+- "Thinking About the Next&nbsp;Shoplift"
+- "WTF Happened to Custom Layout Updates in Magento v2.3.4"
 ---
 
 On April 28, 2020 Magento 2.3.5 was announced. It included an exciting new security enhancement, implementation of a [Content Security Policy (CSP)](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP), available for both Magento Commerce and Magento Open Source.

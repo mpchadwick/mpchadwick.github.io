@@ -3,7 +3,7 @@ layout: blog-single
 title: Get HTTP Response Headers in Go
 date: April 27, 2020
 image: 
-tags: [Go]
+tags: [Go, Golang]
 ---
 
 The [Theory and Practice](https://siongui.github.io/) blog has a nice example of [accessing HTTP Response Headers in Go](https://siongui.github.io/2018/03/06/go-print-http-response-header/).

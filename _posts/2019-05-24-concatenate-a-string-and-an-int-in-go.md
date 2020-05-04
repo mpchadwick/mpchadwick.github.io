@@ -5,6 +5,8 @@ description: "Exploring all the possible options for concatenating a string and 
 date: May 24, 2019
 image: 
 tags: [Go, Golang]
+related_posts:
+- Get HTTP Response Headers in Go
 ---
 
 Recently I needed to concatenate a string and an int in Go. Googling revealed an overwhelming number of options. I've gathered and organized all of them in this post, including full working examples for each.
@@ -12,7 +14,7 @@ Recently I needed to concatenate a string and an int in Go. Googling revealed an
 <!-- excerpt_separator -->
 
 <div class="tout tout--secondary">
-<p><b>NOTE:</b> The examples concatenate the integer 1 with the string "bob@example.com" to form the string "1bob@example.com".</p>
+<p><b>NOTE:</b> This example concatenate the integer 1 with the string "bob@example.com" to form the string "1bob@example.com".</p>
 </div>
 
 ### `fmt.Sprintf`

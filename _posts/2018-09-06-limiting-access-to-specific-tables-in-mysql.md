@@ -1,6 +1,6 @@
 ---
 layout: blog-single
-title:  "Limiting Access To Specific Tables in MySQL - Cheetsheat"
+title:  "Limiting Access To Specific Tables in MySQL - Cheatsheat"
 description: A cheatsheet covering how to limit access to specific table in MySQL
 date: September 6, 2018
 image: 

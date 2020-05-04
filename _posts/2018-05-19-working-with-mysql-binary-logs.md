@@ -5,6 +5,10 @@ description: My guide to working with MySQL's binary logs
 date: May 19, 2018
 image:
 tags: [MySQL]
+related_posts:
+- "MySQL Query Cache Hit Rate"
+- "Resuming a Failed MySQL Import"
+- "Limiting Access To Specific Tables in MySQL - Cheatsheat"
 ---
 
 [Binary Logs](https://dev.mysql.com/doc/refman/5.7/en/binary-log.html) are a useful feature in MySQL. Mainly intended for master / slave [replication](https://dev.mysql.com/doc/refman/5.7/en/replication.html) setups and [point-in-time recovery](https://dev.mysql.com/doc/refman/5.7/en/point-in-time-recovery.html) they contain records of all changes to the MySQL database, including schema alterations and table creations, but also `INSERT`, `UPDATE` and `DELETE` statements.  This makes them extremely useful in offering system audit-ability to do things like forensic analysis in the case of a security breach or answer questions like "why does this product keep getting disabled on my website?".

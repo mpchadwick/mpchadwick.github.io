@@ -26,6 +26,19 @@ layout: page
     {% endif %}
   </div>
 </article>
+{% if page.related_posts.size > 0 %}
+<hr>
+<div class="related-posts tout tout--secondary">
+  <h2>:books: More reading</h2>
+  <p>Here are some other posts I've written that have a similar subject matter</p>
+  <ul>
+    {% for title in page.related_posts %}
+      {% assign post = site.posts | where: "title", title | first %}
+      <li><a href="{{ post.url }}">{{ post.title }}</a> <span class="date">{{ post.date | date: "%B %-d, %Y"  }}</span></li>
+    {% endfor %}
+  </ul>
+</div>
+{% endif %}
 <div class="tout">
 {% include bio.html %}
 </div>

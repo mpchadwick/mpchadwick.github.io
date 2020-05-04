@@ -5,6 +5,10 @@ description: A look at various command line tools that can be used for checking 
 date: February 01, 2018
 image: 
 tags: [Shell]
+related_posts:
+- "Interpreting Traceroute Results"
+- "Measuring round-trip time with nping"
+- "What Is CIDR Notation?"
 ---
 
 A few days back I received an alert from New Relic that a site was down.

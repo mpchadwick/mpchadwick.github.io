@@ -6,7 +6,7 @@ image: /img/blog/magento-2-3-5-csp/magento-miscellaneous-html@2x.png
 tags: [Magento, Security]
 has_tweet: true
 related_posts:
-- "On Magento Module Vulnerabilities"
+- "Disable Content Security Policy (CSP) in Magento"
 - "Thinking About the Next&nbsp;Shoplift"
 - "WTF Happened to Custom Layout Updates in Magento v2.3.4"
 ---

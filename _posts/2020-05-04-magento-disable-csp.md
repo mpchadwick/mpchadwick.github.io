@@ -10,7 +10,7 @@ related_posts:
 - "WTF Happened to Custom Layout Updates in Magento v2.3.4"
 ---
 
-As of version 2.3.5, Magento implements a Content Security Policy (CSP), which is enabled by default. In a previous post, I outlined some [concerns about the usefulness of Content Security Policy in Magento 2.3.5]({{ site.baseurl }}{% link _posts/2020-04-29-magento-2-3-5-csp-fools-errand.md %}). Here we'll take a look at how to disable Content Security Policy.
+As of version 2.3.5, Magento implements a Content Security Policy (CSP), which is enabled by default in report only mode. In a previous post, I outlined some [concerns about the usefulness of Content Security Policy in Magento 2.3.5]({{ site.baseurl }}{% link _posts/2020-04-29-magento-2-3-5-csp-fools-errand.md %}). Here we'll take a look at how to disable Content Security Policy.
 
 <!-- excerpt_separator -->
 

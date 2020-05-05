@@ -6,6 +6,10 @@ date: January 9, 2018
 last_modified_at: May 14, 2018
 image:
 tags: [Magento, Elasticsearch]
+related_posts:
+- "Diff-ing MySQL and Elasticsearch"
+- "Magento 2.3.5 + Content Security Policy (CSP): A Fool's Errand"
+- "Working With The Magento 2 Page Cache The Right Way"
 ---
 
 This post is a catch all location for my notes on working with Elasticsearch in Magento 2. It will be continually updated as I continue to spend more time with Elasticsearch.

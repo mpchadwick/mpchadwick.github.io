@@ -6,6 +6,10 @@ date: October 24, 2017
 last_modified_at: July 3, 2018
 image:
 tags: [Shell, Tools, PHP]
+related_posts:
+- "Working with MySQL Binary&nbsp;Logs"
+- "Visualizing sar data with kSar"
+- "Linux Screen Cheatsheet"
 ---
 
 Today, I posted the following into my company's HipChat...

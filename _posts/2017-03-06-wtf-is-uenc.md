@@ -6,6 +6,10 @@ date: March 06, 2017
 image: 
 tags: [Magento]
 ad: domain-clamp-ad-b.html
+related_posts:
+- "Magento 2.3.5 + Content Security Policy (CSP): A Fool's Errand"
+- "Magento 2 Elasticsearch Cheatsheet"
+- "An Intro To XSS For Magento Developers"
 ---
 
 If you've worked with Magento before, you've probably seen a URL that looks like this...

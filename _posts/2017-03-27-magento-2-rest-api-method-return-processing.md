@@ -6,6 +6,10 @@ date: March 27, 2017
 image:
 tags: [Magento 2]
 ad: domain-clamp-ad-b.html
+related_posts:
+- "Magento 2 REST API Response Formats"
+- "Magento 2 Elasticsearch Cheatsheet"
+- "Magento 2.3.5 + Content Security Policy (CSP): A Fool's Errand"
 ---
 
 If you're getting started with the Magento 2 REST API you'll find a good amount of [resources](http://inchoo.net/magento-2/magento-2-api/) [documenting](https://alankent.me/2015/07/24/creating-a-new-rest-web-service-in-magento-2/) [basic](http://devdocs.magento.com/guides/v2.0/rest/bk-rest.html) [usage](http://devdocs.magento.com/guides/v2.0/get-started/bk-get-started-api.html). Overall, it's a big improvement over the Magento 1 REST API, in my opinion. However, one thing that I couldn't find good information on is how Magento processes the result that your `method` returns. 

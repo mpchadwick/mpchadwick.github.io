@@ -7,6 +7,10 @@ image:
 tags: [PHP]
 ad: domain-clamp-ad-b.html
 has_tweet: true
+related_posts:
+- "Logging PHP Arrays"
+- "Resuming a Failed MySQL Import"
+- "Why and How Git Tags Can Save Your Sanity"
 ---
 
 Recently I needed a function to remove a single query parameter from a given URL in PHP. This seems like the type of thing that there should be a canonical answer for, but, if you run [a Google search](https://www.google.com/search?q=stripping+query+parameter+from+url+in+php), you'll see that there are many ways to skin this cat.

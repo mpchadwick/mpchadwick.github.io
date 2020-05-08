@@ -6,6 +6,10 @@ date: March 08, 2017
 image: 
 tags: [Magento, Security]
 ad: domain-clamp-ad-b.html
+related_posts:
+- "Magento 2 Elasticsearch Cheatsheet"
+- "WTF Happened to Custom Layout Updates in Magento v2.3.4"
+- "Magento 2.3.5 + Content Security Policy (CSP): A Fool's Errand"
 ---
 
 Recently, while checking out [Mozilla Observatory](https://observatory.mozilla.org) I learned about the `HttpOnly` `Set-Cookie` directive. If you're not familiar with it, here's an explanation from MDN...

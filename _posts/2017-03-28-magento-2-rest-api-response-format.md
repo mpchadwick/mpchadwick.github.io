@@ -6,6 +6,10 @@ date: March 28, 2017
 image:
 tags: [Magento 2]
 ad: domain-clamp-ad-b.html
+related_posts:
+- "Magento 2 REST API method return processing"
+- "Magento 2 Elasticsearch Cheatsheet"
+- "Magento 2.3.5 + Content Security Policy (CSP): A Fool's Errand"
 ---
 
 The Magento 2 REST API can return responses in XML or JSON format. This is done based on the `Accept` HTTP Header. Per the developer documentation..

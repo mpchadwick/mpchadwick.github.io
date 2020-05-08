@@ -6,6 +6,10 @@ date: December 21, 2016
 image:
 tags: [HTML]
 ad: domain-clamp-ad-b.html
+related_posts:
+- "Syntax Highlighting And Color Contrast Accessibility"
+- "Overriding Inline onclick Attributes With Event Capturing"
+- "[PROPOSAL] Script Tag Timeout Attribute"
 ---
 
 When writing an ordered list, numbers usually go sequentially up from 1, to 2, to 3 and so on. Anyone with the most basic knowledge of HTML knows that these lists should be represented with the `<ol>` element.

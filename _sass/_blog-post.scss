@@ -19,3 +19,14 @@
 .related-posts h2 {
   text-align: left;
 }
+
+.improve-link {
+  .emoji {
+    margin-right: 5px;
+  }
+  a {
+    color: $color-bg-plain-link-alt;
+  }
+  margin-bottom: 1em;
+  font-size: 0.9rem;
+}

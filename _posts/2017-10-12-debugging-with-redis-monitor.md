@@ -4,7 +4,7 @@ title:  Debugging With Redis MONITOR
 description: A quick look at Redis' MONITOR command, and how it can be used for debugging.
 date: October 12, 2017
 image:
-tags: [Debugging]
+tags: [Debugging, Redis]
 ---
 
 Today I learned about [the Redis `MONITOR` command](https://redis.io/commands/monitor). Running it is  basically like `tail -f`-ing Redis...it prints every command issued against the Redis instance, kind of like [`varnishncsa`](https://varnish-cache.org/docs/trunk/reference/varnishncsa.html).

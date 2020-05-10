@@ -11,6 +11,9 @@
     {% endif %}
     {% if jekyll.environment != 'production' %}
     {% endif %}
+    {% if page.no_index %}
+    <meta name="robots" content="noindex, nofollow"/>
+    {% endif %}
     <meta name="theme-color" content="#d62454"/>
     <meta name="google-site-verification" content="l6xDSpQNWdivp7ROV4KoDsW4If0WC3OvFhZ0x46b8gc" />
     <meta name="msvalidate.01" content="09AF6CE80D8F0363FA3BFC5CE6386EC3" />

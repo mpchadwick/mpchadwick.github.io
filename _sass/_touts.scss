@@ -28,6 +28,14 @@
       background-color: $color-bg-subtle;
       color: black;
       border-left: 10px solid #c1c1c1;
+
+      a {
+        color: purple;
+
+        &:hover {
+          color: darken(purple, 5%);
+        }
+      }
     }
 
     &--secondary {

@@ -10,7 +10,6 @@
         {% seo %}
     {% endif %}
     {% if jekyll.environment != 'production' %}
-    {% include content-security-policy.html %}
     {% endif %}
     <meta name="theme-color" content="#d62454"/>
     <meta name="google-site-verification" content="l6xDSpQNWdivp7ROV4KoDsW4If0WC3OvFhZ0x46b8gc" />
@@ -47,11 +46,6 @@
     <script type="application/json" id="ga-tags">
         {{ page.tags | jsonify }}
     </script>
-    <script
-        src="/scripts/ga.js"
-        integrity="{% if jekyll.environment == 'production' %}sha256-R8eQhZLJqXjojSR5ohAsmOFeUSgAHYDNANylF+ysUVA={% else %}sha256-EiwbrpRFYW5WJ6LfNEl/CJHHoMYbxtZhJz+UJrCxlmk={%endif%}"
-        >
-    </script>
-
+    <script type="module" src="/scripts/ga.js"></script>
 </body>
 </html>

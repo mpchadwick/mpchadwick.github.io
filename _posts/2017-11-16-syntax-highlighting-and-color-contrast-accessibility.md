@@ -73,10 +73,20 @@ Here's a quick demo of the difference for solarized-dark
 
 #### Before
 
-<iframe title="solarized-dark demo before converting stylesheet" src="/img/blog/syntax-highlighting-and-color-constrast-accessibility/solarized-dark-original.html"></iframe>
+<iframe
+	width="600"
+	height="450"
+	title="solarized-dark demo before converting stylesheet"
+	src="/img/blog/syntax-highlighting-and-color-constrast-accessibility/solarized-dark-original.html"
+></iframe>
 
 #### After
 
-<iframe title="solarized-dark demo after converting stylesheet" src="/img/blog/syntax-highlighting-and-color-constrast-accessibility/solarized-dark-converted.html"></iframe>
+<iframe
+	width="600"
+	height="450"
+	title="solarized-dark demo after converting stylesheet"
+	src="/img/blog/syntax-highlighting-and-color-constrast-accessibility/solarized-dark-converted.html"
+></iframe>
 
 To my eye the difference is subtle, but upon close inspection it is clear that the colors in the "after" example have been lightened and stand out better against the background than those of the "before" example.

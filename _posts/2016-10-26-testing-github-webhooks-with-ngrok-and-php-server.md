@@ -13,7 +13,14 @@ Then, when [the new GitHub projects feature](https://help.github.com/articles/tr
 <!-- excerpt_separator -->
 
 <div class="embed-container">
-<iframe src="https://www.youtube.com/embed/pVmtNH51mSE" frameborder="0" allowfullscreen></iframe>
+<iframe
+  src="https://www.youtube.com/embed/pVmtNH51mSE"
+  srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/pVmtNH51mSE?autoplay=1><img src=https://img.youtube.com/vi/pVmtNH51mSE/maxresdefault.jpg alt='Testing GitHub Webhooks Locally with Ngrok and PHP's Built In Webserver'><span>▶</span></a>"
+  frameborder="0"
+  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+  allowfullscreen
+  title="Testing GitHub Webhooks Locally with Ngrok and PHP's Built In Webserver"
+></iframe>
 </div>
 
 ### Conclusion

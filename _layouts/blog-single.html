@@ -46,8 +46,18 @@ layout: page
 {% include bio.html %}
 </div>
 <div id="disqus_thread"></div>
-<script src="/scripts/disqus.js" integrity="sha256-0hjKDOio+OJ0CdOCQ8uR3V1fRlW/ZtSNS4umPUD8eRg="></script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+<div class="call-to-action-wrapper">
+    <button class="call-to-action call-to-action--large" data-disqus-loader>Load comments</a>
+</div>
+<noscript>
+  <style>
+    [data-disqus-loader] {
+      display: none;
+    }
+  </style>
+  Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a>
+</noscript>
 {% if page.has_tweet %}
 <script src="/scripts/twitter.js" integrity="sha256-fpn8+IA24qTasOVhbHsVIxlwH9L2VAncsxjXjhtFyy8="></script>
 {% endif %}
+<script src="/scripts/disqus.js"></script>

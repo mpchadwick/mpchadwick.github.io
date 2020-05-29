@@ -16,6 +16,13 @@ a {
     text-decoration: none;
     color: $color-bg-plain-link;
 }
+button {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  border: 0;
+}
 a:hover {
     text-decoration: underline;
 }

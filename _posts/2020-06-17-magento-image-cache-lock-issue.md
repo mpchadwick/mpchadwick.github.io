@@ -2,7 +2,7 @@
 layout: blog-single
 title: "Magento Image Cache Lock Contention Issue"
 date: June 17, 2020
-image: /img/blog/magento-image-cache-lock-contention/new-relic-most-transaction-trace@2x.png
+image: /img/blog/magento-image-cache-lock-contention/new-relic-transaction-trace@2x.png
 tags: [Magento]
 ---
 

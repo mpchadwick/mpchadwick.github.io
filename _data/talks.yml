@@ -1,7 +1,7 @@
 - event_name: Magento Association Connect Conference
-  event_url: https://hopin.to/events/maconnect#speakers
+  event_url: https://hopin.to/events/maconnect
   talk_name: Discussion panel on Magento Security
-  talk_url: Discussion panel on Magento Security
+  talk_url: https://hopin.to/events/maconnect
   date: May 28, 2020
 
 - event_name: Magento Live Europe

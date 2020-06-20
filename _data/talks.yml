@@ -13,8 +13,9 @@
 - event_name: Meet Magento NYC
   event_url: https://meetmagento.nyc/
   talk_name: "What Agencies Want From Extension Providers"
-  talk_url: https://meetmagento.nyc/agenda-2019/
+  talk_url: https://www.youtube.com/watch?v=lNVdY-yF61s
   date: September 4, 2019 
+  url_is_video: true
 
 - event_name: Meet Magento NYC
   event_url: https://meetmagento.nyc/

@@ -1,3 +1,9 @@
+- event_name: Magento Association Connect Conference
+  event_url: https://hopin.to/events/maconnect#speakers
+  talk_name: Discussion panel on Magento Security
+  talk_url: Discussion panel on Magento Security
+  date: May 28, 2020
+
 - event_name: Magento Live Europe
   event_url: https://live-eu.magento.com/
   talk_name: "What Agencies Want From Extension Providers"

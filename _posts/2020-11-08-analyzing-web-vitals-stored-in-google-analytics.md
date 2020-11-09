@@ -59,7 +59,7 @@ Initially I had wanted to use Excel Pivot Tables for this, however I quickly lea
 
 - **Google Sheets:** Supports median (which Excel doesn't) but no way to get 75th percentile (which is recommended benchmark by Google)
 - **Apple Numbers:** Had never used it, but couldn't even get it to load all the data (I guess it only supports ~6K rows)
-- **OpenOffice Numbers:** Don't even ask...
+- **OpenOffice Calc:** Don't even ask...
 
 While I could obviously write a script to parse the data and extract the percentiles it seemed like not the best solution. I wanted something flexible and I didn't want to have to re-invent the wheel.
 

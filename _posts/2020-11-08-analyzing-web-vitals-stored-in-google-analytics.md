@@ -73,8 +73,14 @@ def my75(g):
     return np.percentile(g, 75)
 
 df = pd.read_csv("web-vitals.csv")
-table = pd.pivot_table(df, 
-values='ga:avgEventValue', index=['ga:eventAction'], aggfunc=[np.median, my75])
+table = pd.pivot_table(
+    df, 
+    values='ga:avgEventValue',
+    index=['ga:eventAction'],
+    aggfunc=[np.median, my75]
+)
+
+print (table)
 ```
 
 Additional columns can be added to `index` to further segment the data.

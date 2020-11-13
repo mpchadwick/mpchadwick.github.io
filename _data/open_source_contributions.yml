@@ -1,3 +1,8 @@
+- project: Magento 2
+  title: Fix misleading description of robots functionality
+  link: https://github.com/magento/merchdocs/pull/843
+  type: Docs
+
 - project: phpggc
   title: Add Zend Framework 1 File Delete Chain
   link: https://github.com/ambionics/phpggc/pull/33

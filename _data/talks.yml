@@ -1,3 +1,10 @@
+- event_name: Commerce Hero Podcast
+  event_url: https://www.youtube.com/c/CommerceHero/videos
+  talk_name: Max Chadwick on Training Junior Developers Remotely, Developer Onboarding Programs, + more
+  talk_url: https://www.youtube.com/watch?v=rXWIMZZvH2U
+  date: September 16, 2020
+  url_is_video: true
+
 - event_name: Magento Association Connect Conference
   event_url: https://hopin.to/events/maconnect
   talk_name: Discussion panel on Magento Security

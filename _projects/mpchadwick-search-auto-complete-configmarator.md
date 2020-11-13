@@ -1,7 +1,7 @@
 ---
 title: Mpchadwick_SearchAutocompleteConfigmarator
 position: 600
-technologies: PHP
+languages: PHP
 tags: Magento
 view_url: https://github.com/mpchadwick/Mpchadwick_SearchAutocompleteConfigmarator
 call_to_action: View on GitHub

@@ -5,23 +5,38 @@ description: Things I've built, open source contributions I've made and talks I'
 body-class: projects
 ---
 
-# Open Source
+# Projects
 
 <div class="tout tout--secondary">
 <p>In my spare time I like to build and publish open source software. Here are some of the things I've built</p>
 </div>
 
+<div class="project-list">
+
 {% assign sorted_projects = site.projects | sort: 'position' %}
 
 {% for project in sorted_projects %}
 
-<h2 id="{{ project.title | slugify }}">{{ project.title }}</h2>
+<div class="post-summary">
+	<h2 id="{{ project.title | slugify }}">{{ project.title }}</h2>
 
-{{ project.content }}
+	<div class="tags-list">
+	    <strong>Language(s):</strong>
+	    <ul>
+	      {% for language in project.languages %}
+	      <li>{{ language }}</li>
+	      {% endfor %}
+	    </ul>
+	</div>
 
-<a href="{{ project.view_url }}" class="call-to-action">{{ project.call_to_action }}</a>
+	{{ project.content }}
+
+	<a href="{{ project.view_url }}" class="call-to-action">{{ project.call_to_action }}</a>
+</div>
 
 {% endfor %}
+
+</div>
 
 ---
 

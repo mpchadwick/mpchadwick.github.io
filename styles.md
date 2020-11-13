@@ -64,6 +64,12 @@ Next let's look at the different "touts" that we can use.
 <p>This is the third style of tout available <a href="#">Here's a link</a> demonstrating what links like here. Again, I'm writing a bit so you can see how it looks when it wraps to two lines.</p>
 </div>
 
+Let's see a button
+
+<div class="call-to-action-wrapper">
+    <a class="call-to-action" href="#">Read more</a>
+</div>
+
 Next let's look at an embedded YouTube video:
 
 <iframe

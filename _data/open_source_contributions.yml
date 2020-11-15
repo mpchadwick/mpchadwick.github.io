@@ -1,3 +1,10 @@
+- project: faker
+  title: Memoize recurse regex
+  link: https://github.com/dmgk/faker/pull/23
+  type: Go
+  featured: true
+  description: I identified that Faker was uncessarily calling <code>regexp.MustCompile</code> <em>every</em> time it was asked for a new value. I found that this was introducing major performance issues while profiling my project <a href="https://github.com/mpchadwick/dbanon">dbanon</a>, which uses faker to anonymize a database. With an example dataset of 1 million users, and 4 faker calls for each user (First name, Last name, Email, and Password) compiling this regex was nearly 80% of the time spent across everything dbanon was doing. I fixed this by memoizing the <code>*Regexp</code> so that it was only compiled once. A simple change, but a big impact from a performance standpoint. The exact change and before and after profiles are available in the link below.
+
 - project: Magento 2
   title: Fix misleading description of robots functionality
   link: https://github.com/magento/merchdocs/pull/843

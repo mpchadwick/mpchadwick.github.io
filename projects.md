@@ -44,6 +44,25 @@ body-class: projects
 
 I like to contribute back to the tools I use. Here are some of my open source contributions...
 
+{% assign featured_contribs = site.data.open_source_contributions | where:"featured","true" %}
+
+{% for contrib in featured_contribs %}
+
+<div class="tout tout--alt">
+<h4></h4>
+<p><strong>Featured Contribution:</strong> <em>{{ contrib.title }}</em> in <em>{{ contrib.project }}</em></p>
+<div class="tags-list">
+    <strong>Language(s):</strong>
+    <ul>
+      <li>{{ contrib.type }}</li>
+    </ul>
+</div>
+<p>{{ contrib.description }}</p>
+<p><a href="{{ contrib.link }}">{{ contrib.link }}</a></p>
+</div>
+
+{% endfor %}
+
 {% assign types = site.data.open_source_contributions | group_by: 'type' | sort: 'size' %}
 
 {% for type in types reversed %}

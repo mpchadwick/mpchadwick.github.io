@@ -27,13 +27,22 @@ Sometimes, for one reason or another, MySQL may get in a state where it has a ma
 mysql -e "SHOW FULL PROCESSLIST" | grep 'SELECT' | grep 'catalog_product_flat_1' | awk '{ print $1; }' | xargs -n1 mysqladmin kill
 ```
 {:.wrap}
+
+Additionally, we can use an `if` in the `awk` command to only kill queries that have been running more than a specific amount of time. In the updated example we only `kill` queries that have been running at least 30 seconds.
+
+```
+mysql -e "SHOW FULL PROCESSLIST" | grep 'SELECT' | grep 'catalog_product_flat_1' | awk '{ if ($6 >= 30) print $1; }' | xargs -n1 mysqladmin kill
+```
+{:.wrap}
  
 If the backlog is big enough that it's preventing you from establishing a connection you can retry the command in a loop.
  
 ```
 while true; do
-  mysql -e "SHOW FULL PROCESSLIST" | grep 'SELECT' | grep 'catalog_product_flat_1' | awk '{ print $1; }' | xargs -n1 mysqladmin kill
+  mysql -e "SHOW FULL PROCESSLIST" | grep 'SELECT' | grep 'catalog_product_flat_1' | awk '{ if ($6 >= 30) print $1; }' | xargs -n1 mysqladmin kill
   sleep 1
 done
 ```
 {:.wrap}
+
+In certain cases you may need to run this loop continually to enable site stability while troubleshooting an issue.

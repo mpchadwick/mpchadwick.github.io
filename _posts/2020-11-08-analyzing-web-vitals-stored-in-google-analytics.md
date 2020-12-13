@@ -83,4 +83,42 @@ table = pd.pivot_table(
 print (table)
 ```
 
+The output will look something like this:
+
+```
+                         median             my75
+               ga:avgEventValue ga:avgEventValue
+ga:eventAction
+CLS                        74.0            261.0
+FCP                      1331.0           2243.0
+FID                         8.0             19.0
+LCP                      1754.0           2861.0
+```
+
 Additional columns can be added to `index` to further segment the data.
+
+For example, asssuming we have set up page type as content group 1 we can segment as follows:
+
+
+```
+table = pd.pivot_table(
+    df,
+    values='ga:avgEventValue',
+    index=['ga:eventAction', 'ga:contentGroup1'],
+    aggfunc=[np.median, my75]
+)
+```
+
+Here's a snippet of the output:
+
+```
+                                          median             my75
+                                ga:avgEventValue ga:avgEventValue
+ga:eventAction ga:contentGroup1
+CLS            category                     56.0            96.00
+               home                         99.0           133.00
+               product                     394.0           629.00
+FCP            category                    461.0          1614.50
+               home                        971.0          2138.00
+               product                    1995.0          2533.00
+```

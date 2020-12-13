@@ -30,7 +30,7 @@ gagocli reports \
   -end 2020-11-07 \
   -view <<REDACTED>> \
   -mets ga:avgEventValue \
-  -dims ga:eventAction,ga:eventLabel,ga:deviceCategory \
+  -dims ga:date,ga:eventAction,ga:eventLabel,ga:deviceCategory \
   -max -1 | \
   grep -E '(ga:|CLS|FID|LCP|FCP)' > web-vitals.csv
 ```

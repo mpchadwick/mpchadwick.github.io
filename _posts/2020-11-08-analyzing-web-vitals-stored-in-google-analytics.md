@@ -95,12 +95,12 @@ FID                         8.0             19.0
 LCP                      1754.0           2861.0
 ```
 
-Additional columns can be added to `index` to further segment the data.
+Additional columns can be added to `index` (or via `columns`) to further segment the data.
 
 For example, asssuming we have set up page type as content group 1 we can segment as follows:
 
 
-```
+```python
 table = pd.pivot_table(
     df,
     values='ga:avgEventValue',
@@ -121,4 +121,36 @@ CLS            category                     56.0            96.00
 FCP            category                    461.0          1614.50
                home                        971.0          2138.00
                product                    1995.0          2533.00
+```
+
+### Visualization
+
+Pandas also allows us to create visualizations. Here we view 75th percentile CLS over time (plotting both the median and 75th percentile and a separate line for each page type is way too noisy).
+
+```python
+import matplotlib.pyplot as pp
+
+df_cls = df.query('`ga:eventAction` == "CLS"')
+
+table_cls = pd.pivot_table(
+    df_cls,
+    values='ga:avgEventValue',
+    index=['ga:date'],
+    columns=['ga:contentGroup1'],
+    aggfunc=[my75]
+)
+
+plot_cls = table_cls.plot()
+
+# Avoid scientific notation / offset for date
+plot_cls.ticklabel_format(useOffset=False, style='plain', axis='both')
+
+# Put the legend outside the plot
+box = plot_cls.get_position()
+plot_cls.set_position([box.x0, box.y0 + box.height * 0.1,
+                 box.width, box.height * 0.9])
+plot_cls.legend(loc='upper center', bbox_to_anchor=(0.5, -0.05),
+          fancybox=True, shadow=True, ncol=5)
+
+pp.show()
 ```

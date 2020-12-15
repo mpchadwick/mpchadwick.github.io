@@ -1,6 +1,8 @@
 ---
 layout: page
 ---
+<!-- Show an image ad -->
+<script async src="https://media.ethicalads.io/media/client/ethicalads.min.js"></script>
 <article>
   <h1>{{ page.title }}</h1>
   <h4>Published: {{page.date | date: "%B %-d, %Y"}}</h4>
@@ -14,6 +16,7 @@ layout: page
     </ul>
   </div>
   {% endif %}
+  <div data-ea-publisher="maxchadwick-xyzblog" class="horizontal" data-ea-type="image"></div>
   <div class="improve-link">
     :pencil2: <a href="{{ site.github.repository_url }}/edit/master/{{ page.path }}">Improve this page on GitHub</a>
   </div>

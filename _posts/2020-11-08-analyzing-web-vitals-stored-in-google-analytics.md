@@ -30,7 +30,7 @@ gagocli reports \
   -end 2020-11-07 \
   -view <<REDACTED>> \
   -mets ga:avgEventValue \
-  -dims ga:eventAction,ga:eventLabel,ga:deviceCategory \
+  -dims ga:date,ga:eventAction,ga:eventLabel,ga:deviceCategory \
   -max -1 | \
   grep -E '(ga:|CLS|FID|LCP|FCP)' > web-vitals.csv
 ```
@@ -83,4 +83,74 @@ table = pd.pivot_table(
 print (table)
 ```
 
-Additional columns can be added to `index` to further segment the data.
+The output will look something like this:
+
+```
+                         median             my75
+               ga:avgEventValue ga:avgEventValue
+ga:eventAction
+CLS                        74.0            261.0
+FCP                      1331.0           2243.0
+FID                         8.0             19.0
+LCP                      1754.0           2861.0
+```
+
+Additional columns can be added to `index` (or via `columns`) to further segment the data.
+
+For example, asssuming we have set up page type as content group 1 we can segment as follows:
+
+
+```python
+table = pd.pivot_table(
+    df,
+    values='ga:avgEventValue',
+    index=['ga:eventAction', 'ga:contentGroup1'],
+    aggfunc=[np.median, my75]
+)
+```
+
+Here's a snippet of the output:
+
+```
+                                          median             my75
+                                ga:avgEventValue ga:avgEventValue
+ga:eventAction ga:contentGroup1
+CLS            category                     56.0            96.00
+               home                         99.0           133.00
+               product                     394.0           629.00
+FCP            category                    461.0          1614.50
+               home                        971.0          2138.00
+               product                    1995.0          2533.00
+```
+
+### Visualization
+
+Pandas also allows us to create visualizations. Here we view 75th percentile CLS over time (plotting both the median and 75th percentile and a separate line for each page type is way too noisy).
+
+```python
+import matplotlib.pyplot as pp
+
+df_cls = df.query('`ga:eventAction` == "CLS"')
+
+table_cls = pd.pivot_table(
+    df_cls,
+    values='ga:avgEventValue',
+    index=['ga:date'],
+    columns=['ga:contentGroup1'],
+    aggfunc=[my75]
+)
+
+plot_cls = table_cls.plot()
+
+# Avoid scientific notation / offset for date
+plot_cls.ticklabel_format(useOffset=False, style='plain', axis='both')
+
+# Put the legend outside the plot
+box = plot_cls.get_position()
+plot_cls.set_position([box.x0, box.y0 + box.height * 0.1,
+                 box.width, box.height * 0.9])
+plot_cls.legend(loc='upper center', bbox_to_anchor=(0.5, -0.05),
+          fancybox=True, shadow=True, ncol=5)
+
+pp.show()
+```

@@ -1,8 +1,6 @@
 ---
 layout: page
 ---
-<!-- Show an image ad -->
-<script async src="https://media.ethicalads.io/media/client/ethicalads.min.js"></script>
 <article>
   <h1>{{ page.title }}</h1>
   <h4>Published: {{page.date | date: "%B %-d, %Y"}}</h4>
@@ -64,3 +62,5 @@ layout: page
 <script src="/scripts/twitter.js" integrity="sha256-fpn8+IA24qTasOVhbHsVIxlwH9L2VAncsxjXjhtFyy8="></script>
 {% endif %}
 <script src="/scripts/disqus.js"></script>
+<script src="https://media.ethicalads.io/media/client/ethicalads.min.js" defer></script>
+<script src="/scripts/fallback.js" defer></script>

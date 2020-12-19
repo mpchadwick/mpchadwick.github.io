@@ -26,11 +26,7 @@
     <meta name="theme-color" content="#ffffff">
 </head>
 <body class="no-js{% if page.body-class %} {{page.body-class}}{% endif %}">
-    <script>
-        var body = document.getElementsByTagName("body")[0];
-        body.classList.remove('no-js');
-        body.classList.add('js')
-    </script>
+    <script src="/scripts/mustard.js"></script>
     {% include icons.html %}
     {{ content }}
     <footer class="footer">

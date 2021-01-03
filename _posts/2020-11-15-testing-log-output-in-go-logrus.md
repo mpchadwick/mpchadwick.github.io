@@ -4,6 +4,10 @@ title:  "Testing Log Output in Go with logrus"
 date: November 15, 2020
 image: 
 tags: [Go, Golang]
+related_posts:
+- "Get HTTP Response Headers in Go"
+- "Concatenate a string and an int in Go"
+- "Working with MySQL Binary Logs"
 ---
 
 [logrus](https://github.com/sirupsen/logrus) provides a nice facility for testing logging, which is [documented in the README](https://github.com/sirupsen/logrus#testing). While the README gives you a general idea of the offering, it doesn't provide any opinions on how to structure your project to support log testing, leaving you on your own to decide on a strategy. Here I wanted to show you the strategy I came up with and am currently using on my project [`dbanon`](https://github.com/mpchadwick/dbanon).

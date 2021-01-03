@@ -39,7 +39,7 @@ func SetLogger(l *logrus.Logger) {
 }
 ```
 
-**Example**: https://github.com/mpchadwick/dbanon/blob/v0.6.0/src/logger.go
+**Example**: [https://github.com/mpchadwick/dbanon/blob/v0.6.0/src/logger.go](https://github.com/mpchadwick/dbanon/blob/v0.6.0/src/logger.go)
 
 You'll see the reasoning for this file in the coming examples. 
 
@@ -54,7 +54,8 @@ if !someCheck() {
 }
 ```
 
-**Example**: https://github.com/mpchadwick/dbanon/blob/v0.6.0/src/provider.go#L111-L118
+**Example**: [https://github.com/mpchadwick/dbanon/blob/v0.6.0/src/provider.go#L111-L118](https://github.com/mpchadwick/dbanon/blob/v0.6.0/src/provider.go#L111-L118
+)
 
 Any configuration should also be done against the `*logrus.Logger` instance returned by `GetLogger`
 
@@ -63,7 +64,7 @@ logger := GetLogger()
 logger.SetLevel(level)
 ```
 
-**Example**: https://github.com/mpchadwick/dbanon/blob/v0.6.0/main.go#L67-L86
+**Example**: [https://github.com/mpchadwick/dbanon/blob/v0.6.0/main.go#L67-L86](https://github.com/mpchadwick/dbanon/blob/v0.6.0/main.go#L67-L86)
 
 ### Using `logger.go` in testing
 
@@ -74,7 +75,7 @@ testLogger, hook := test.NewNullLogger()
 SetLogger(testLogger)
 ```
 
-**Example**: https://github.com/mpchadwick/dbanon/blob/v0.6.0/src/provider_test.go#L9-L10
+**Example**: [https://github.com/mpchadwick/dbanon/blob/v0.6.0/src/provider_test.go#L9-L10](https://github.com/mpchadwick/dbanon/blob/v0.6.0/src/provider_test.go#L9-L10)
 
 Now you can call methods with inputs that are expected to generate log messages and check the `hook`.
 
@@ -85,4 +86,4 @@ _ := DoSomething("Bad input")
 	}
 ```
 
-**Example**: https://github.com/mpchadwick/dbanon/blob/v0.6.0/src/provider_test.go#L39-L42
+**Example**: [https://github.com/mpchadwick/dbanon/blob/v0.6.0/src/provider_test.go#L39-L42](https://github.com/mpchadwick/dbanon/blob/v0.6.0/src/provider_test.go#L39-L42)

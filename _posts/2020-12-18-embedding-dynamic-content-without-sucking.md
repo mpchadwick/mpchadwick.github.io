@@ -4,6 +4,10 @@ title:  "Embedding Dynamic Content Without Sucking"
 date: December 18, 2020
 image: 
 tags: [Frontend]
+related_posts:
+- "Analyzing Web Vitals Stored in Google Analytics"
+- "Tracking Paint Timing Metrics in Google Analytics"
+- "Embedding YouTube Videos Without Sucking"
 ---
 
 A common pattern for embedding dynamic content on the web looks something like this:

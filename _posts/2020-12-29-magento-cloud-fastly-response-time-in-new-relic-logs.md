@@ -4,6 +4,10 @@ title:  "Magento Cloud Response Times as measured by Fastly in New Relic"
 date: December 29, 2020
 image: /img/blog/magento-cloud-fastly-response-time/example-graph@2x.png
 tags: [Magento]
+related_posts:
+- "Magento Cloud Page Cache Hit Rate with New Relic Logs"
+- "Using n98-magerun2 dev:console on Magento Cloud"
+- "Magento 2 Elasticsearch Cheatsheet"
 ---
 
 Recently I've been dealing with a Magento performance issue that appears to been caused by Fastly (more on that in another post). Here I wanted to share a quick tip on how to view Fastly response times for Magento Cloud in New Relic.

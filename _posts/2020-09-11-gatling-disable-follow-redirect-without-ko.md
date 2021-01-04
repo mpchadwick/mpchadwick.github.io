@@ -4,6 +4,9 @@ title:  "Gatling disableFollowRedirect without KO"
 date: September 11, 2020
 image: 
 tags: [Tools, Gatling]
+related_posts:
+- "Gatling Multiplier Parameter"
+- "Expected 404s and Gatling"
 ---
 
 I'm currently working on a Gatling simulation which involves sending traffic to an endpoint that issues an HTTP 307 response. For this load test I want to send requests to this endpoint, but I don't want Gatling to follow the redirect. You can instruct Gatling to not follow the redirect by calling [`disableFollowRedirect`](https://gatling.io/docs/current/http/http_request/#followredirect):

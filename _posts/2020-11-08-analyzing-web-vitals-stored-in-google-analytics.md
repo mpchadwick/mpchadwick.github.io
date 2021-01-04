@@ -4,6 +4,10 @@ title:  "Analyzing Web Vitals Stored in Google Analytics"
 date: November 8, 2020
 image: 
 tags: [Performance, Google Analytics, Python]
+related_posts:
+- "Tracking Paint Timing Metrics in Google Analytics"
+- "Fetching Pageview Counts from Google Analytics API with Ruby"
+- "Google Analytics Events & Bounce Rate"
 ---
 
 Google Analytics is a convenient (free) place to store Web Vitals "field measurements". The Google Chrome team has provided [extensive instructions on how to do this](https://github.com/GoogleChrome/web-vitals#send-the-results-to-google-analytics).

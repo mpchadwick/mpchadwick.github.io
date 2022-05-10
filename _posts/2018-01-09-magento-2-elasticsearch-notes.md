@@ -178,7 +178,7 @@ curl 'localhost:9200/magento2_product_1_v1/_search?pretty&q=sku'
 This [`bool query`](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-bool-query.html) moves closer to the direction of how Magento queries Elasticsearch. Note the double-escaping of `t\\-shirt`. This is again due to analyzers. 
 
 ```
-$ curl -H 'Content-Type: application/json" "localhost:9200/magento2_product_1_v1/_search?pretty" -d'
+$ curl -H 'Content-Type: application/json' "localhost:9200/magento2_product_1_v1/_search?pretty" -d'
 {
   "query": {
     "bool": {

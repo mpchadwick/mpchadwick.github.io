@@ -40,6 +40,8 @@ func main() {
 
 Presumably, the problem was that the newly imported package also used a flag with the same name.
 
+<!-- excerpt_separator -->
+
 The first solution that came to mind was to rename my flag from `version` to something else (e.g. `ver`). While this might be a viable approach to fix the issue it was definitely not a desirable one. As such, I [reported the issue](https://github.com/vitessio/vitess/issues/10714) to the package provider to see if they'd be willing to make any compatibility adjustments on their end to accommodate my use case.
 
 While initially it appeared that my only recourse would be to rename the flag, a clever user [responded](https://github.com/vitessio/vitess/issues/10714#issuecomment-1186579881) to my issue, making me aware of the `flag.NewFlagSet` function. By calling the `NewFlagSet` function in my code before defining my flags I was able to prevent conflicts with the newly imported package.

@@ -26,6 +26,23 @@ health status index                           pri rep docs.count docs.deleted st
 yellow open   magento2_product_1_v1             5   1          1            0      7.5kb          7.5kb
 ```
 
+This assumes that the Elasticsearch index is running on `localhost` on port `9200`. The actual host / port on a given project can be confirmed in the database in the `core_config_data` table (or potentially in the `app/etc/env.php` file) at the following paths
+
+- Host: `catalog/search/elasticsearch_server_hostname`
+- Port: `catalog/search/elasticsearch_server_port`
+
+### Determining Which Index is Being Used
+
+The query may return a number of indexes.
+
+Indexes follow the following format...
+
+`magento2_product_{{store_id}}_v{{version_number}}`
+
+As you can see, on a multi-store Magento instance a separate Elasticsearch index will be available for each store.
+
+In terms of the version number, there should only be one index per store, but I have seen cases where indexes don't get deleted cleanly and there are old indexes lying around. Magento will query the highest version number for each store.
+
 ### Inspecting Indexed Data
 
 <div class="tout tout--secondary">
@@ -101,20 +118,12 @@ By default it will return 10 documents.
 <p><strong>NOTE</strong>: When querying Elasticsearch it's important to understand the concept of  <a href="(https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-analyzers.html">analyzers</a>. If your product has a SKU of "SKU", Elasticsearch's analyzers will convert it to lowercase. Therefore, you need to search for "sku", not "SKU".</p>
 </div>
 
-There are a few ways you can do this. Here's the simplest (searching for a product with a sku value of "sku")...
+There are a few ways you can do this. Here's the simplest (searching across all fields...)
 
 **Request**
 
 ```
-$ curl "localhost:9200/magento2_product_1_v1/_search?pretty" -d'
-{
-  "query": {
-    "term": {
-      "sku": "sku"
-    }
-  }
-}
-'
+curl 'localhost:9200/magento2_product_1_v1/_search?pretty&q=sku'
 ```
 
 **Response**
@@ -169,7 +178,7 @@ $ curl "localhost:9200/magento2_product_1_v1/_search?pretty" -d'
 This [`bool query`](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-bool-query.html) moves closer to the direction of how Magento queries Elasticsearch. Note the double-escaping of `t\\-shirt`. This is again due to analyzers. 
 
 ```
-$ curl "localhost:9200/magento2_product_1_v1/_search?pretty" -d'
+$ curl -H 'Content-Type: application/json' "localhost:9200/magento2_product_1_v1/_search?pretty" -d'
 {
   "query": {
     "bool": {
@@ -195,7 +204,7 @@ By default Elasticsearch will do an "or" search when receiving a query with mult
 **Request**
 
 ```
-$ curl "localhost:9200/magento2_product_1_v1/_search?pretty" -d'
+$ curl -H 'Content-Type: application/json' "localhost:9200/magento2_product_1_v1/_search?pretty" -d'
 {
   "query": {
     "bool": {
@@ -226,7 +235,7 @@ By default Elasticsearch will return all the fields for each document. An array 
 **Request**
 
 ```
-curl "localhost:9200/magento2_product_1_v1/_search?pretty" -d'
+curl -H 'Content-Type: application/json' "localhost:9200/magento2_product_1_v1/_search?pretty" -d'
 {
   "fields": [
     "_id",
@@ -258,7 +267,7 @@ So far the `bool` examples we've looked at all use `should` exclusively. When us
 **Request**
 
 ```
-curl "localhost:9200/magento2_product_1_v1/_search?pretty" -d'
+curl -H 'Content-Type: application/json' "localhost:9200/magento2_product_1_v1/_search?pretty" -d'
 {
   "fields": [
     "_id",
@@ -301,7 +310,7 @@ Another way to achieve this is via a `must`. All conditions provided as `must`s 
 **Request**
 
 ```
-curl "localhost:9200/magento2_product_1_v1/_search?pretty" -d'
+curl -H 'Content-Type: application/json' "localhost:9200/magento2_product_1_v1/_search?pretty" -d'
 {
   "fields": [
     "_id",
@@ -371,7 +380,7 @@ The version number is increased by when `Magento\Elasticsearch\Model\Adapter\Ela
 Below is an example of how Magento queries Elasticsearch when searching for the term "Product". Fields queried are determined by the "Use in Search" attribute property and the [boosts](https://www.elastic.co/guide/en/elasticsearch/guide/current/query-time-boosting.html) are determined by the "Search Weight" attribute property...
 
 ```
-$ curl "localhost:9200/magento2_product_1_v1/_search?pretty" -d'
+$ curl -H 'Content-Type: application/json' "localhost:9200/magento2_product_1_v1/_search?pretty" -d'
 {
   "aggregations": {
     "prices": {
@@ -485,7 +494,7 @@ $ curl "localhost:9200/magento2_product_1_v1/_search?pretty" -d'
 When Elasticsearch is configured as Magento's search engine, Elasticsearch will also be consulted to retrieve the product set while browsing category pages. Here's a query to return all the product in category "3" with color "12"
 
 ```
-$ curl "localhost:9200/magento2_product_1_v1/_search?pretty" -d'
+$ curl -H 'Content-Type: application/json' "localhost:9200/magento2_product_1_v1/_search?pretty" -d'
 {
   "aggregations": {
     "prices": {

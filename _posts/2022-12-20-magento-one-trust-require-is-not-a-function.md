@@ -1,6 +1,6 @@
 ---
 layout: blog-single
-title:  "Magento + OneTrust Coookie Consent - require is not a function"
+title:  "Magento + OneTrust Cookie Consent - require is not a function"
 date: December 20, 2022
 image: 
 tags: [Magento]

@@ -1,6 +1,6 @@
 ---
 layout: blog-single
-title:  "Magento + OneTrust Coookie Consent - require is not a function"
+title:  "Magento + OneTrust Cookie Consent - require is not a function"
 date: December 20, 2022
 image: 
 tags: [Magento]
@@ -23,7 +23,7 @@ In order to resolve this issue I spent quite a bit of time troubleshooting obfus
 
 ### Background: OneTrust Auto-Blocking
 
-If you're dealing with this error on a Magento site, like me, there's a good change you're using [OneTrust Auto-Block](https://my.onetrust.com/articles/en_US/Knowledge/UUID-c5122557-2070-65cb-2612-f2752c0cc4aa). Using the Auto-Blocking technology makes a lot of sense because without it, there's a non-trivial engineering lift to ensure that cookies are actually blocked (see: [OneTrust: Cookie Blocking - Blocking Cookies via Tag Managers and HTML Implementation Webinar](https://community.cookiepro.com/s/article/Cookie-Blocking-Blocking-cookies-via-Tag-Managers-and-HTML?language=en_US)). Using auto-block in theory simplifies this as we can just have OneTrust automatically block scripts without needing to change anything within the website markup or tag manager configuration.
+If you're dealing with this error on a Magento site, like me, there's a good chance you're using [OneTrust Auto-Block](https://my.onetrust.com/articles/en_US/Knowledge/UUID-c5122557-2070-65cb-2612-f2752c0cc4aa). Using the Auto-Blocking technology makes a lot of sense because without it, there's a non-trivial engineering lift to ensure that cookies are actually blocked (see: [OneTrust: Cookie Blocking - Blocking Cookies via Tag Managers and HTML Implementation Webinar](https://community.cookiepro.com/s/article/Cookie-Blocking-Blocking-cookies-via-Tag-Managers-and-HTML?language=en_US)). Using auto-block in theory simplifies this as we can just have OneTrust automatically block scripts without needing to change anything within the website markup or tag manager configuration.
 
 ### Tracing the error to the auto-blocking script
 
@@ -41,7 +41,7 @@ var x = JSON.parse('[{"Tag":"https://www.googletagmanager.com/gtm.js","CategoryI
 
 With some clues from OneTrust I realized that this variable contains a mapping of "Tag"s (which are just URLs) to OneTrust cookie categories (e.g. C0002).
 
-I was eventually able to determine that auto-block script  checks each script as it's added to the page against this list of tags (using a `MutationObserver`). If the script is contained in the list of tags it switches the `type` from `application/javascript` to `text/plain` and adds a class attribute listing with the appropriate cookie categories. This will prevent the script from being executed.
+I was eventually able to determine that auto-block script  checks each script as it's added to the page against this list of tags (using a `MutationObserver`). If the script `src` is contained in the list of tags it switches the `type` from `application/javascript` to `text/plain` and adds a class attribute listing with the appropriate cookie categories. This will prevent the script from being executed.
 
 Later, in the `otBannerSdk.js` JavaScript the `reactivateScriptTag` function will run, and it will replace the `text/plain` script tags with new script tags with type `application/javascript`.
 
@@ -72,7 +72,7 @@ OneTrust attempts to determine the cookie sources during the site scan, but in o
 
 ### Fixing the issue
 
-In order the fix the issue I had to review the source for each and every cookie one-by-one and determine the correct sources. For non-Magento issued cookies clearly it shouldn't be a URL under example.com. For the Magento cookies, the best seems to be just remove any source ([Magento documentation](https://docs.magento.com/user-guide/v2.3/stores/cookie-reference.html) states that their cookies are exempt. Generally I was able to correct the sources through the OneTrust recommended workflow. but in some cases cookies had been incorrectly attributed to nearly 2,000 URLs on the client's site. For these cases the solution I came up with was the delete and manually re-create the cookie in the UI.
+In order the fix the issue I had to review the source for each and every cookie one-by-one and determine the correct sources. For non-Magento issued cookies clearly it shouldn't be a URL under example.com. For the Magento cookies, the best seems to be just remove any source ([Magento documentation](https://docs.magento.com/user-guide/v2.3/stores/cookie-reference.html) states that their cookies are exempt). Generally I was able to correct the sources through the OneTrust recommended workflow, but in some cases cookies had been incorrectly attributed to nearly 2,000 URLs on the client's site. For these cases the solution I came up with was the delete and manually re-create the cookie in the UI.
 
 ### Conclusion
 

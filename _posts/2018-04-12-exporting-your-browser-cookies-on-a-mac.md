@@ -110,4 +110,4 @@ CREATE INDEX moz_basedomain ON moz_cookies(baseDomain, originAttributes);
 
 Safari stores it's cookies in `~/Library/Cookies`. There you'll find a file named `Cookies.binarycookies`.
 
-The data is in binary format, but again, there's [an excellent python script](http://securitylearn.net/wp-content/uploads/tools/iOS/BinaryCookieReader.py) which can be used for parsing.
+The data is in binary format, but again, there's [a python script](https://github.com/ktnjared/BinaryCookieReader) which can be used for parsing.

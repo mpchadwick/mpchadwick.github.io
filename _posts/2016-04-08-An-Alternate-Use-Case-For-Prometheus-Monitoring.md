@@ -5,7 +5,7 @@ date: April 08, 2016
 tags: [Monitoring]
 ---
 
-I first heard about [Prometheus](http://prometheus.io/) on [an episode of The Changelog Podcast](https://changelog.com/168/). Before tuning in, I read the description and was intrigued.  **Monitoring** is an important part of my day job where my team is responsible for ensuring the technical end of operations runs smoothly for many large scale ecommerce businesses. I saw that the episode featured an engineer from SoundCloud (a service I use regularly for streaming music) and decided to give it a spin.
+I first heard about [Prometheus](http://prometheus.io/) on [an episode of The Changelog Podcast](https://changelog.com/podcast/168). Before tuning in, I read the description and was intrigued.  **Monitoring** is an important part of my day job where my team is responsible for ensuring the technical end of operations runs smoothly for many large scale ecommerce businesses. I saw that the episode featured an engineer from SoundCloud (a service I use regularly for streaming music) and decided to give it a spin.
 
 <!-- excerpt_separator -->
 

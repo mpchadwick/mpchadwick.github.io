@@ -115,7 +115,7 @@ By default it will return 10 documents.
 #### Search By SKU
 
 <div class="tout tout--secondary">
-<p><strong>NOTE</strong>: When querying Elasticsearch it's important to understand the concept of  <a href="(https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-analyzers.html">analyzers</a>. If your product has a SKU of "SKU", Elasticsearch's analyzers will convert it to lowercase. Therefore, you need to search for "sku", not "SKU".</p>
+<p><strong>NOTE</strong>: When querying Elasticsearch it's important to understand the concept of  <a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-analyzers.html">analyzers</a>. If your product has a SKU of "SKU", Elasticsearch's analyzers will convert it to lowercase. Therefore, you need to search for "sku", not "SKU".</p>
 </div>
 
 There are a few ways you can do this. Here's the simplest (searching across all fields...)

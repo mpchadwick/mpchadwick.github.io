@@ -79,7 +79,7 @@ Input validation and output escaping are not mutually exclusive. You should be d
 
 ### How Do We Do This In Magento
 
-Magento provides documentation on output escaping for Magento 2 [here](http://devdocs.magento.com/guides/v2.0/frontend-dev-guide/templates/template-security.html). When outputting untrusted text, you should use `escapeHtml`. This will use the PHP function `htmlspecialchars` to convert `<` to `&lt;`.
+Magento provides documentation on output escaping for Magento 2 [here](https://developer.adobe.com/commerce/php/development/security/cross-site-scripting/). When outputting untrusted text, you should use `escapeHtml`. This will use the PHP function `htmlspecialchars` to convert `<` to `&lt;`.
 
 Additionally, when outputting untrusted data in HTML attributes, we need to be careful. For example, the attacker could use the following query to break out of an attribute and execute scripts.
 

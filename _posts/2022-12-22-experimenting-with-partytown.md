@@ -15,6 +15,8 @@ I was immediately intrigued by the idea and saw great potential, especially on t
 
 Today I spent some time playing with Partytown. In this post I'll share my process and findings.
 
+<!-- excerpt_separator -->
+
 ### Methodology
 
 For my use-case I was looking to quickly test some potential performance optimizations against a remote website that I didn't have a copy of running locally. The website was running Adobe Commerce (a.k.a. Magento) on the Adobe Commerce Cloud infrastructure. 

@@ -8,7 +8,7 @@ tags: [PHP]
 ad: domain-clamp-ad-b.html
 ---
 
-I recently had the need to extract the value of a Set-Cookie response header in PHP. Google lead me [`http_parse_cookie`](http://php.net/manual/fa/function.http-parse-cookie.php). Unfortunately, `http_parse_cookie` requires `pecl_http` which isn't available with PHP out of box, and is a pain to install. 
+I recently had the need to extract the value of a Set-Cookie response header in PHP. Google lead me [`http_parse_cookie`](https://github.com/m6w6/ext-http/commit/9f564f1bb81519679a4cb362b868e9b1f93cd8a8). Unfortunately, `http_parse_cookie` requires `pecl_http` which isn't available with PHP out of box, and is a pain to install. 
 
 Other Google results suggest [defining your own function](https://gist.github.com/pokeb/10590).
 

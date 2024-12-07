@@ -7,7 +7,7 @@ tags: [Adobe Commerce]
 related_posts:
 ---
 
-Over the past few months I've seen reports from multiple clients about problems saving and updating product information on their Adobe Commerce stores. We originally saw the issue back in August and I need to give credit to [Webscale](https://www.webscale.com/)'s support as they were actually the ones who identified the root cause.
+Over the past few months I've seen reports from multiple clients about problems saving and updating product information on their Adobe Commerce stores. We originally saw the issue back in August and I need to give credit to [Nemanja Djuric](https://nemanja.io/) from [Webscale](https://www.webscale.com/) as he was actually the one who identified the root cause.
 
 <!-- excerpt_separator -->
 
